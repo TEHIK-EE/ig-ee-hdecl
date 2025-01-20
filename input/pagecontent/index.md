@@ -1,3 +1,3 @@
-# HDECL
+# Tervisedeklaratsioon (Health declaration)
 
-Feel free to modify this index page with your own awesome content!
+Tervisedeklaratsiooni sissejuhatus

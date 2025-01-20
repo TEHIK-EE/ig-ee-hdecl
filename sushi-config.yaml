@@ -6,7 +6,7 @@
 id: ee.fhir.hdecl
 canonical: https://fhir.ee
 name: HDECL
-# title: Example Title
+title: Tervisedeklaratsiooni juurutusjuhend
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 1.0.0
@@ -18,7 +18,7 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 publisher:
   name: TEHIK
   url: https://tehik.ee
-  # email: test@example.org
+  email: abi@tehik.ee
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -43,9 +43,9 @@ publisher:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
+pages:
+  index.md:
+    title: Sissejuhatus
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
