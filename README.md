@@ -1,1 +1,1 @@
-"#ig ig-ee-hdecl" 
+## Tervisedeklaratsiooni juurutusjuhend
