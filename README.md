@@ -1,3 +1,3 @@
 ## Tervisedeklaratsiooni juurutusjuhend
 
-Juurutusjuhend on kättesaadav siit
+Juurutusjuhend on kättesaadav siit: 
