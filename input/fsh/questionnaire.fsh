@@ -1,6 +1,6 @@
-Profile: EEHealthDeclaration
+Profile: EEHealthDeclarationQuestionnaire
 Parent: Questionnaire
-Id: EEHealthDeclaration
+Id: EEHealthDeclarationQuestionnaire
 Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * ^version = "1.0.0"
 * ^status = #draft
@@ -27,14 +27,14 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * item 0..*
   * linkId 1..1
   * definition 0..0
-  * code 0..0
+  * code 0..1
   * prefix 1..1
-  * text 1..1
+  * text 0..1
   * type 1..1
   * required 1..1
 
-Instance: ExampleEEHealthDeclaration
-InstanceOf: EEHealthDeclaration
+Instance: ExampleEEHealthDeclarationQuestionnaire
+InstanceOf: EEHealthDeclarationQuestionnaire
 Description: "Näidis tervisedeklaratsiooni andmestik"
 Usage: #example
 * url = "http://fhir.ee/StructureDefinition/EEHealthDeclaration"
@@ -44,79 +44,146 @@ Usage: #example
 * code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
-* item[0].linkId = "1"
+
+* item[0].linkId = "declaration.category"
+* item[=].prefix = "0"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #decl_category
+* item[=].code.display = "Kasutusala"
+* item[=].type = #coding
+* item[=].answerValueSet = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answerOption[0].valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answerOption[0].valueCoding.code = #1
+* item[=].answerOption[0].valueCoding.display = "I grupi mootorsõidukijuht"
+* item[=].answerOption[1].valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answerOption[1].valueCoding.code = #2
+* item[=].answerOption[1].valueCoding.display = "II grupi mootorsõidukijuht"
+* item[=].answerOption[2].valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answerOption[2].valueCoding.code = #6
+* item[=].answerOption[2].valueCoding.display = "Töötervishoid"
+* item[=].answerOption[3].valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answerOption[3].valueCoding.code = #7
+* item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistus"
+* item[=].required = true
+* item[=].text = "Kasutusala"
+
+* item[+].linkId = "lifestyle"
 * item[=].prefix = "1"
-* item[=].text = "Elustiil"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_title
+* item[=].code.display = "Elustiil"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "1.1"
+* item[=].text = "Elustiil"
+
+* item[=].item[0].linkId = "lifestyle.alcohol"
 * item[=].item[=].prefix = "1.1"
-* item[=].item[=].text = "Kas te tarbite alkoholi?"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_alcohol
+* item[=].code.display = "Kas te tarbite alkoholi?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "1.1.1"
+* item[=].item[=].text = "Kas te tarbite alkoholi?"
+
+* item[=].item[=].item[0].linkId = "lifestyle.alcohol.amount"
 * item[=].item[=].item[=].prefix = "1.1.1"
-* item[=].item[=].item[=].text = "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kangusega alkoholi)"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_alcohol_amount
+* item[=].code.display = "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
 * item[=].item[=].item[=].type = #decimal
-* item[=].item[=].item[=].enableWhen.question = "1.1"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.alcohol"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "1.2"
+* item[=].item[=].item[=].text = "Mitu ühikut nädalas?"
+
+* item[=].item[+].linkId = "lifestyle.smoking"
 * item[=].item[=].prefix = "1.2"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_smoking
+* item[=].code.display = "Kas te suitsetate?"
 * item[=].item[=].text = "Kas te suitsetate?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "1.2.1"
+
+* item[=].item[=].item[0].linkId = "lifestyle.smoking.amount"
 * item[=].item[=].item[=].prefix = "1.2.1"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #lifestyle_smoking_amount
+* item[=].item[=].code.display = "Mitu sigaretti päevas?"
 * item[=].item[=].item[=].text = "Mitu sigaretti päevas?"
 * item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].enableWhen.question = "1.2"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[=].item[+].linkId = "1.2.2"
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking.period"
 * item[=].item[=].item[=].prefix = "1.2.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #lifestyle_smoking_period
+* item[=].item[=].item[=].code.display = "Mitu aastat olete järjest suitsetanud"
 * item[=].item[=].item[=].text = "Mitu aastat olete järjest suitsetanud?"
 * item[=].item[=].item[=].type = #decimal
-* item[=].item[=].item[=].enableWhen.question = "1.2"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[=].item[+].linkId = "1.2.3"
+
+* item[=].item[=].item[+].linkId = "lifestyle.smoking.quit"
 * item[=].item[=].item[=].prefix = "1.2.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #lifestyle_smoking_quit
+* item[=].item[=].item[=].code.display = "Kui olete loobunud suitsetamisest, siis millal loobusite?"
 * item[=].item[=].item[=].text = "Kui olete loobunud suitsetamisest, siis millal loobusite? "
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen.question = "1.2"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.smoking"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "1.3"
+
+* item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].prefix = "1.3"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_narcotics
+* item[=].code.display = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
 * item[=].item[=].text = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "1.3.1"
+
+* item[=].item[=].item[0].linkId = "lifestyle.narcotics.how_often"
 * item[=].item[=].item[=].prefix = "1.3.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #how_often
+* item[=].item[=].item[=].code.display = "Kirjeldage kui sageli"
 * item[=].item[=].item[=].text = "Kirjeldage, kui sageli"
 * item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].enableWhen.question = "1.3"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.narcotics"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "1.4"
+
+* item[=].item[+].linkId = "lifestyle.drugs"
 * item[=].item[=].prefix = "1.4"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #lifestyle_drugs
+* item[=].code.display = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "1.4.1"
+
+* item[=].item[=].item[0].linkId = "lifestyle.drugs.specify"
 * item[=].item[=].item[=].prefix = "1.4.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "1.4"
+* item[=].item[=].item[=].enableWhen.question = "lifestyle.drugs"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
+
 * item[+].linkId = "2"
 * item[=].prefix = "2"
 * item[=].text = "Töökeskkond"

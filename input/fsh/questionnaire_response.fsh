@@ -1,6 +1,6 @@
-Profile: EEHealthDeclarationResponse
+Profile: EEHealthDeclaration
 Parent: QuestionnaireResponse
-Id: EEHealthDeclarationResponse
+Id: EEHealthDeclaration
 Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * ^version = "1.0.0"
 * ^status = #draft
@@ -28,8 +28,8 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
     * item 0..*
   * item 0..*
 
-Instance: ExampleEEHealthDeclarationResponse
-InstanceOf: EEHealthDeclarationResponse
+Instance: ExampleEEHealthDeclaration
+InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest"
 Usage: #example
 * status = #completed
