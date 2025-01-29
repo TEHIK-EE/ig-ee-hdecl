@@ -209,7 +209,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "2.1"
+* item[=].item[=].item[=].enableWhen.question = "work_environment.restrictions"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -230,7 +230,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "2.2"
+* item[=].item[=].item[=].enableWhen.question = "work_environment.health_problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -269,7 +269,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "2.5"
+* item[=].item[=].item[=].enableWhen.question = "work_environment.ppe_problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -339,7 +339,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergia ravimitele (palun täpsustage)"
 * item[=].item[=].text = "Allergia ravimitele (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "3.1"
+* item[=].item[=].enableWhen.question = "allergies.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -351,7 +351,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "3.2"
+* item[=].item[=].item[=].enableWhen.question = "allergies.medication"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -363,7 +363,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergia toiduainetele (palun täpsustage)"
 * item[=].item[=].text = "Allergia toiduainetele (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "3.1"
+* item[=].item[=].enableWhen.question = "allergies.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -375,7 +375,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "3.3"
+* item[=].item[=].item[=].enableWhen.question = "allergies.food"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -387,7 +387,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergia õietolmule (palun täpsustage)"
 * item[=].item[=].text = "Allergia õietolmule (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "3.1"
+* item[=].item[=].enableWhen.question = "allergies.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -399,7 +399,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "3.4"
+* item[=].item[=].item[=].enableWhen.question = "allergies.pollen"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -411,7 +411,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergia koduloomadele või -lindudele (palun täpsustage)"
 * item[=].item[=].text = "Allergia koduloomadele või -lindudele (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "3.1"
+* item[=].item[=].enableWhen.question = "allergies.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -423,7 +423,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "3.5"
+* item[=].item[=].item[=].enableWhen.question = "allergies.animals"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -435,7 +435,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergia muudele ainetele (palun täpsustage)"
 * item[=].item[=].text = "Allergia muudele ainetele (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "3.1"
+* item[=].item[=].enableWhen.question = "allergies.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -447,7 +447,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "3.6"
+* item[=].item[=].item[=].enableWhen.question = "allergies.other"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -517,7 +517,7 @@ Usage: #example
 * item[=].item[=].code.display = "Depressioon"
 * item[=].item[=].text = "Depressioon"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -529,7 +529,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.2"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.depression"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -541,7 +541,7 @@ Usage: #example
 * item[=].item[=].code.display = "Skisofreenia"
 * item[=].item[=].text = "Skisofreenia"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -553,7 +553,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.3"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.schizophrenia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -565,7 +565,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kartus töötada üksinda"
 * item[=].item[=].text = "Kartus töötada üksinda"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -577,7 +577,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.4"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.work_alone"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -589,7 +589,7 @@ Usage: #example
 * item[=].item[=].code.display = "Hirm suletud ruumi ees"
 * item[=].item[=].text = "Hirm suletud ruumi ees"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -601,7 +601,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.5"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.claustrophobia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -613,7 +613,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kõrgusekartus"
 * item[=].item[=].text = "Kõrgusekartus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -625,7 +625,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.6"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.fear_of_heights"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -637,7 +637,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -649,7 +649,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.7"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -661,7 +661,7 @@ Usage: #example
 * item[=].item[=].code.display = "Sagedane stress"
 * item[=].item[=].text = "Sagedane stress"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "4.1"
+* item[=].item[=].enableWhen.question = "mental_state.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -673,7 +673,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "4.8"
+* item[=].item[=].item[=].enableWhen.question = "mental_state.stress"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -743,7 +743,7 @@ Usage: #example
 * item[=].item[=].code.display = "Teadvuse kaotuse hood"
 * item[=].item[=].text = "Teadvuse kaotuse hood"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -755,7 +755,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.2"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.syncope"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -767,7 +767,7 @@ Usage: #example
 * item[=].item[=].code.display = "Krambihood (epilepsia ehk langetõbi)"
 * item[=].item[=].text = "Krambihood (epilepsia ehk langetõbi)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -779,7 +779,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.3"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.seizures"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -791,7 +791,7 @@ Usage: #example
 * item[=].item[=].code.display = "Tasakaaluhäired (sh Meniere'i tõbi)"
 * item[=].item[=].text = "Tasakaaluhäired (sh Meniere'i tõbi)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -803,7 +803,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.4"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.balance_disorder"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -815,7 +815,7 @@ Usage: #example
 * item[=].item[=].code.display = "Ajuinfarkt või ajuinsult"
 * item[=].item[=].text = "Ajuinfarkt või ajuinsult"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -827,7 +827,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.5"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.stroke"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -839,7 +839,7 @@ Usage: #example
 * item[=].item[=].code.display = "Merehaigus"
 * item[=].item[=].text = "Merehaigus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -851,7 +851,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.6"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.sea_sickness"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -863,7 +863,7 @@ Usage: #example
 * item[=].item[=].code.display = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -876,7 +876,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.7"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.coordination_disorder"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -888,7 +888,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "5.1"
+* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -900,7 +900,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "5.8"
+* item[=].item[=].item[=].enableWhen.question = "nervous_system.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -970,7 +970,7 @@ Usage: #example
 * item[=].item[=].code.display = "Lühinägevus"
 * item[=].item[=].text = "Lühinägevus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "6.1"
+* item[=].item[=].enableWhen.question = "eyesight.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -982,7 +982,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "6.2"
+* item[=].item[=].item[=].enableWhen.question = "eyesight.myopia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -994,7 +994,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
 * item[=].item[=].text = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "6.1"
+* item[=].item[=].enableWhen.question = "eyesight.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1006,7 +1006,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "6.3"
+* item[=].item[=].item[=].enableWhen.question = "eyesight.limited_field_of_view"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1018,7 +1018,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kahelinägemine"
 * item[=].item[=].text = "Kahelinägemine"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "6.1"
+* item[=].item[=].enableWhen.question = "eyesight.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1030,7 +1030,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "6.4"
+* item[=].item[=].item[=].enableWhen.question = "eyesight.double_vision"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1042,7 +1042,7 @@ Usage: #example
 * item[=].item[=].code.display = "Värvusmeele häired"
 * item[=].item[=].text = "Värvusmeele häired"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "6.1"
+* item[=].item[=].enableWhen.question = "eyesight.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1054,7 +1054,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "6.5"
+* item[=].item[=].item[=].enableWhen.question = "eyesight.problems_seeing_color"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1066,7 +1066,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "6.1"
+* item[=].item[=].enableWhen.question = "eyesight.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1078,7 +1078,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "6.6"
+* item[=].item[=].item[=].enableWhen.question = "eyesight.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1148,7 +1148,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kuulmislangus"
 * item[=].item[=].text = "Kuulmislangus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1160,7 +1160,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.2"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.hearing_impairmen"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1172,7 +1172,7 @@ Usage: #example
 * item[=].item[=].code.display = "Allergiline nohu"
 * item[=].item[=].text = "Allergiline nohu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1184,7 +1184,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.3"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.allergic_rhinitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1196,7 +1196,7 @@ Usage: #example
 * item[=].item[=].code.display = "Otsmiku- või põskkoopa krooniline põletik"
 * item[=].item[=].text = "Otsmiku- või põskkoopa krooniline põletik"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1208,7 +1208,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.4"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.chronic_sinusitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1220,7 +1220,7 @@ Usage: #example
 * item[=].item[=].code.display = "Ninahingamise takistus"
 * item[=].item[=].text = "Ninahingamise takistus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1232,7 +1232,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.5"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.nasal_breathing_problems"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1244,7 +1244,7 @@ Usage: #example
 * item[=].item[=].code.display = "Sagedane (rohkem kui 4x aastas) esinev kurguhaigus"
 * item[=].item[=].text = "Sagedane (rohkem kui 4x aastas) esinev kurguhaigus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1256,7 +1256,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.6"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.frequent_throat_infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1268,7 +1268,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "7.1"
+* item[=].item[=].enableWhen.question = "ear_nose_throat.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1280,7 +1280,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "7.7"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1350,7 +1350,7 @@ Usage: #example
 * item[=].item[=].code.display = "Astma"
 * item[=].item[=].text = "Astma"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "8.1"
+* item[=].item[=].enableWhen.question = "respiratory_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1362,7 +1362,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "8.2"
+* item[=].item[=].item[=].enableWhen.question = "respiratory_system.asthma"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1374,7 +1374,7 @@ Usage: #example
 * item[=].item[=].code.display = "Krooniline obstruktiivne kopsuhaigus ehk KOK"
 * item[=].item[=].text = "Krooniline obstruktiivne kopsuhaigus ehk KOK"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "8.1"
+* item[=].item[=].enableWhen.question = "respiratory_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1386,7 +1386,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "8.3"
+* item[=].item[=].item[=].enableWhen.question = "respiratory_system.copd"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1398,7 +1398,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "8.1"
+* item[=].item[=].enableWhen.question = "respiratory_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1410,7 +1410,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "8.4"
+* item[=].item[=].item[=].enableWhen.question = "respiratory_system.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1422,7 +1422,7 @@ Usage: #example
 * item[=].item[=].code.display = "Uneapnoe"
 * item[=].item[=].text = "Uneapnoe"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "8.1"
+* item[=].item[=].enableWhen.question = "respiratory_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1434,7 +1434,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "8.5"
+* item[=].item[=].item[=].enableWhen.question = "respiratory_system.sleep_apnoe"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1504,7 +1504,7 @@ Usage: #example
 * item[=].item[=].code.display = "Suhkruhaigus"
 * item[=].item[=].text = "Suhkruhaigus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "9.1"
+* item[=].item[=].enableWhen.question = "metabolism_disorder.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1516,7 +1516,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "9.2"
+* item[=].item[=].item[=].enableWhen.question = "metabolism_disorder.diabetes"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1528,7 +1528,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "9.1"
+* item[=].item[=].enableWhen.question = "metabolism_disorder.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1540,7 +1540,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "9.3"
+* item[=].item[=].item[=].enableWhen.question = "metabolism_disorder.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1611,7 +1611,7 @@ Usage: #example
 * item[=].item[=].code.display = "Koormusega seonduv valu rinnus"
 * item[=].item[=].text = "Koormusega seonduv valu rinnus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1635,7 +1635,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kõrge vererõhk"
 * item[=].item[=].text = "Kõrge vererõhk"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1647,7 +1647,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.3"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.high_bp"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1659,7 +1659,7 @@ Usage: #example
 * item[=].item[=].code.display = "Läbipõetud südameinfarkt"
 * item[=].item[=].text = "Läbipõetud südameinfarkt"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1671,7 +1671,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.4"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.previous_mi"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1683,7 +1683,7 @@ Usage: #example
 * item[=].item[=].code.display = "Südame rütmihäired"
 * item[=].item[=].text = "Südame rütmihäired"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1695,7 +1695,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.5"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.heart_arrhythmia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1707,7 +1707,7 @@ Usage: #example
 * item[=].item[=].code.display = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].text = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1719,7 +1719,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.6"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.heart_stenting"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1731,7 +1731,7 @@ Usage: #example
 * item[=].item[=].code.display = "On paigaldatud südamerütmur"
 * item[=].item[=].text = "On paigaldatud südamerütmur"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1743,7 +1743,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.7"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.pacer"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1755,7 +1755,7 @@ Usage: #example
 * item[=].item[=].code.display = "On tehtud südameoperatsioon"
 * item[=].item[=].text = "On tehtud südameoperatsioon"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1767,7 +1767,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.8"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.heart_operation"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1779,7 +1779,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "10.1"
+* item[=].item[=].enableWhen.question = "cardiovascular_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1791,7 +1791,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.9"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system..other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1861,7 +1861,7 @@ Usage: #example
 * item[=].item[=].code.display = "Liigesejäikus"
 * item[=].item[=].text = "Liigesejäikus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1873,7 +1873,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.2"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.stiff_joints"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1885,7 +1885,7 @@ Usage: #example
 * item[=].item[=].code.display = "Jäseme osaline või täielik halvatus (palun täpsustage)"
 * item[=].item[=].text = "Jäseme osaline või täielik halvatus (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1897,7 +1897,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.3"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.paresis_plegia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1909,7 +1909,7 @@ Usage: #example
 * item[=].item[=].code.display = "Jäseme või selle osa puudumine (palun täpsustage)"
 * item[=].item[=].text = "Jäseme või selle osa puudumine (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1921,7 +1921,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.4"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.amputee"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1933,7 +1933,7 @@ Usage: #example
 * item[=].item[=].code.display = "Käte värisemine (treemor)"
 * item[=].item[=].text = "Käte värisemine (treemor)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1945,7 +1945,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.5"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.tremor"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1957,7 +1957,7 @@ Usage: #example
 * item[=].item[=].code.display = "Liigesevalu"
 * item[=].item[=].text = "Liigesevalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1969,7 +1969,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.6"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.joint_pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1981,7 +1981,7 @@ Usage: #example
 * item[=].item[=].code.display = "Kaelavalu"
 * item[=].item[=].text = "Kaelavalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -1993,7 +1993,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.7"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.neck_pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -2005,7 +2005,7 @@ Usage: #example
 * item[=].item[=].code.display = "Õlavöötmevalu"
 * item[=].item[=].text = "Õlavöötmevalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -2017,7 +2017,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.8"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.shoulder_pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -2029,7 +2029,7 @@ Usage: #example
 * item[=].item[=].code.display = "Alaseljavalu"
 * item[=].item[=].text = "Alaseljavalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -2041,7 +2041,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.9"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.lower_back_pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -2053,7 +2053,7 @@ Usage: #example
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "11.1"
+* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
@@ -2065,243 +2065,377 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "11.10"
+* item[=].item[=].item[=].enableWhen.question = "skeletal_system.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[+].linkId = "12"
+* item[+].linkId = "infections"
 * item[=].prefix = "12"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #infections
+* item[=].code.display = "Nakkushaigused"
 * item[=].text = "Nakkushaigused"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "12.0"
+
+* item[=].item[0].linkId = "infections.diagnoses"
 * item[=].item[=].prefix = "12.0"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #previous_diagnoses
+* item[=].item[=].code.display = "Varasemad diagnoosid"
 * item[=].item[=].text = "Varasemad diagnoosid"
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
-* item[=].item[=].item[0].linkId = "12.0.1"
+
+* item[=].item[=].item[0].linkId = "infections.diagnoses.group"
 * item[=].item[=].item[=].prefix = "12.0.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #previous_diagnosis_singular
+* item[=].item[=].item[=].code.display = "Varasem diagnoos"
 * item[=].item[=].item[=].text = "Varasem diagnoos" 
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
-* item[=].item[=].item[=].item[0].linkId = "12.0.1.1"
+
+* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #diagnosis
+* item[=].item[=].item[=].item[=].code.display = "Diagnoos"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-nakkushaigused"
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[=].item[=].item[+].linkId = "12.0.1.2"
+
+* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.description"
 * item[=].item[=].item[=].item[=].prefix = "12.0.1.2"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #diagnosis_description
+* item[=].item[=].item[=].item[=].code.display = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
-* item[=].item[+].linkId = "12.1" 
+
+* item[=].item[+].linkId = "infections.no_complaints" 
 * item[=].item[=].prefix = "12.1"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #not_known
+* item[=].item[=].code.display = "Teadaolevalt ei ole põdenud"
 * item[=].item[=].text = "Teadaolevalt ei ole põdenud"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[+].linkId = "12.2"
+
+* item[=].item[+].linkId = "infections.tuberculosis"
 * item[=].item[=].prefix = "12.2"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #tuberculosis
+* item[=].item[=].code.display = "Tuberkuloos"
 * item[=].item[=].text = "Tuberkuloos"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.2.1"
+
+* item[=].item[=].item[0].linkId = "infections.tuberculosis.specify"
 * item[=].item[=].item[=].prefix = "12.2.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.2"
+* item[=].item[=].item[=].enableWhen.question = "infections.tuberculosis"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.3"
+
+* item[=].item[+].linkId = "infections.hepatitis"
 * item[=].item[=].prefix = "12.3"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #hepatitis
+* item[=].item[=].code.display = "Viirushepatiidid (A-hepatiit, B-hepatiit, C-hepatiit)"
 * item[=].item[=].text = "Viirushepatiidid (A-hepatiit, B-hepatiit, C-hepatiit)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.3.1"
+
+* item[=].item[=].item[0].linkId = "infections.hepatitis.specify"
 * item[=].item[=].item[=].prefix = "12.3.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.3"
+* item[=].item[=].item[=].enableWhen.question = "infections.hepatitis"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.4"
+
+* item[=].item[+].linkId = "infections.hiv_carrier"
 * item[=].item[=].prefix = "12.4"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #hiv_carrier
+* item[=].item[=].code.display = "HIV kandja"
 * item[=].item[=].text = "HIV kandja"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.4.1"
+
+* item[=].item[=].item[0].linkId = "infections.hiv_carrier.specify"
 * item[=].item[=].item[=].prefix = "12.4.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.4"
+* item[=].item[=].item[=].enableWhen.question = "infections.hiv_carrier"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.5"
+
+* item[=].item[+].linkId = "infections.aids"
 * item[=].item[=].prefix = "12.5"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #aids
+* item[=].item[=].code.display = "AIDS"
 * item[=].item[=].text = "AIDS"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.5.1"
+
+* item[=].item[=].item[0].linkId = "infections.aids.specify"
 * item[=].item[=].item[=].prefix = "12.5.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.5"
+* item[=].item[=].item[=].enableWhen.question = "infections.aids"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.6"
+
+* item[=].item[+].linkId = "infections.intestinal_infection"
 * item[=].item[=].prefix = "12.6"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #intestinal_infection
+* item[=].item[=].code.display = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
 * item[=].item[=].text = "Soolenakkused (salmonelloos, kampülobakterioos, shigelloos, jersinioos ja rotaviirusenteriit, E. coli soolenakkus, Koolera, kõhutüüfus, paratüüfused, Noroviiruse tekkene äge enteropaatia, giardiaas (lambliaas), krüptosporidioos, amöbiaas, listerioos, helmintiaasid ehk nugiusshaigused, muud toidu- ja joogiveevahenduslikud nakkused)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.6.1"
+
+* item[=].item[=].item[0].linkId = "infections.intestinal_infection.specify"
 * item[=].item[=].item[=].prefix = "12.6.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.6"
+* item[=].item[=].item[=].enableWhen.question = "infections.intestinal_infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.7"
+
+* item[=].item[+].linkId = "infections.respiratory_infection"
 * item[=].item[=].prefix = "12.7"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #respiratory_infection
+* item[=].item[=].code.display = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
 * item[=].item[=].text = "Hingamisteede nakkused (difteeria, läkaköha, leetrid, punetised, mumps)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.7.1"
+
+* item[=].item[=].item[0].linkId = "infections.respiratory_infection.specify"
 * item[=].item[=].item[=].prefix = "12.7.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.7"
+* item[=].item[=].item[=].enableWhen.question = "infections.respiratory_infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.8"
+
+* item[=].item[+].linkId = "infections.dermal_infection"
 * item[=].item[=].prefix = "12.8"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #dermal_infection
+* item[=].item[=].code.display = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
 * item[=].item[=].text = "Nahainfektsioonid (MRSA kandlus, käte nahamädanikud, seenhaigused)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.8.1"
+
+* item[=].item[=].item[0].linkId = "infections.dermal_infection.specify"
 * item[=].item[=].item[=].prefix = "12.8.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.8"
+* item[=].item[=].item[=].enableWhen.question = "infections.dermal_infection"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[+].linkId = "12.9"
+
+* item[=].item[+].linkId = "infections.other_disease"
 * item[=].item[=].prefix = "12.9"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #other_disease
+* item[=].item[=].code.display = "Muu haigus (palun täpsustage, millised ja millal)"
 * item[=].item[=].text = "Muu haigus (palun täpsustage, millised ja millal)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "12.1"
+* item[=].item[=].enableWhen.question = "infections.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "12.9.1"
+
+* item[=].item[=].item[0].linkId = "infections.other_disease.specify"
 * item[=].item[=].item[=].prefix = "12.9.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "12.9"
+* item[=].item[=].item[=].enableWhen.question = "infections.other_disease"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[+].linkId = "13"
+
+* item[+].linkId = "other_chronic_illnesses"
 * item[=].prefix = "13"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #other_chronic_illnesses
+* item[=].code.display = "Muud kroonilised haigused, seisundid või sümptomid, mida eespool ei kirjeldatud"
 * item[=].text = "Muud kroonilised haigused, seisundid või sümptomid, mida eespool ei kirjeldatud"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "13.1" 
+
+* item[=].item[0].linkId = "other_chronic_illnesses.none" 
 * item[=].item[=].prefix = "13.1"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #none
+* item[=].item[=].code.display = "Puuduvad"
 * item[=].item[=].text = "Puuduvad"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[+].linkId = "13.2"
+
+* item[=].item[+].linkId = "other_chronic_illnesses.condition_illness_symptom"
 * item[=].item[=].prefix = "13.2"
-* item[=].item[=].text = "Tuberkuloos"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #condition_illness_symptom
+* item[=].item[=].code.display = "Haigus/seisund/sümptom (palun täpsustage, millised ja millal)"
+* item[=].item[=].text = "Haigus/seisund/sümptom (palun täpsustage, millised ja millal)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "13.1"
+* item[=].item[=].enableWhen.question = "other_chronic_illnesses.none"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "13.2.1"
+
+* item[=].item[=].item[0].linkId = "other_chronic_illnesses.condition_illness_symptom.specify"
 * item[=].item[=].item[=].prefix = "13.2.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "13.2"
+* item[=].item[=].item[=].enableWhen.question = "other_chronic_illnesses.condition_illness_symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[+].linkId = "14"
+
+* item[+].linkId = "treatment_done"
 * item[=].prefix = "14"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #treatment_done
+* item[=].code.display = "Senine ravi"
 * item[=].text = "Senine ravi"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "14.1" 
+
+* item[=].item[0].linkId = "treatment_done.foreign_treatment" 
 * item[=].item[=].prefix = "14.1"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #foreign_treatment
+* item[=].item[=].code.display = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "14.1.1"
+
+* item[=].item[=].item[0].linkId = "treatment_done.foreign_treatment"
 * item[=].item[=].item[=].prefix = "14.1.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "14.1"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[0].linkId = "14.2" 
+
+* item[=].item[0].linkId = "treatment_done.regular_medication_women" 
 * item[=].item[=].prefix = "14.2"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #regular_medication_women
+* item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid"
 * item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid (sh rasestumisvastaseid vahendeid)? Palun loetlege, milliseid"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "14.2.1"
+
+* item[=].item[=].item[0].linkId = "treatment_done.regular_medication_women.specify"
 * item[=].item[=].item[=].prefix = "14.2.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "14.2"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
-* item[=].item[0].linkId = "14.3" 
+//enable when sugu on naine
+
+* item[=].item[0].linkId = "treatment_done.regular_medication_men" 
 * item[=].item[=].prefix = "14.3"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #regular_medication_men
+* item[=].item[=].code.display = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
 * item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
-* item[=].item[=].item[0].linkId = "14.3.1"
+
+* item[=].item[=].item[0].linkId = "treatment_done.regular_medication_men.specify"
 * item[=].item[=].item[=].prefix = "14.3.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].enableWhen.question = "14.3"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
+//enable when sugu on mees
+
 * item[=].item[=].item[+].linkId = "14.3.2"
 * item[=].item[=].item[=].prefix = "14.3.2"
 * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
