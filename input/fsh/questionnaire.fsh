@@ -875,10 +875,10 @@ Usage: #example
 * item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].enableWhen.question = "declaration.category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #6
-* item[=].item[=].enableBehavior = #all
+// * item[=].item[=].enableWhen.question = "declaration.category"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerCoding = #6
+// * item[=].item[=].enableBehavior = #all
 * item[=].item[=].required = true
 
 
@@ -2761,10 +2761,10 @@ Usage: #example
 * item[=].item[=].enableWhen.question = "traumas.none"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].enableWhen.question = "declaration.category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #6
-* item[=].item[=].enableBehavior = #all
+// * item[=].item[=].enableWhen.question = "declaration.category"
+// * item[=].item[=].enableWhen.operator = #=
+// * item[=].item[=].enableWhen.answerCoding = #6
+// * item[=].item[=].enableBehavior = #all
 * item[=].item[=].required = true
 
 * item[=].item[=].item[0].linkId = "traumas.concussion.specify"
