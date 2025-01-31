@@ -30,87 +30,170 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 
 Instance: ExampleEEHealthDeclaration
 InstanceOf: EEHealthDeclaration
-Description: "Näidis andmestik küsimustikust vastusest"
+Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
-* status = #completed
 * meta.versionId = "1.0"
+* extension[ResponseExpiration].url = "https://fhir.ee/StructureDefinition/response-expiration"
+* extension[ResponseExpiration].valueDate = 2025-06-16
+* identifier.system = "http://example.org/fhir/identifiers"
+* identifier.value = "1234567"
 * questionnaire = "https://fhir.ee/StructureDefinition/EEHealthDeclaration"
+* status = #completed
 * subject = Reference(QuestionnairePatient)
 * authored =  2024-01-01
 * author = Reference(QuestionnairePatient)
-* item[0].linkId = "1"
+
+* item[0].linkId = "declaration.category"
+* item[=].text = "Kasutusala"
+* item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
+* item[=].answer.valueCoding.code = #6
+* item[=].answer.valueCoding.display = "Töötervishoid"
+
+* item[+].linkId = "lifestyle"
 * item[=].text = "Elustiil"
-* item[=].item[0].linkId = "1.1"
+
+* item[=].item[0].linkId = "lifestyle.alcohol"
 * item[=].item[=].text = "Kas te tarbite alkoholi?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "1.1.1"
+
+* item[=].item[=].answer.item[0].linkId = "lifestyle.alcohol.amount"
 * item[=].item[=].answer.item[=].text =  "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kangusega alkoholi)"
 * item[=].item[=].answer.item[=].answer.valueDecimal =  3.4
-* item[=].item[+].linkId = "1.2"
+
+* item[=].item[+].linkId = "lifestyle.smoking"
 * item[=].item[=].text = "Kas te suitsetate?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "1.2.1"
+
+* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking.amount"
 * item[=].item[=].answer.item[=].text =  "Mitu sigaretti päevas?"
 * item[=].item[=].answer.item[=].answer.valueInteger = 20
-* item[=].item[=].answer.item[+].linkId = "1.2.2"
+
+* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking.period"
 * item[=].item[=].answer.item[=].text =  "Mitu aastat olete järjest suitsetanud?"
 * item[=].item[=].answer.item[=].answer.valueDecimal = 45.0
-* item[=].item[+].linkId = "1.3"
+
+* item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].text = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "1.3.1"
+
+* item[=].item[=].answer.item[0].linkId = "lifestyle.narcotics.how_often"
 * item[=].item[=].answer.item[=].text =  "Kirjeldage, kui sageli"
-* item[=].item[=].answer.item[=].answer.valueString = "Igapäevaselt tarvitan narkot"
-* item[=].item[+].linkId = "1.4"
+* item[=].item[=].answer.item[=].answer.valueString = "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
+
+* item[=].item[+].linkId = "lifestyle.drugs"
 * item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "1.4.1"
+
+* item[=].item[=].answer.item[0].linkId = "lifestyle.drugs.specify"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString = "Kodeiin ja muud opioidid"
-* item[+].linkId = "2"
+
+* item[+].linkId = "work_environment"
 * item[=].text = "Töökeskkond"
-* item[=].item[0].linkId = "2.1"
+
+* item[=].item[0].linkId = "work_environment.restrictions"
 * item[=].item[=].text = "Kas Teile on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "2.1.1"
+
+* item[=].item[=].answer.item[0].linkId = "work_environment.restrictions.specify"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Psühholoogilise stressi tõttu takistatud tööd"
-* item[=].item[+].linkId = "2.2"
+
+* item[=].item[+].linkId = "work_environment.health_problems"
 * item[=].item[=].text = "Kas Teil esineb või on esinenud tervisehäireid, mida seostate oma tööülesannete täitmise või töökeskkonnaga?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "2.2.1"
+
+* item[=].item[=].answer.item[0].linkId = "work_environment.health_problems.specify"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Hingamisraskused tingitud töökeskkonnast"
-* item[=].item[+].linkId = "2.3"
+
+* item[=].item[+].linkId = "work_environment.occupational_diagnosis"
 * item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[+].linkId = "2.4"
+
+* item[=].item[+].linkId = "work_environment.general_diagnosis"
 * item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
 * item[=].item[=].answer.valueBoolean = false
-* item[=].item[+].linkId = "2.5"
+
+* item[=].item[+].linkId = "work_environment.ppe_problems"
 * item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
 * item[=].item[=].answer.valueBoolean = true
-* item[=].item[=].answer.item[0].linkId = "2.5.1"
+
+* item[=].item[=].answer.item[0].linkId = "work_environment.ppe_problems.specify"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Kiivri kandmine tekitab peavalu"
-* item[+].linkId = "3"
+
+* item[+].linkId = "allergies"
 * item[=].text = "Allergiad"
-* item[=].item[0].linkId = "3.1"
+
+* item[=].item[0].linkId = "allergies.no_complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = true
-* item[+].linkId = "4"
+
+* item[+].linkId = "mental_state"
 * item[=].text = "Psüühika"
-* item[=].item[0].linkId = "4.0"
+
+* item[=].item[0].linkId = "mental_state.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
-* item[=].item[=].item[0].linkId = "4.0.1"
-* item[=].item[=].item[=].item[0].linkId = "4.0.1.1"
+
+* item[=].item[=].item[0].linkId = "mental_state.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "mental_state.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #F61.0
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
-* item[=].item[+].linkId = "4.1"
+
+* item[=].item[=].item[+].linkId = "mental_state.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "mental_state.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #R45.4
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Ärrituvus ja viha"
+
+* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "Liikluses muutun kergesti ärritatavaks"
+
+* item[=].item[+].linkId = "mental_state.no_complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "mental_state.depression"
+* item[=].item[=].text = "Depressioon"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "mental_state.depression.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Pidev apaatsus ja süvenev meeleolulangus"
+
+* item[=].item[+].linkId = "mental_state.schizophrenia"
+* item[=].item[=].text = "Skisofreenia"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "mental_state.work_alone"
+* item[=].item[=].text = "Kartus töötada üksinda"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "mental_state.claustrophobia"
+* item[=].item[=].text = "Hirm suletud ruumi ees"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "mental_state.fear_of_heights"
+* item[=].item[=].text = "Kõrgusekartus"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "mental_state.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "mental_state.other_condition.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Generaliseerunud äravushoog (1x kuus)"
+
 
 
 
