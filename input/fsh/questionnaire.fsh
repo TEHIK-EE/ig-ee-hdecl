@@ -3722,14 +3722,6 @@ Usage: #example
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "health_assessment.sick_days.foreign_country_sick_days_duration"
-* item[=].item[=].item[=].prefix = "23.4.1"
-* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].item[=].code.code = #foreign_country_sick_days_duration
-* item[=].item[=].item[=].code.display = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
-* item[=].item[=].item[=].text = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
-* item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days"
 * item[=].item[=].item[=].prefix = "23.4.2"
@@ -3749,4 +3741,176 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].repeats = true
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.from"
+* item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.1"
+* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].item[=].code.code = #from
+* item[=].item[=].item[=].item[=].item[=].code.display = "Alates"
+* item[=].item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.duration"
+* item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.2"
+* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].item[=].code.code = #duration
+* item[=].item[=].item[=].item[=].item[=].code.display = "Kestus päevades"
+* item[=].item[=].item[=].item[=].item[=].text = "Kestus päevades"
+* item[=].item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.diagnosis"
+* item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.3"
+* item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].item[=].code.code = #diagnosis
+* item[=].item[=].item[=].item[=].item[=].code.display = "Diagnoos"
+* item[=].item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[+].linkId = "health_assessment.work_disability"
+* item[=].item[=].prefix = "23.5"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #work_disability
+* item[=].item[=].code.display = "Töövõimetus"
+* item[=].item[=].text = "Töövõimetus"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "health_assessment.work_disability.foreign_work_disability_given"
+* item[=].item[=].item[=].prefix = "23.5.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #foreign_work_disability_given
+* item[=].item[=].item[=].code.display = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
+* item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[0].linkId = "health_assessment.work_disability.foreign_work_disability_given.specify"
+* item[=].item[=].item[=].item[=].prefix = "23.5.1.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].item[=].code.display = "Täpsusta"
+* item[=].item[=].item[=].item[=].text = "Täpsusta"
+* item[=].item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].enableWhen.question = "health_assessment.work_disability.foreign_work_disability_given"
+* item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability"
+* item[=].item[=].item[=].prefix = "23.5.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #partial_work_disability
+* item[=].item[=].item[=].code.display = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
+* item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+
+* item[=].item[=].item[=].item[0].linkId = "health_assessment.work_disability.partial_work_disability.from"
+* item[=].item[=].item[=].item[=].prefix = "23.5.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #from
+* item[=].item[=].item[=].item[=].code.display = "Alates"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true 
+
+* item[=].item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability.to"
+* item[=].item[=].item[=].item[=].prefix = "23.5.2.2"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #to
+* item[=].item[=].item[=].item[=].code.display = "kuni"
+* item[=].item[=].item[=].item[=].text = "kuni"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true 
+
+* item[=].item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability.work_disability_type"
+* item[=].item[=].item[=].item[=].prefix = "23.5.2.3"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #work_disability_type
+* item[=].item[=].item[=].item[=].code.display = "Töövõimeliik"
+* item[=].item[=].item[=].item[=].text = "Töövõimeliik"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true 
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/toovoime-liik"
+
+* item[=].item[+].linkId = "health_assessment.disability"
+* item[=].item[=].prefix = "23.6"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #disability
+* item[=].item[=].code.display = "Puue"
+* item[=].item[=].text = "Puue"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "health_assessment.disability.foreign_disability_given"
+* item[=].item[=].item[=].prefix = "23.6.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #foreign_disability_given
+* item[=].item[=].item[=].code.display = "Kas Teil on välisriigis tuvastatud puue?"
+* item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[0].linkId = "health_assessment.disability.foreign_disability_given.degree_of_disability"
+* item[=].item[=].item[=].item[=].prefix = "23.6.1.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #degree_of_disability
+* item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
+* item[=].item[=].item[=].item[=].text = "Puude raskusaste"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].enableWhen.question = "health_assessment.disability.foreign_disability_given"
+* item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+
+* item[=].item[=].item[+].linkId = "health_assessment.disability.disability_data"
+* item[=].item[=].item[=].prefix = "23.6.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #disability_data
+* item[=].item[=].item[=].code.display = "Puue (andmed Sotsiaalkindlustusametist)"
+* item[=].item[=].item[=].text = "Puue (andmed Sotsiaalkindlustusametist)"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].required = false
+
+* item[=].item[=].item[=].item[0].linkId = "health_assessment.disability.disability_data.from"
+* item[=].item[=].item[=].item[=].prefix = "23.6.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #from
+* item[=].item[=].item[=].item[=].code.display = "Alates"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true 
+
+* item[=].item[=].item[=].item[+].linkId = "health_assessment.disability.disability_data.to"
+* item[=].item[=].item[=].item[=].prefix = "23.6.2.2"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #to
+* item[=].item[=].item[=].item[=].code.display = "kuni"
+* item[=].item[=].item[=].item[=].text = "kuni"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].readOnly = true 
+
+* item[=].item[=].item[=].item[+].linkId = "health_assessment.disability.disability_data.degree_of_disability"
+* item[=].item[=].item[=].item[=].prefix = "23.6.2.3"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #degree_of_disability
+* item[=].item[=].item[=].item[=].code.display = "Puude raskusaste"
+* item[=].item[=].item[=].item[=].text = "Puude raskusaste"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true 
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/puude-raskusastek"
+
+
 
