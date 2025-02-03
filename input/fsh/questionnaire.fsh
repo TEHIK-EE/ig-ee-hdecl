@@ -3732,7 +3732,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #group
 * item[=].item[=].item[=].required = false
 
-* item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day"
+* item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day"
 * item[=].item[=].item[=].item[=].prefix = "23.4.2.1"
 * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].code.code = #sick_day
@@ -3742,7 +3742,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.from"
+* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.from"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.1"
 * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].item[=].code.code = #from
@@ -3752,7 +3752,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.duration"
+* item[=].item[=].item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.duration"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.2"
 * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].item[=].code.code = #duration
@@ -3762,7 +3762,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.group.five_year_sick_days.sick_day.diagnosis"
+* item[=].item[=].item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.diagnosis"
 * item[=].item[=].item[=].item[=].item[=].prefix = "23.4.2.1.3"
 * item[=].item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].item[=].code.code = #diagnosis
@@ -3910,7 +3910,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #coding
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true 
-* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/puude-raskusastek"
+* item[=].item[=].item[=].item[=].answerValueSet = "https://fhir.ee/CodeSystem/puude-raskusaste"
 
 
 
