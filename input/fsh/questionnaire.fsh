@@ -872,12 +872,12 @@ Usage: #example
 * item[=].item[=].code.display = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "nervous_system.no_complaints"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerBoolean = false
-* item[=].item[=].enableWhen.question = "declaration.category"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #6
+* item[=].item[=].enableWhen[0].question = "nervous_system.no_complaints"
+* item[=].item[=].enableWhen[0].operator = #=
+* item[=].item[=].enableWhen[0].answerBoolean = false
+* item[=].item[=].enableWhen[1].question = "declaration.category"
+* item[=].item[=].enableWhen[1].operator = #=
+* item[=].item[=].enableWhen[1].answerCoding = #6
 * item[=].item[=].enableBehavior = #all
 * item[=].item[=].required = true
 
