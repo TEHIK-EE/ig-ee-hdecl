@@ -4803,3 +4803,430 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.chicken_box"
+* item[=].item[=].prefix = "24.17"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #chicken_box
+* item[=].item[=].code.display = "Tuulerõuged"
+* item[=].item[=].text = "Tuulerõuged"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.chicken_box.vaccinated"
+* item[=].item[=].item[=].prefix = "24.17.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #chicken_box_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.chicken_box.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.17.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.chicken_box.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.chicken_box.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.17.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.chicken_box.self_report_date"
+* item[=].item[=].item[=].prefix = "24.17.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.chicken_box.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.shingles"
+* item[=].item[=].prefix = "24.18"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #shingles
+* item[=].item[=].code.display = "Vöötohatis"
+* item[=].item[=].text = "Vöötohatis"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.shingles.vaccinated"
+* item[=].item[=].item[=].prefix = "24.18.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #shingles_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud vöötohatise vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.shingles.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.18.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.shingles.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.18.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.shingles.self_report_date"
+* item[=].item[=].item[=].prefix = "24.18.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.shingles.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.meningococcus"
+* item[=].item[=].prefix = "24.19"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #meningococcus
+* item[=].item[=].code.display = "Meningokokk"
+* item[=].item[=].text = "Meningokokk"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.meningococcus.vaccinated"
+* item[=].item[=].item[=].prefix = "24.19.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #meningococcus_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.meningococcus.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.19.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.meningococcus.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.19.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.meningococcus.self_report_date"
+* item[=].item[=].item[=].prefix = "24.19.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.meningococcus.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.yellow_fever"
+* item[=].item[=].prefix = "24.20"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #yellow_fever
+* item[=].item[=].code.display = "Kollapalavik"
+* item[=].item[=].text = "Kollapalavik"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.yellow_fever.vaccinated"
+* item[=].item[=].item[=].prefix = "24.20.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #yellow_fever_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.yellow_fever.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.20.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.yellow_fever.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.yellow_fever.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.20.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.yellow_fever.self_report_date"
+* item[=].item[=].item[=].prefix = "24.20.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.yellow_fever.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.typhoid_fever"
+* item[=].item[=].prefix = "24.21"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #typhoid_fever
+* item[=].item[=].code.display = "Kõhutüüfus"
+* item[=].item[=].text = "Kõhutüüfus"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.typhoid_fever.vaccinated"
+* item[=].item[=].item[=].prefix = "24.21.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #typhoid_fever_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.typhoid_fever.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.21.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid_fever.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.typhoid_fever.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.21.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.typhoid_fever.self_report_date"
+* item[=].item[=].item[=].prefix = "24.21.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.typhoid_fever.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.tick_encephalitis"
+* item[=].item[=].prefix = "24.22"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #tick_encephalitis
+* item[=].item[=].code.display = "Puukentsefaliit"
+* item[=].item[=].text = "Puukentsefaliit"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.tick_encephalitis.vaccinated"
+* item[=].item[=].item[=].prefix = "24.22.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #tick_encephalitis_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "immunization.tick_encephalitis.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.22.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.tick_encephalitis.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.tick_encephalitis.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.22.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[+].linkId = "immunization.tick_encephalitis.self_report_date"
+* item[=].item[=].item[=].prefix = "24.22.3"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen.question = "immunization.tick_encephalitis.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "immunization.other_vaccines"
+* item[=].item[=].prefix = "24.23"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #other_vaccines
+* item[=].item[=].code.display = "Muud vaktsiinid"
+* item[=].item[=].text = "Muud vaktsiinid"
+* item[=].item[=].type = #group
+* item[=].item[=].required = true
+
+* item[=].item[=].item[0].linkId = "immunization.other_vaccines.vaccinated"
+* item[=].item[=].item[=].prefix = "24.23.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #other_vaccines_vaccinated
+* item[=].item[=].item[=].code.display = "Kas Teile on tehtud muid vaktsiine?"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.other_vaccines.vaccinated.specify"
+* item[=].item[=].item[=].item[=].prefix = "24.23.1.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].item[=].enableWhen.question = "immunization.other_vaccines.vaccinated"
+* item[=].item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].item[=].required = false
+
+
+* item[=].item[=].item[+].linkId = "immunization.other_vaccines.immunization_his_data"
+* item[=].item[=].item[=].prefix = "24.23.2"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #immunization
+* item[=].item[=].item[=].code.display = "Immuniseerimine"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen.question = "immunization.other_vaccines.vaccinated"
+* item[=].item[=].item[=].enableWhen.operator = #=
+* item[=].item[=].item[=].enableWhen.answerBoolean = true
+* item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].repeats = true
+* item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.other_vaccines.immunization_his_data.preventable_disease"
+* item[=].item[=].item[=].item[=].prefix = "24.23.2.1"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #vaccine_preventable_disease
+* item[=].item[=].item[=].item[=].code.display = "vaktsiinvälditav haigus või haigustekitaja"
+* item[=].item[=].item[=].item[=].text = "vaktsiinvälditav haigus või haigustekitaja"
+* item[=].item[=].item[=].item[=].type = #coding
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[=].item[=].item[=].item[+].linkId = "immunization.other_vaccines.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].prefix = "24.23.2.2"
+* item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].item[=].code.code = #date
+* item[=].item[=].item[=].item[=].code.display = "Kuupäev"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].readOnly = true
+
+* item[+].linkId = "occupational_risk_factors"
+* item[=].prefix = "25"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #occupational_risk_factors
+* item[=].code.display = "Töökohal esinevad ohutegurid"
+* item[=].text = "Töökohal esinevad ohutegurid"
+* item[=].type = #group
+* item[=].enableWhen.question = "declaration.category"
+* item[=].enableWhen.operator = #=
+* item[=].enableWhen.answerCoding = #6
+* item[=].required = true
+
+* item[=].item[0].linkId = "occupational_risk_factors.risk_factor"
+* item[=].item[=].prefix = "25.1"
+* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].code.code = #risk_factor
+* item[=].item[=].code.display = "Ohutegur"
+* item[=].item[=].type = #coding
+* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/td-ohutegurid"
+* item[=].item[=].required = false
+* item[=].item[=].repeats = true
+* item[=].item[=].text = "Ohutegur"
+
+* item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
+* item[=].item[=].item[=].prefix = "25.1.1"
+* item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].item[=].item[=].code.code = #specify
+* item[=].item[=].item[=].code.display = "Täpsustus"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].type = #text
+* item[=].item[=].item[=].required = false
