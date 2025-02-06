@@ -145,6 +145,10 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #F61.0
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
 
+* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionSegatyypiHaire)
+
 * item[=].item[=].item[+].linkId = "mental_state.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
@@ -157,6 +161,10 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.description"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Liikluses muutun kergesti ärritatavaks"
+
+* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionArrituvusViha)
 
 * item[=].item[+].linkId = "mental_state.no_complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -194,9 +202,41 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Generaliseerunud äravushoog (1x kuus)"
 
+* item[+].linkId = "nervous_system"
+* item[=].text = "Närvisüsteem"
 
+* item[=].item[0].linkId = "nervous_system.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
 
+* item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
 
+* item[=].item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.4
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kausalgia"
+
+* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionKausalgia)
+
+* item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.0
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Karpaaltunneli sündroom"
+
+* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "Arvutis trükkimine ja kirjutamine muutub valulikuks mingil ajahetkel"
+
+* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionKarpaaltunnel)
 
 Instance: QuestionnairePatient
 InstanceOf: Patient
@@ -212,3 +252,53 @@ Usage: #example
   * given = "Kati"
   * family = "Piiriülene"
 * gender = #female
+
+Instance: QuestionnaireConditionKausalgia
+InstanceOf: Condition
+Description: "Patsiendi diagnoos - kausalgia"
+Usage: #example
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* subject = Reference(QuestionnairePatient)
+
+* code.coding[0].system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* code.coding[0].code = #G56.4
+* code.coding[0].display = "Kausalgia"
+
+Instance: QuestionnaireConditionKarpaaltunnel
+InstanceOf: Condition
+Description: "Patsiendi diagnoos - karpaaltunnel"
+Usage: #example
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* subject = Reference(QuestionnairePatient)
+
+* code.coding[0].system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* code.coding[0].code = #G56.0
+* code.coding[0].display = "Kausalgia"
+
+Instance: QuestionnaireConditionArrituvusViha
+InstanceOf: Condition
+Description: "Patsiendi diagnoos - ärrituvus ja viha"
+Usage: #example
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* subject = Reference(QuestionnairePatient)
+
+* code.coding[0].system = "https://fhir.ee/ValueSet/td-psyyhika"
+* code.coding[0].code = #R45.4
+* code.coding[0].display = "Ärrituvus ja viha"
+
+Instance: QuestionnaireConditionSegatyypiHaire
+InstanceOf: Condition
+Description: "Patsiendi diagnoos - segatüüpi isiksushäire"
+Usage: #example
+* clinicalStatus = #active
+* verificationStatus = #confirmed
+* subject = Reference(QuestionnairePatient)
+
+* code.coding[0].system = "https://fhir.ee/ValueSet/td-psyyhika"
+* code.coding[0].code = #F61.0
+* code.coding[0].display = "Segatüüpi isiksushäired"
+
+
