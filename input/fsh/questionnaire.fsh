@@ -25,7 +25,7 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * title = "Tervisedeklaratsiooni küsimustik"
 * description = "Tervisedeklaratsiooni küsimustik"
 * code 1..1
-* item 0..*
+* item 1..*
   * linkId 1..1
   * definition 0..0
   * code 0..*
