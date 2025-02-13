@@ -41,7 +41,6 @@ Usage: #example
 * url = "http://fhir.ee/StructureDefinition/EEHealthDeclaration"
 * status = #draft
 * approvalDate = "2024-01-01"
-* lastReviewDate = "2025-01-01"
 * code.system = "http://fhir.ee/CodeSystem/dokumendi-tyyp"
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
