@@ -7,9 +7,10 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * ^date = "2024-01-01"
 * url 1..1
 * versionAlgorithm[x] 0..0
+* identifier 0..0
 * derivedFrom 0..0
 * experimental 0..0
-* subjectType 0..0
+* subjectType = #Patient
 * publisher 0..0
 * contact 0..0
 * useContext 0..0
@@ -18,8 +19,8 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * copyright 0..0
 * copyrightLabel 0..0
 * approvalDate 1..1
-* lastReviewDate 1..1
-* effectivePeriod 0..0
+* lastReviewDate 0..0
+* effectivePeriod 0..1
 * name = "HDECL"
 * title = "Tervisedeklaratsiooni küsimustik"
 * description = "Tervisedeklaratsiooni küsimustik"
@@ -27,8 +28,8 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * item 0..*
   * linkId 1..1
   * definition 0..0
-  * code 0..1
-  * prefix 1..1
+  * code 0..*
+  * prefix 0..1
   * text 0..1
   * type 1..1
   * required 1..1
