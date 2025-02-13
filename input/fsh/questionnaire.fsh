@@ -31,6 +31,7 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
   * code 0..*
   * prefix 0..1
   * text 0..1
+  * initial 0..0
   * type 1..1
   * required 1..1
 
