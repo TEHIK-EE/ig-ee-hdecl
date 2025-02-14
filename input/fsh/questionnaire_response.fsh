@@ -147,7 +147,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionSegatyypiHaire)
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "mental_state.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
@@ -164,7 +166,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionArrituvusViha)
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "mental_state.no_complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -219,7 +223,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionKausalgia)
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
@@ -236,7 +242,9 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference = Reference(QuestionnaireConditionKarpaaltunnel)
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 Instance: QuestionnairePatient
 InstanceOf: Patient
