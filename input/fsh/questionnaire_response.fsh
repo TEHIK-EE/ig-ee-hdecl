@@ -246,6 +246,210 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
+* item[=].item[+].linkId = "nervous_system.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "nervous_system.syncope"
+* item[=].item[=].text = "Teadvuse kaotuse hood"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.syncope.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "aeg-ajalt minestan"
+
+* item[=].item[+].linkId = "nervous_system.seizures"
+* item[=].item[=].text = "Krambihood (epilepsia ehk langetõbi)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.seizures.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Vilkuv valgustus tekitab epilepsia hoogu"
+
+* item[=].item[+].linkId = "nervous_system.balance_disorder"
+* item[=].item[=].text = "Tasakaaluhäired (sh Meniere'i tõbi)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.balance_disorder.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Meniere'i tõbi diagnoositud"
+
+* item[=].item[+].linkId = "nervous_system.stroke"
+* item[=].item[=].text = "Ajuinfarkt või ajuinsult"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.stroke.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Läbipõetud hemoraagiline ajuinfarkt"
+
+* item[=].item[+].linkId = "nervous_system.sea_sickness"
+* item[=].item[=].text = "Merehaigus"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.sea_sickness.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Iiveldus merel sõites"
+
+* item[=].item[+].linkId = "nervous_system.coordination_disorder"
+* item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.coordination_disorder.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Treemor kätes tekitab raskuseid koordinatsiooniga"
+
+* item[=].item[+].linkId = "nervous_system.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "nervous_system.other_condition.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Valu alaseljas füüsilise koormuse ajal"
+
+* item[+].linkId = "eyesight"
+* item[=].text = "Silmad ja nägemine"
+
+* item[=].item[0].linkId = "eyesight.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "eyesight.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "eyesight.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #H27.1
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Läätse väärasetsus"
+
+* item[=].item[=].item[=].item[+].linkId = "eyesight.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "eyesight.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "eyesight.myopia"
+* item[=].item[=].text = "Lühinägevus"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "eyesight.myopia.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Paremat silmast lühinägelik"
+
+* item[=].item[+].linkId = "eyesight.limited_field_of_view"
+* item[=].item[=].text = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "eyesight.limited_field_of_view.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "külgedel esineb piiratus"
+
+* item[=].item[+].linkId = "eyesight.double_vision"
+* item[=].item[=].text = "Kahelinägemine"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "eyesight.problems_seeing_color"
+* item[=].item[=].text = "Värvusmeele häired"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "eyesight.problems_seeing_color.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Osaline daltonism"
+
+* item[=].item[+].linkId = "eyesight.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "eyesight.other_condition.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Ise-diagnoositud glaukoom"
+
+* item[+].linkId = "ear_nose_throat"
+* item[=].text = "Kõrv, nina, neel"
+
+* item[=].item[0].linkId = "ear_nose_throat.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "ear_nose_throat.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "ear_nose_throat.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-korv-nina-neel"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #J38.5
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kõrispasm"
+
+* item[=].item[=].item[=].item[+].linkId = "ear_nose_throat.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "ear_nose_throat.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[+].linkId = "respiratory_system"
+* item[=].text = "Hingamissüsteem"
+
+* item[=].item[0].linkId = "respiratory_system.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hingamissusteem"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #J65
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
+
+* item[=].item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "Krooniline kopsutolmustus"
+
+* item[=].item[=].item[=].item[+].linkId = "respiratory_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "respiratory_system.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "respiratory_system.asthma"
+* item[=].item[=].text = "Astma"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "respiratory_system.copd"
+* item[=].item[=].text = "Krooniline obstruktiivne kopsuhaigus ehk KOK"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "respiratory_system.copd.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "hingamine füüsilisel koormusel raskendatud"
+
+* item[=].item[+].linkId = "respiratory_system.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "respiratory_system.other_condition.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Sügavalt hingamine krabisev hääl"
+
+* item[=].item[+].linkId = "respiratory_system.sleep_apnoe"
+* item[=].item[=].text = "Uneapnoe"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "respiratory_system.sleep_apnoe.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Norskan (kasutan ka CPAP maski)"
+
+
 Instance: QuestionnairePatient
 InstanceOf: Patient
 Description: "Patsient erinevate identifikaatoritega"
@@ -260,53 +464,4 @@ Usage: #example
   * given = "Kati"
   * family = "Piiriülene"
 * gender = #female
-
-Instance: QuestionnaireConditionKausalgia
-InstanceOf: Condition
-Description: "Patsiendi diagnoos - kausalgia"
-Usage: #example
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* subject = Reference(QuestionnairePatient)
-
-* code.coding[0].system = "https://fhir.ee/ValueSet/td-narvisusteem"
-* code.coding[0].code = #G56.4
-* code.coding[0].display = "Kausalgia"
-
-Instance: QuestionnaireConditionKarpaaltunnel
-InstanceOf: Condition
-Description: "Patsiendi diagnoos - karpaaltunnel"
-Usage: #example
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* subject = Reference(QuestionnairePatient)
-
-* code.coding[0].system = "https://fhir.ee/ValueSet/td-narvisusteem"
-* code.coding[0].code = #G56.0
-* code.coding[0].display = "Kausalgia"
-
-Instance: QuestionnaireConditionArrituvusViha
-InstanceOf: Condition
-Description: "Patsiendi diagnoos - ärrituvus ja viha"
-Usage: #example
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* subject = Reference(QuestionnairePatient)
-
-* code.coding[0].system = "https://fhir.ee/ValueSet/td-psyyhika"
-* code.coding[0].code = #R45.4
-* code.coding[0].display = "Ärrituvus ja viha"
-
-Instance: QuestionnaireConditionSegatyypiHaire
-InstanceOf: Condition
-Description: "Patsiendi diagnoos - segatüüpi isiksushäire"
-Usage: #example
-* clinicalStatus = #active
-* verificationStatus = #confirmed
-* subject = Reference(QuestionnairePatient)
-
-* code.coding[0].system = "https://fhir.ee/ValueSet/td-psyyhika"
-* code.coding[0].code = #F61.0
-* code.coding[0].display = "Segatüüpi isiksushäired"
-
 
