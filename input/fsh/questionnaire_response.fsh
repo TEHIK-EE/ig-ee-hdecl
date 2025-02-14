@@ -407,7 +407,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #J65
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
 
-* item[=].item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "respiratory_system.diagnoses.group.description"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Krooniline kopsutolmustus"
 
