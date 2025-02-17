@@ -449,6 +449,152 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Norskan (kasutan ka CPAP maski)"
 
+* item[+].linkId = "metabolism_disorder"
+* item[=].text = "Ainevahetuse häired (sh kilpnäärme haigused)"
+
+* item[=].item[0].linkId = "metabolism_disorder.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "metabolism_disorder.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "metabolism_disorder.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #E11.9
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Insuliinisõltumatu suhkurtõbi tüsistusteta"
+
+* item[=].item[=].item[=].item[+].linkId = "metabolism_disorder.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
+
+* item[=].item[=].item[=].item[+].linkId = "metabolism_disorder.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "metabolism_disorder.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "metabolism_disorder.diabetes"
+* item[=].item[=].text = "Suhkruhaigus"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "metabolism_disorder.diabetes.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
+
+* item[=].item[+].linkId = "metabolism_disorder.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[+].linkId = "cardiovascular_system"
+* item[=].text = "Süda ja veresoonkond"
+
+* item[=].item[0].linkId = "cardiovascular_system.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "cardiovascular_system.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "cardiovascular_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #I25.2
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Varasem müokardiinfarkt"
+
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "Pärgarterite 50% ummistus põhjustas MI"
+
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "cardiovascular_system.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "cardiovascular_system.physical_activity_stenocardia"
+* item[=].item[=].text = "Koormusega seonduv valu rinnus"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "cardiovascular_system.physical_activity_stenocardia.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Süda hakkab puperdama füüsilisel koormusel"
+
+* item[=].item[+].linkId = "cardiovascular_system.high_bp"
+* item[=].item[=].text = "Kõrge vererõhk"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "cardiovascular_system.previous_mi"
+* item[=].item[=].text = "Läbipõetud südameinfarkt"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "cardiovascular_system.previous_mi.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "4 aastat tagasi põdesin läbi südame isheemitõvest tingitud infarkti"
+
+* item[=].item[+].linkId = "cardiovascular_system.heart_arrhythmia"
+* item[=].item[=].text = "Südame rütmihäired"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "cardiovascular_system.heart_stenting"
+* item[=].item[=].text = "On tehtud südamesondeerimine või stentimine"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "cardiovascular_system.heart_stenting.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Pärast põetud infarkti paigaldatud balloondilatatsiooni stent (reiearteri kaudu)"
+
+* item[=].item[+].linkId = "cardiovascular_system.pacer"
+* item[=].item[=].text = "On paigaldatud südamerütmur"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "cardiovascular_system.heart_operation"
+* item[=].item[=].text = "On tehtud südameoperatsioon"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "cardiovascular_system.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[+].linkId = "skeletal_system"
+* item[=].text = "Luud, liigesed ja lihased"
+
+* item[=].item[0].linkId = "skeletal_system.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #M47
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Spondüloos e lülijäikus"
+
+* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueString = "lülijäikus"
+
+* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "skeletal_system.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = false
+
+
+
+
 
 Instance: QuestionnairePatient
 InstanceOf: Patient
