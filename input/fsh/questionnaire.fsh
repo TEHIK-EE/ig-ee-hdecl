@@ -1865,7 +1865,7 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "cardiovascular_system..other_condition"
+* item[=].item[+].linkId = "cardiovascular_system.other_condition"
 * item[=].item[=].prefix = "10.9"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].code.code = #other_condition
@@ -2493,7 +2493,7 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "treatment_done.foreign_treatment"
+* item[=].item[=].item[0].linkId = "treatment_done.foreign_treatment.specify"
 * item[=].item[=].item[=].prefix = "14.1.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify

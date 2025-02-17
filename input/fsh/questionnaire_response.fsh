@@ -592,6 +592,158 @@ Usage: #example
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
+* item[=].item[+].linkId = "skeletal_system.stiff_joints"
+* item[=].item[=].text = "Liigesejäikus"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "skeletal_system.stiff_joints.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Hommikuti on kõik liigesed kanged"
+
+* item[=].item[+].linkId = "skeletal_system.paresis_plegia"
+* item[=].item[=].text = "Jäseme osaline või täielik halvatus (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.amputee"
+* item[=].item[=].text = "Jäseme või selle osa puudumine (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.tremor"
+* item[=].item[=].text = "Käte värisemine (treemor)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.joint_pain"
+* item[=].item[=].text = "Liigesevalu"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "skeletal_system.joint_pain.specify"
+* item[=].item[=].item[=].text = "Täpsutus"
+* item[=].item[=].item[=].answer.valueString = "Hommikuti on kõik liigesed valusad"
+
+* item[=].item[+].linkId = "skeletal_system.neck_pain"
+* item[=].item[=].text = "Kaelavalu"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.shoulder_pain"
+* item[=].item[=].text = "Õlavöötmevalu"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.lower_back_pain"
+* item[=].item[=].text = "Alaseljavalu"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "skeletal_system.other_condition"
+* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[+].linkId = "infections"
+* item[=].text = "Nakkushaigused"
+
+* item[=].item[0].linkId = "infections.diagnoses"
+* item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[=].item[0].linkId = "infections.diagnoses.group"
+* item[=].item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nakkushaigused"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #A51.1
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Primaarne anaalsüüfilis"
+
+* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[+].linkId = "infections.no_complaints"
+* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[+].linkId = "other_chronic_illnesses"
+* item[=].text = "Muud kroonilised haigused, seisundid või sümptomid, mida eespool ei kirjeldatud"
+
+* item[=].item[0].linkId = "other_chronic_illnesses.none"
+* item[=].item[=].text = "Puuduvad"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[+].linkId = "treatment_done"
+* item[=].text = "Senine ravi"
+
+* item[=].item[0].linkId = "treatment_done.foreign_treatment"
+* item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "treatment_done.foreign_treatment.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Ostsin lätis paratsetamooli"
+
+* item[=].item[+].linkId = "treatment_done.regular_medication"
+* item[=].item[=].text = "Regulaarsed ravimid"
+
+* item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men"
+* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
+* item[=].item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men.specify"
+* item[=].item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].item[=].answer.valueString = "Xymelin, beeta-blokaatorid, hjärtemagnyl (südame aspirin)"
+
+* item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions"
+* item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
+
+* item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.current_prescriptions.prescription"
+* item[=].item[=].item[=].item[=].text = "Retsept"
+
+* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.date"
+* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-09-01
+
+//Mis loendist s4ee info peaks tulema
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.atc"
+* item[=].item[=].item[=].item[=].item[=].text = "ATC"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/atc-ee"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #G03BA03
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "testosteroon"
+
+// Pakendi info tuleb alles välja kui ravim välja ostetakse (puudub konkreetne meie loend ja välja kirjutatud ravimite juures seda infot ei ole, mis pakendiga tegu)
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.package"
+* item[=].item[=].item[=].item[=].item[=].text = "Pakend"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/pakend" //Vale
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #mingi_pakend
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
+
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.source_reference"
+* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
