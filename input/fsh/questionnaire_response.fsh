@@ -720,7 +720,13 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
+* item[=].item[+].linkId = "treatment_done.hospitalization"
+* item[=].item[=].text = "Kas olete viibinud haiglaravil?"
+* item[=].item[=].answer.valueBoolean = true
 
+* item[=].item[=].item[0].linkId = "treatment_done.hospitalization.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Kopsupõletikuga intensiivravil mõni aeg tagasi"
 
 
 
