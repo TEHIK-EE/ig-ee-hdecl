@@ -2771,7 +2771,8 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].code.display = "Operatsiooni lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsioon lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].type = #coding
-* item[=].item[=].item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].item[=].item[=].required = false
+* item[=].item[=].item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].item[=].item[=].readOnly = true
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.source_reference"
@@ -2832,7 +2833,6 @@ Usage: #example
 * item[=].item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
-
 
 * item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].prefix = "15.0.1.3"
