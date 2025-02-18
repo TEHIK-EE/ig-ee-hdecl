@@ -728,24 +728,65 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Kopsupõletikuga intensiivravil mõni aeg tagasi"
 
+* item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization"
+* item[=].item[=].item[=].text = "Varasem haiglaravi"
 
+* item[=].item[=].item[=].item[0].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce"
+* item[=].item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
 
+* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.from"
+* item[=].item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-05-01
 
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.to"
+* item[=].item[=].item[=].item[=].item[=].text = "Kuni"
+* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-06-01
 
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.provider"
+* item[=].item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
+* item[=].item[=].item[=].item[=].item[=].answer.valueString = "Lääne-Tallinna Keskhaigla"
 
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.source_reference"
+* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
+* item[=].item[+].linkId = "treatment_done.operations"
+* item[=].item[=].text = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
+* item[=].item[=].answer.valueBoolean = true
 
+* item[=].item[=].item[0].linkId = "treatment_done.operations.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Avatud apendektoomia, vist oli 4 2 kuud tagasi. Põhjuseks akuutne pimesoole põletik"
 
+* item[=].item[=].item[+].linkId = "treatment_done.operations.procedures"
+* item[=].item[=].item[=].text = "Teostatud protseduurid"
 
+* item[=].item[=].item[=].item[0].linkId = "treatment_done.operations.procedures.operation"
+* item[=].item[=].item[=].item[=].text = "Operatsioon"
 
+* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.operations.procedures.operation.date"
+* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-11-20
 
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.specific_operation"
+* item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code.value = #JEA01
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Laparoskoopiline apendektoomia"
 
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.add_codes"
+* item[=].item[=].item[=].item[=].item[=].text = "Operatsiooni lisakoodid"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code.value = #JEW96
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Muu operatsioon apendiksil"
 
-
-
-
-
-
+* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.source_reference"
+* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 
 
