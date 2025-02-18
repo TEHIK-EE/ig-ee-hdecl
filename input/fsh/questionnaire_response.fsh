@@ -821,9 +821,9 @@ Usage: #example
 * item[=].item[=].text = "Luumurrud (palun täpsustage, millised ja millal)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[+].item[0].linkId = "traumas.fractures.specify"
-* item[=].item[+].item[=].text = "Täpsustus"
-* item[=].item[+].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
+* item[=].item[=].item[0].linkId = "traumas.fractures.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
 
 * item[=].item[+].linkId = "traumas.concussion"
 * item[=].item[=].text = "Rasked peavigastused"
