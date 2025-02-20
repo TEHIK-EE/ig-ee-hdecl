@@ -3484,8 +3484,8 @@ Usage: #example
 * item[=].prefix = "21"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].code.code = #medical_device
-* item[=].code.display = "Kasutan järgmisi meditsiiniseadmeid/abivahendeid "
-* item[=].text = "Kasutan järgmisi meditsiiniseadmeid/abivahendeid "
+* item[=].code.display = "Kasutan järgmisi meditsiiniseadmeid/abivahendeid"
+* item[=].text = "Kasutan järgmisi meditsiiniseadmeid/abivahendeid"
 * item[=].type = #group
 * item[=].required = true
 
