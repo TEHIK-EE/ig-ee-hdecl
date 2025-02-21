@@ -1168,13 +1168,80 @@ Usage: #example
 * item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
+* item[+].linkId = "immunization"
+* item[=].text = "Immuniseerimine"
 
+* item[=].item[0].linkId = "immunization.b_hepatitis"
+* item[=].item[=].text = "B-viirushepatiit"
 
+* item[=].item[=].item[0].linkId = "immunization.b_hepatitis.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = true
 
+* item[=].item[=].item[+].linkId = "immunization.b_hepatitis.immunization_his_data"
+* item[=].item[=].item[=].text = "Immuniseerimine"
 
+* item[=].item[=].item[=].item[0].linkId = "immunization.b_hepatitis.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2022-10-10
 
+* item[=].item[=].item[=].item[+].linkId = "immunization.b_hepatitis.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
+* item[=].item[=].item[+].linkId = "immunization.b_hepatitis.self_report_date"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].answer.valueDate = 2022-10-01
 
+* item[=].item[+].linkId = "immunization.tuberculosis"
+* item[=].item[=].text = "Tuberkuloos"
+
+* item[=].item[=].item[0].linkId = "immunization.tuberculosis.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization_his_data"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 1996-03-16
+
+* item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[=].item[+].linkId = "immunization.tuberculosis.self_report_date"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].answer.valueDate = 1996-03-16
+
+* item[=].item[+].linkId = "immunization.rotavirus"
+* item[=].item[=].text = "Rotaviirus"
+
+* item[=].item[=].item[0].linkId = "immunization.rotavirus.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization_his_data"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 1996-03-16
+
+* item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[=].item[+].linkId = "immunization.rotavirus.self_report_date"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
 
 
