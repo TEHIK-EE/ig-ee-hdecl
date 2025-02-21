@@ -788,50 +788,50 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[+].linkId = "traumas"
-* item[=].text = "Traumad"
+// * item[+].linkId = "traumas"
+// * item[=].text = "Traumad"
 
-* item[=].item[0].linkId = "traumas.diagnoses"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "traumas.diagnoses"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "traumas.diagnoses.group"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+// * item[=].item[=].item[0].linkId = "traumas.diagnoses.group"
+// * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.3
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
+// * item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.diagnosis"
+// * item[=].item[=].item[=].item[=].text = "Diagnoos"
+// * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
+// * item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.3
+// * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
 
-* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.description"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Radioaktiivselt ämblikult sai hammustada"
+// * item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses.group.description"
+// * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
+// * item[=].item[=].item[=].item[=].answer.valueString = "Radioaktiivselt ämblikult sai hammustada"
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source_reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+// * item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source_reference"
+// * item[=].item[=].item[=].item[=].text = "Allika viide"
+// * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+// * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+// * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "traumas.none"
-* item[=].item[=].text = "Puuduvad"
-* item[=].item[=].answer.valueBoolean = false
+// * item[=].item[+].linkId = "traumas.none"
+// * item[=].item[=].text = "Puuduvad"
+// * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "traumas.fractures"
-* item[=].item[=].text = "Luumurrud (palun täpsustage, millised ja millal)"
-* item[=].item[=].answer.valueBoolean = true
+// * item[=].item[+].linkId = "traumas.fractures"
+// * item[=].item[=].text = "Luumurrud (palun täpsustage, millised ja millal)"
+// * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "traumas.fractures.specify"
-* item[=].item[=].item[=].text = "Täpsustus"
-* item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
+// * item[=].item[=].item[0].linkId = "traumas.fractures.specify"
+// * item[=].item[=].item[=].text = "Täpsustus"
+// * item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
 
-* item[=].item[+].linkId = "traumas.concussion"
-* item[=].item[=].text = "Rasked peavigastused"
-* item[=].item[=].answer.valueBoolean = false
+// * item[=].item[+].linkId = "traumas.concussion"
+// * item[=].item[=].text = "Rasked peavigastused"
+// * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "traumas.other_injuries"
-* item[=].item[=].text = "Muud olulised vigastused (palun täpsustage, millised ja millal)"
-* item[=].item[=].answer.valueBoolean = false
+// * item[=].item[+].linkId = "traumas.other_injuries"
+// * item[=].item[=].text = "Muud olulised vigastused (palun täpsustage, millised ja millal)"
+// * item[=].item[=].answer.valueBoolean = false
 
 // * item[+].linkId = "skin_disease"
 // * item[=].text = "Nahahaigused"
@@ -1201,18 +1201,18 @@ Usage: #example
 
 
 
-// Instance: QuestionnairePatient
-// InstanceOf: Patient
-// Description: "Patsient erinevate identifikaatoritega"
-// Usage: #example
-// * id = "katipiiriylene"
-// * active = true
-// * identifier[0]
-//   * system = "https://fhir.ee/sid/pid/est/ni"
-//   * value = "49406240016"
-// * name
-//   * use = #official
-//   * given = "Kati"
-//   * family = "Piiriülene"
-// * gender = #female
+Instance: QuestionnairePatient
+InstanceOf: Patient
+Description: "Patsient erinevate identifikaatoritega"
+Usage: #example
+* id = "katipiiriylene"
+* active = true
+* identifier[0]
+  * system = "https://fhir.ee/sid/pid/est/ni"
+  * value = "49406240016"
+* name
+  * use = #official
+  * given = "Kati"
+  * family = "Piiriülene"
+* gender = #female
 
