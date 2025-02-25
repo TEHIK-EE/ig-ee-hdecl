@@ -1243,13 +1243,214 @@ Usage: #example
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
+* item[=].item[+].linkId = "immunization.diphteria"
+* item[=].item[=].text = "Difteeria"
+
+* item[=].item[=].item[0].linkId = "immunization.diphteria.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[+].linkId = "immunization.diphteria.immunization_his_data"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 1996-05-16
+
+* item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[=].item[+].linkId = "immunization.diphteria.self_report_date"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].answer.valueDate = 1996-04-16
+
+* item[=].item[+].linkId = "immunization.tetanus"
+* item[=].item[=].text = "Teetanus"
+
+* item[=].item[=].item[0].linkId = "immunization.tetanus.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[+].linkId = "immunization.tetanus.immunization_his_data"
+* item[=].item[=].item[=].text = "Immuniseerimine"
+
+* item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization_his_data.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2000-01-01
+
+* item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[=].item[=].item[+].linkId = "immunization.tetanus.self_report_date"
+* item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].answer.valueDate = 2000-01-01
 
 
 
 
+* item[=].item[+].linkId = "immunization.pertussis"
+* item[=].item[=].text = "Läkaköha"
 
+* item[=].item[=].item[0].linkId = "immunization.pertussis.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
 
+* item[=].item[+].linkId = "immunization.polio"
+* item[=].item[=].text = "Poliomüeliit"
 
+* item[=].item[=].item[0].linkId = "immunization.polio.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.hemo_influenza"
+* item[=].item[=].text = "Influensa"
+
+* item[=].item[=].item[0].linkId = "immunization.hemo_influenza.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.measles"
+* item[=].item[=].text = "Leetrid"
+
+* item[=].item[=].item[0].linkId = "immunization.measles.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.mumps"
+* item[=].item[=].text = "Mumps"
+
+* item[=].item[=].item[0].linkId = "immunization.mumps.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.rubella"
+* item[=].item[=].text = "Punetised"
+
+* item[=].item[=].item[0].linkId = "immunization.rubella.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.hpv"
+* item[=].item[=].text = "HPV"
+
+* item[=].item[=].item[0].linkId = "immunization.hpv.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.covid"
+* item[=].item[=].text = "COVID"
+
+* item[=].item[=].item[0].linkId = "immunization.covid.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.flu"
+* item[=].item[=].text = "Gripiviirus"
+
+* item[=].item[=].item[0].linkId = "immunization.flu.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.pneumococcus"
+* item[=].item[=].text = "Pneumokokk"
+
+* item[=].item[=].item[0].linkId = "immunization.pneumococcus.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.a_hepatitis"
+* item[=].item[=].text = "A-hepatiit"
+
+* item[=].item[=].item[0].linkId = "immunization.a_hepatitis.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.chicken_box"
+* item[=].item[=].text = "Tuulerõuged"
+
+* item[=].item[=].item[0].linkId = "immunization.chicken_box.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.shingles"
+* item[=].item[=].text = "Vöötohatis"
+
+* item[=].item[=].item[0].linkId = "immunization.shingles.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.meningococcus"
+* item[=].item[=].text = "Meningokokk"
+
+* item[=].item[=].item[0].linkId = "immunization.meningococcus.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.yellow_fever"
+* item[=].item[=].text = "Kollapalavik"
+
+* item[=].item[=].item[0].linkId = "immunization.yellow_fever.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.typhoid_fever"
+* item[=].item[=].text = "Kõhutüüfus"
+
+* item[=].item[=].item[0].linkId = "immunization.typhoid_fever.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.tick_encephalitis"
+* item[=].item[=].text = "Puukentsefaliit"
+
+* item[=].item[=].item[0].linkId = "immunization.tick_encephalitis.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "immunization.other_vaccines"
+* item[=].item[=].text = "Muud vaktsiinid"
+
+* item[=].item[=].item[0].linkId = "immunization.other_vaccines.vaccinated"
+* item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
+* item[=].item[=].item[=].answer.valueBoolean = false
+
+* item[+].linkId = "occupational_risk_factors"
+* item[=].text = "Töökohal esinevad ohutegurid"
+
+* item[=].item[0].linkId = "occupational_risk_factors.risk_factor"
+* item[=].item[=].text = "Ohutegur"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
+* item[=].item[=].answer.valueCoding.code = #1
+* item[=].item[=].answer.valueCoding.display = "Asbestirohke keskkond"
+
+* item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Hästi tolmune on töö"
+
+* item[=].item[+].linkId = "occupational_risk_factors.risk_factor"
+* item[=].item[=].text = "Ohutegur"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
+* item[=].item[=].answer.valueCoding.code = #3
+* item[=].item[=].answer.valueCoding.display = "Päevavalguse vähesus"
+
+* item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Hästi pime on ka"
+
+* item[+].linkId = "gender"
+* item[=].text = "Sugu"
+
+* item[=].item[0].linkId = "gender.authors_gender"
+* item[=].item[=].text = "Sugu"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/sugu"
+* item[=].item[=].answer.valueCoding.code = #M
+* item[=].item[=].answer.valueCoding.display = "Mees"
 
 
 
