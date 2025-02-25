@@ -5644,7 +5644,6 @@ Usage: #example
 * item[=].code.display = "Sugu"
 * item[=].text = "Sugu"
 * item[=].type = #group
-// * item[=].disabledDisplay = #hidden
 * item[=].required = true
 
 * item[=].item[0].linkId = "gender.authors_gender"
@@ -5656,4 +5655,4 @@ Usage: #example
 * item[=].item[=].type = #coding
 * item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
 * item[=].item[=].required = true
-// * item[=].item[=].disabledDisplay = #hidden
+
