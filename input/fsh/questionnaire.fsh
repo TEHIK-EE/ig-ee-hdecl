@@ -1223,7 +1223,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.hearing_impairmen"
+* item[=].item[=].item[=].enableWhen.question = "ear_nose_throat.hearing_impairment"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1716,7 +1716,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "10.2"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.physical_activity_stenocardia"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -1884,7 +1884,7 @@ Usage: #example
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system..other_condition"
+* item[=].item[=].item[=].enableWhen.question = "cardiovascular_system.other_condition"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
@@ -5644,7 +5644,7 @@ Usage: #example
 * item[=].code.display = "Sugu"
 * item[=].text = "Sugu"
 * item[=].type = #group
-* item[=].disabledDisplay = #hidden
+// * item[=].disabledDisplay = #hidden
 * item[=].required = true
 
 * item[=].item[0].linkId = "gender.authors_gender"
@@ -5656,4 +5656,4 @@ Usage: #example
 * item[=].item[=].type = #coding
 * item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
 * item[=].item[=].required = true
-* item[=].item[=].disabledDisplay = #hidden
+// * item[=].item[=].disabledDisplay = #hidden
