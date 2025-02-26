@@ -5656,4 +5656,3 @@ Usage: #example
 * item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
 * item[=].item[=].required = true
 
-
