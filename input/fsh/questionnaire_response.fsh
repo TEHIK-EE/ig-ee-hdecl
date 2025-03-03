@@ -33,11 +33,11 @@ InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 * meta.versionId = "1.0"
-* extension[ResponseExpiration].url = "https://fhir.ee/StructureDefinition/response-expiration"
+* extension[ResponseExpiration].url = "https://fhir.ee/hdecl/StructureDefinition/response-expiration"
 * extension[ResponseExpiration].valueDate = 2025-06-16
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
-* questionnaire = "https://fhir.ee/StructureDefinition/EEHealthDeclaration"
+* questionnaire = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclaration"
 * status = #completed
 * subject = Reference(QuestionnairePatient)
 * authored =  2024-01-01
@@ -148,7 +148,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "mental_state.diagnoses.group"
@@ -167,7 +167,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "mental_state.no_complaints"
@@ -224,7 +224,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group"
@@ -243,7 +243,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "nervous_system.no_complaints"
@@ -324,7 +324,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "eyesight.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "eyesight.no_complaints"
@@ -385,7 +385,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "ear_nose_throat.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "ear_nose_throat.no_complaints"
@@ -414,7 +414,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "respiratory_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "respiratory_system.no_complaints"
@@ -471,7 +471,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "metabolism_disorder.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "metabolism_disorder.no_complaints"
@@ -512,7 +512,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "cardiovascular_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "cardiovascular_system.no_complaints"
@@ -585,7 +585,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "skeletal_system.no_complaints"
@@ -654,7 +654,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "infections.no_complaints"
@@ -749,7 +749,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.source_reference"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "treatment_done.operations"
@@ -785,7 +785,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.source_reference"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[+].linkId = "traumas"
@@ -810,7 +810,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "traumas.none"
@@ -851,7 +851,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group"
@@ -870,7 +870,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "skin_disease.skin_conditions"
@@ -903,7 +903,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "digestive_organs.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "digestive_organs.no_complaints"
@@ -960,7 +960,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "urogenital_system.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "urogenital_system.no_complaints"
@@ -985,7 +985,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "blood_problems.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "blood_problems.no_complaints"
@@ -1061,7 +1061,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "sleep.snoring"
@@ -1188,7 +1188,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "immunization.b_hepatitis.immunization_his_data.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "immunization.b_hepatitis.self_report_date"
@@ -1212,7 +1212,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization_his_data.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "immunization.tuberculosis.self_report_date"
@@ -1236,7 +1236,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization_his_data.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "immunization.rotavirus.self_report_date"
@@ -1260,7 +1260,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization_his_data.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "immunization.diphteria.self_report_date"
@@ -1284,7 +1284,7 @@ Usage: #example
 * item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization_his_data.source_reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789" 
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[=].item[+].linkId = "immunization.tetanus.self_report_date"

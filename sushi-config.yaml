@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ee.fhir.hdecl
-canonical: https://fhir.ee
+canonical: https://fhir.ee/hdecl
 name: HDECL
 title: Tervisedeklaratsiooni juurutusjuhend
 # description: Example Implementation Guide for getting started with SUSHI
