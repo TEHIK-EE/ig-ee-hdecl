@@ -33,8 +33,19 @@ InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 * meta.versionId = "1.0"
-* extension[ResponseExpiration].url = "https://fhir.ee/hdecl/StructureDefinition/response-expiration"
-* extension[ResponseExpiration].valueDate = 2025-06-16
+
+// The top-level extension
+* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/response-expiration"
+
+// Sub-extension: category
+* extension[0].extension[0].url = "category"
+* extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendit-otsuse-kasutusala"
+* extension[0].extension[0].valueCodeableConcept.coding[0].code = #military
+
+// Sub-extension: expiration
+* extension[0].extension[1].url = "expiration"
+* extension[0].extension[1].valueDate = "2025-06-16"
+
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
 * questionnaire = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclaration"
