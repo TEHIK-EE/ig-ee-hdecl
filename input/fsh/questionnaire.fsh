@@ -46,7 +46,7 @@ Usage: #example
 * code.code = #81
 * code.display = "Tervisedeklaratsioon"
 
-* item[0].linkId = "declaration.category"
+* item[0].linkId = "category"
 * item[=].prefix = "0"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].code.code = #decl_category
@@ -67,6 +67,15 @@ Usage: #example
 * item[=].answerOption[3].valueCoding.display = "Kaitseväeteenistus"
 * item[=].required = true
 * item[=].text = "Kasutusala"
+
+* item[+].linkId = "patient_gender"
+* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
+* item[=].code.code = #gender
+* item[=].code.display = "Sugu"
+* item[=].text = "Sugu"
+* item[=].type = #coding
+* item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
+* item[=].required = true
 
 * item[+].linkId = "lifestyle"
 * item[=].prefix = "1"
@@ -5637,22 +5646,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #text
 * item[=].item[=].item[=].required = false
 
-* item[+].linkId = "gender"
-* item[=].prefix = "26"
-* item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].code.code = #gender
-* item[=].code.display = "Sugu"
-* item[=].text = "Sugu"
-* item[=].type = #group
-* item[=].required = true
 
-* item[=].item[0].linkId = "gender.authors_gender"
-* item[=].item[=].prefix = "26.1"
-* item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #gender
-* item[=].item[=].code.display = "Sugu"
-* item[=].item[=].text = "Sugu"
-* item[=].item[=].type = #coding
-* item[=].item[=].answerValueSet = "https://fhir.ee/ValueSet/sugu"
-* item[=].item[=].required = true
+
+
 

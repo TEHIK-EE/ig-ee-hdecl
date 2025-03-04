@@ -34,15 +34,13 @@ Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 * meta.versionId = "1.0"
 
-// The top-level extension
+
 * extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/response-expiration"
 
-// Sub-extension: category
 * extension[0].extension[0].url = "category"
 * extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendit-otsuse-kasutusala"
 * extension[0].extension[0].valueCodeableConcept.coding[0].code = #military
 
-// Sub-extension: expiration
 * extension[0].extension[1].url = "expiration"
 * extension[0].extension[1].valueDate = "2025-06-16"
 
@@ -54,11 +52,17 @@ Usage: #example
 * authored =  2024-01-01
 * author = Reference(QuestionnairePatient)
 
-* item[0].linkId = "declaration.category"
+* item[0].linkId = "category"
 * item[=].text = "Kasutusala"
 * item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
 * item[=].answer.valueCoding.code = #6
 * item[=].answer.valueCoding.display = "Töötervishoid"
+
+* item[+].linkId = "patient_gender"
+* item[=].text = "Sugu"
+* item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/sugu"
+* item[=].answer.valueCoding.code = #M
+* item[=].answer.valueCoding.display = "Mees"
 
 * item[+].linkId = "lifestyle"
 * item[=].text = "Elustiil"
@@ -1454,14 +1458,9 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Hästi pime on ka"
 
-* item[+].linkId = "gender"
-* item[=].text = "Sugu"
 
-* item[=].item[0].linkId = "gender.authors_gender"
-* item[=].item[=].text = "Sugu"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/sugu"
-* item[=].item[=].answer.valueCoding.code = #M
-* item[=].item[=].answer.valueCoding.display = "Mees"
+
+
 
 
 
