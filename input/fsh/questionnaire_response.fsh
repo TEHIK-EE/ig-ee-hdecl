@@ -5,9 +5,7 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^date = "2024-01-01"
-* id 1..1
 * meta.profile 1..1
-* meta.versionId 1..1
 * questionnaire 1..1
 * language 0..1
 * status 1..1
@@ -16,7 +14,6 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * subject 1..1
 * encounter 0..0
 * text 0..0
-* authored 1..1
 * author 1..1
 * extension contains response-expiration named ResponseExpiration 0..1
 * extension[ResponseExpiration] 0..1
