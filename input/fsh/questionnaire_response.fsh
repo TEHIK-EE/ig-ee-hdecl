@@ -15,6 +15,7 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * partOf 0..0
 * subject 1..1
 * encounter 0..0
+* text 0..0
 * authored 1..1
 * author 1..1
 * extension contains response-expiration named ResponseExpiration 0..1

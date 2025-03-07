@@ -16,6 +16,7 @@ Description: "Tervisedeklaratsiooni küsimustiku profiil"
 * useContext 0..0
 * jurisdiction 0..0
 * purpose 0..0
+* text 0..0
 * copyright 0..0
 * copyrightLabel 0..0
 * approvalDate 1..1
@@ -1923,7 +1924,7 @@ Usage: #example
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[+].linkId = "skeletal_system"
+* item[+].linkId = "bones-joints-muscles"
 * item[=].prefix = "11"
 * item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].code.code = #skeletal_system
@@ -1932,7 +1933,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 
-* item[=].item[0].linkId = "skeletal_system.diagnoses"
+* item[=].item[0].linkId = "bones-joints-muscles.diagnoses"
 * item[=].item[=].prefix = "11.0"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].code.code = #previous_diagnoses
@@ -1941,7 +1942,7 @@ Usage: #example
 * item[=].item[=].type = #group
 * item[=].item[=].required = false
 
-* item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group"
 * item[=].item[=].item[=].prefix = "11.0.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #previous_diagnosis_singular
@@ -1951,7 +1952,7 @@ Usage: #example
 * item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].repeats = true
 
-* item[=].item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.1"
 * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].code.code = #diagnosis
@@ -1962,7 +1963,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.2"
 * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].code.code = #diagnosis_description
@@ -1972,7 +1973,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = false
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].prefix = "11.0.1.3"
 * item[=].item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].item[=].code.code = #source_reference
@@ -1982,7 +1983,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].item[=].readOnly = true
 
-* item[=].item[+].linkId = "skeletal_system.no_complaints" 
+* item[=].item[+].linkId = "bones-joints-muscles.no-complaints" 
 * item[=].item[=].prefix = "11.1"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].code.code = #no_complaints
@@ -1991,218 +1992,218 @@ Usage: #example
 * item[=].item[=].type = #boolean
 * item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.stiff_joints"
+* item[=].item[+].linkId = "bones-joints-muscles.joint-stiffness"
 * item[=].item[=].prefix = "11.2"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #stiff_joints
+* item[=].item[=].code.code = #joint-stiffness
 * item[=].item[=].code.display = "Liigesejäikus"
 * item[=].item[=].text = "Liigesejäikus"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.stiff_joints.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-stiffness.specification"
 * item[=].item[=].item[=].prefix = "11.2.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.stiff_joints"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.joint-stiffness"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.paresis_plegia"
+* item[=].item[+].linkId = "bones-joints-muscles.limb-paralysis"
 * item[=].item[=].prefix = "11.3"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #paresis_plegia
+* item[=].item[=].code.code = #limb-paralysis
 * item[=].item[=].code.display = "Jäseme osaline või täielik halvatus (palun täpsustage)"
 * item[=].item[=].text = "Jäseme osaline või täielik halvatus (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.paresis_plegia.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.limb-paralysis.specification"
 * item[=].item[=].item[=].prefix = "11.3.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.paresis_plegia"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.limb-paralysis"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.amputee"
+* item[=].item[+].linkId = "bones-joints-muscles.missing-limb"
 * item[=].item[=].prefix = "11.4"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #amputee
+* item[=].item[=].code.code = #missing-limb
 * item[=].item[=].code.display = "Jäseme või selle osa puudumine (palun täpsustage)"
 * item[=].item[=].text = "Jäseme või selle osa puudumine (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.amputee.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.missing-limb.specification"
 * item[=].item[=].item[=].prefix = "11.4.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.amputee"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.missing-limb"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.tremor"
+* item[=].item[+].linkId = "bones-joints-muscles.tremor"
 * item[=].item[=].prefix = "11.5"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].code.code = #tremor
 * item[=].item[=].code.display = "Käte värisemine (treemor)"
 * item[=].item[=].text = "Käte värisemine (treemor)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.tremor.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.tremor.specification"
 * item[=].item[=].item[=].prefix = "11.5.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.tremor"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.tremor"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.joint_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.joint-pain"
 * item[=].item[=].prefix = "11.6"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #joint_pain
+* item[=].item[=].code.code = #joint-pain
 * item[=].item[=].code.display = "Liigesevalu"
 * item[=].item[=].text = "Liigesevalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.joint_pain.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-pain.specification"
 * item[=].item[=].item[=].prefix = "11.6.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.joint_pain"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.joint-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.neck_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.neck-pain"
 * item[=].item[=].prefix = "11.7"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #neck_pain
+* item[=].item[=].code.code = #neck-pain
 * item[=].item[=].code.display = "Kaelavalu"
 * item[=].item[=].text = "Kaelavalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.neck_pain.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.neck-pain.specification"
 * item[=].item[=].item[=].prefix = "11.7.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.neck_pain"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.neck-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.shoulder_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.shoulder-pain"
 * item[=].item[=].prefix = "11.8"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #shoulder_pain
+* item[=].item[=].code.code = #shoulder-pain
 * item[=].item[=].code.display = "Õlavöötmevalu"
 * item[=].item[=].text = "Õlavöötmevalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.shoulder_pain.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.shoulder-pain.specification"
 * item[=].item[=].item[=].prefix = "11.8.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.shoulder_pain"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.shoulder-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.lower_back_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.lower-back-pain"
 * item[=].item[=].prefix = "11.9"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #lower_back_pain
+* item[=].item[=].code.code = #lower-back-pain
 * item[=].item[=].code.display = "Alaseljavalu"
 * item[=].item[=].text = "Alaseljavalu"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.lower_back_pain.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.lower-back-pain.specification"
 * item[=].item[=].item[=].prefix = "11.9.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.lower_back_pain"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.lower-back-pain"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
 
-* item[=].item[+].linkId = "skeletal_system.other_condition"
+* item[=].item[+].linkId = "bones-joints-muscles.other-disease-condition-symptom"
 * item[=].item[=].prefix = "11.10"
 * item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
-* item[=].item[=].code.code = #other_condition
+* item[=].item[=].code.code = #other-disease-condition-symptom
 * item[=].item[=].code.display = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].type = #boolean
-* item[=].item[=].enableWhen.question = "skeletal_system.no_complaints"
+* item[=].item[=].enableWhen.question = "bones-joints-muscles.no-complaints"
 * item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].enableWhen.answerBoolean = false
 * item[=].item[=].required = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.other_condition.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].prefix = "11.10.1"
 * item[=].item[=].item[=].code.system = "https://fhir.ee/ValueSet/td-kysimustik-test"
 * item[=].item[=].item[=].code.code = #specify
 * item[=].item[=].item[=].code.display = "Täpsustus"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].type = #text
-* item[=].item[=].item[=].enableWhen.question = "skeletal_system.other_condition"
+* item[=].item[=].item[=].enableWhen.question = "bones-joints-muscles.other-disease-condition-symptom"
 * item[=].item[=].item[=].enableWhen.operator = #=
 * item[=].item[=].item[=].enableWhen.answerBoolean = true
 * item[=].item[=].item[=].required = true
