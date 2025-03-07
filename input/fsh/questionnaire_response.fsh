@@ -71,7 +71,7 @@ Usage: #example
 * item[=].item[=].text = "Kas te tarbite alkoholi?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.alcohol.amount"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.alcohol.alcohol-units"
 * item[=].item[=].answer.item[=].text =  "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kangusega alkoholi)"
 * item[=].item[=].answer.item[=].answer.valueDecimal =  3.4
 
