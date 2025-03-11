@@ -807,7 +807,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.fractures.specify"
 * item[=].item[=].item[=].text = "Täpsustus"
-//* item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
+* item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
 
 * item[=].item[+].linkId = "traumas.concussion"
 * item[=].item[=].text = "Rasked peavigastused"
@@ -874,7 +874,6 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "digestive_organs.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-//Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
 * item[=].item[=].item[=].item[0].linkId = "digestive_organs.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-seedeelundid"
