@@ -1,15 +1,15 @@
-Instance: EEHealthDeclarationCancel
+Instance: ee-health-declaration-complete
 InstanceOf: OperationDefinition
 Usage: #definition
 * version = "5.0.0"
-* name = "EEHealthDeclarationCancel"
-* title = "Tervisedeklaratsiooni tühistamine"
+* name = "EEHealthDeclarationComplete"
+* title = "Tervisedeklaratsiooni kinnitamine"
 * status = #active
 * kind = #operation
 * experimental = false
-* description = "'In progress' või 'completed' staatuses tervisedeklaratsiooni tühistamise sõnum."
+* description = "'In progress' tervisedeklaratsiooni kinnitamine ('completed' seisundisse)."
 * affectsState = true
-* code = #cancel
+* code = #complete
 * resource = #QuestionnaireResponse
 * system = false
 * type = false

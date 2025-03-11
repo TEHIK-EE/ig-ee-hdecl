@@ -1,27 +1,27 @@
-Instance: EEHealthDeclarationGetConsent
+Instance: ee-health-declaration-set-consent
 InstanceOf: OperationDefinition
 Usage: #definition
-Description: "Tervisedeklaratsiooni ressursi ligipääsude päring"
+Description: "Tervisedeklaratsiooni ressursi ligipääsude muutmine. Ühe operatsiooniga saab muuta ligipääsu kas arstile (doctor) ja/või esindajale (representative). Lubatud väärtused on 'closed' või 'open'."
 * version = "5.0.0"
-* name = "EEHealthDeclarationGetConsent"
-* title = "Tervisedeklaratsiooni ressursi ligipääsude päring"
+* name = "EEHealthDeclarationSetConsent"
+* title = "Tervisedeklaratsiooni ressursi ligipääsude muutmine"
 * status = #active
 * kind = #operation
 * experimental = false
-* affectsState = false
-* code = #get-consent
+* affectsState = true
+* code = #set-consent
 * resource = #QuestionnaireResponse
 * system = false
 * type = false
 * instance = true
 * parameter[+].name = #representative
-* parameter[=].use = #out
+* parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "Konfidentsiaalsus eestkostjale"
 * parameter[=].type = #string
 * parameter[+].name = #doctor
-* parameter[=].use = #out
+* parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "Konfidentsiaalsus arstile"
