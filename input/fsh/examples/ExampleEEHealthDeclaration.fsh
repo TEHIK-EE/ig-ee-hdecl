@@ -1,42 +1,12 @@
-Profile: EEHealthDeclaration
-Parent: QuestionnaireResponse
-Id: EEHealthDeclaration
-Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
-* ^version = "1.0.0"
-* ^status = #draft
-* ^date = "2024-01-01"
-* meta.profile 1..1
-* questionnaire 1..1
-* language 0..1
-* status 1..1
-* basedOn 0..0
-* partOf 0..0
-* subject 1..1
-* encounter 0..0
-* text 0..0
-* author 1..1
-* extension contains response-expiration named ResponseExpiration 0..1
-* extension[ResponseExpiration] 0..1
-* item 0..*
-  * linkId 1..1
-  * definition 0..0
-  * text 0..1
-  * answer 0..*
-    * value[x] 1..1
-    * item 0..*
-  * item 0..*
-
 Instance: ExampleEEHealthDeclaration
 InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
-* meta.versionId = "1.0"
 
-
-* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/response-expiration"
+* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclarationExpiration"
 
 * extension[0].extension[0].url = "category"
-* extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendit-otsuse-kasutusala"
+* extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendi-otsuse-kasutusala"
 * extension[0].extension[0].valueCodeableConcept.coding[0].code = #military
 
 * extension[0].extension[1].url = "expiration"
@@ -44,7 +14,7 @@ Usage: #example
 
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
-* questionnaire = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclaration"
+* questionnaire = "https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0"
 * status = #completed
 * subject = Reference(QuestionnairePatient)
 * authored =  2024-01-01
@@ -697,7 +667,8 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men"
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
-* item[=].item[=].item[=].answer.valueBoolean = true
+//Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
+//* item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men.specify"
 * item[=].item[=].item[=].item[=].text = "Täpsustus"
@@ -786,13 +757,13 @@ Usage: #example
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.specific_operation"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code.value = #JEA01
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEA01
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Laparoskoopiline apendektoomia"
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.add_codes"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsiooni lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code.value = #JEW96
+* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEW96
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Muu operatsioon apendiksil"
 
 * item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.source_reference"
@@ -1455,40 +1426,4 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Hästi pime on ka"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Instance: QuestionnairePatient
-InstanceOf: Patient
-Description: "Patsient erinevate identifikaatoritega"
-Usage: #example
-* id = "katipiiriylene"
-* active = true
-* identifier[0]
-  * system = "https://fhir.ee/sid/pid/est/ni"
-  * value = "49406240016"
-* name
-  * use = #official
-  * given = "Kati"
-  * family = "Piiriülene"
-* gender = #female
 
