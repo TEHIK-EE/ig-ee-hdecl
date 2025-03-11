@@ -1,4 +1,5 @@
 Extension: EEHealthDeclarationExpiration
+Id: ee-health-declaration-expiration
 Title: "Health declaration expiration"
 Description: "Indicates the date on which this health declaration is considered expired."
 * ^context.type = #element
