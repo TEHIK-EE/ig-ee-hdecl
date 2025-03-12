@@ -26,11 +26,11 @@ Usage: #example
 * item[=].answer.valueCoding.code = #6
 * item[=].answer.valueCoding.display = "Töötervishoid"
 
-* item[+].linkId = "patient_gender"
+* item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
-* item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/sugu"
-* item[=].answer.valueCoding.code = #M
-* item[=].answer.valueCoding.display = "Mees"
+* item[=].answer.valueCoding.system = "http://hl7.org/fhir/ValueSet/administrative-gender"
+* item[=].answer.valueCoding.code = #male
+* item[=].answer.valueCoding.display = "Male"
 
 * item[+].linkId = "lifestyle"
 * item[=].text = "Elustiil"
@@ -47,11 +47,11 @@ Usage: #example
 * item[=].item[=].text = "Kas te suitsetate?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking.amount"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking.smoking-amount"
 * item[=].item[=].answer.item[=].text =  "Mitu sigaretti päevas?"
 * item[=].item[=].answer.item[=].answer.valueInteger = 20
 
-* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking.period"
+* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking.smoking-period"
 * item[=].item[=].answer.item[=].text =  "Mitu aastat olete järjest suitsetanud?"
 * item[=].item[=].answer.item[=].answer.valueDecimal = 45.0
 
@@ -59,563 +59,567 @@ Usage: #example
 * item[=].item[=].text = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.narcotics.how_often"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.narcotics.narcotics-frequency"
 * item[=].item[=].answer.item[=].text =  "Kirjeldage, kui sageli"
 * item[=].item[=].answer.item[=].answer.valueString = "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
 
-* item[=].item[+].linkId = "lifestyle.drugs"
+* item[=].item[+].linkId = "lifestyle.medication"
 * item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.drugs.specify"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.medication.specification"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString = "Kodeiin ja muud opioidid"
 
-* item[+].linkId = "work_environment"
+* item[+].linkId = "work-environment"
 * item[=].text = "Töökeskkond"
 
-* item[=].item[0].linkId = "work_environment.restrictions"
+* item[=].item[0].linkId = "work-environment.work-restrictions"
 * item[=].item[=].text = "Kas Teile on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "work_environment.restrictions.specify"
+* item[=].item[=].answer.item[0].linkId = "work-environment.work-restrictions.specification"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Psühholoogilise stressi tõttu takistatud tööd"
 
-* item[=].item[+].linkId = "work_environment.health_problems"
+* item[=].item[+].linkId = "work-environment.work-health-problems"
 * item[=].item[=].text = "Kas Teil esineb või on esinenud tervisehäireid, mida seostate oma tööülesannete täitmise või töökeskkonnaga?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "work_environment.health_problems.specify"
+* item[=].item[=].answer.item[0].linkId = "work-environment.work-health-problems.specification"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Hingamisraskused tingitud töökeskkonnast"
 
-* item[=].item[+].linkId = "work_environment.occupational_diagnosis"
+* item[=].item[+].linkId = "work-environment.occupational-disease"
 * item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[+].linkId = "work_environment.general_diagnosis"
+* item[=].item[+].linkId = "work-environment.work-related-disease"
 * item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "work_environment.ppe_problems"
+* item[=].item[+].linkId = "work-environment.ppe-problems"
 * item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].answer.item[0].linkId = "work_environment.ppe_problems.specify"
+* item[=].item[=].answer.item[0].linkId = "work-environment.ppe-problems.specification"
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Kiivri kandmine tekitab peavalu"
 
 * item[+].linkId = "allergies"
 * item[=].text = "Allergiad"
 
-* item[=].item[0].linkId = "allergies.no_complaints"
+* item[=].item[0].linkId = "allergies.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "mental_state"
+* item[+].linkId = "mental-health"
 * item[=].text = "Psüühika"
 
-* item[=].item[0].linkId = "mental_state.diagnoses"
+* item[=].item[0].linkId = "mental-health.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "mental_state.diagnoses.group"
+* item[=].item[=].item[0].linkId = "mental-health.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "mental_state.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #F61.0
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
 
-* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "mental_state.diagnoses.group"
+* item[=].item[=].item[+].linkId = "mental-health.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "mental_state.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #R45.4
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Ärrituvus ja viha"
 
-* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Liikluses muutun kergesti ärritatavaks"
 
-* item[=].item[=].item[=].item[+].linkId = "mental_state.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "mental_state.no_complaints"
+* item[=].item[+].linkId = "mental-health.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "mental_state.depression"
+* item[=].item[+].linkId = "mental-health.depression"
 * item[=].item[=].text = "Depressioon"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "mental_state.depression.specify"
+* item[=].item[=].item[0].linkId = "mental-health.depression.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Pidev apaatsus ja süvenev meeleolulangus"
 
-* item[=].item[+].linkId = "mental_state.schizophrenia"
+* item[=].item[+].linkId = "mental-health.schizophrenia"
 * item[=].item[=].text = "Skisofreenia"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "mental_state.work_alone"
+* item[=].item[+].linkId = "mental-health.fear-working-alone"
 * item[=].item[=].text = "Kartus töötada üksinda"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "mental_state.claustrophobia"
+* item[=].item[+].linkId = "mental-health.fear-closed-spaces"
 * item[=].item[=].text = "Hirm suletud ruumi ees"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "mental_state.fear_of_heights"
+* item[=].item[+].linkId = "mental-health.fear-heights"
 * item[=].item[=].text = "Kõrgusekartus"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "mental_state.other_condition"
+* item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "mental_state.other_condition.specify"
+* item[=].item[=].item[0].linkId = "mental-health.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Generaliseerunud äravushoog (1x kuus)"
 
-* item[+].linkId = "nervous_system"
+* item[+].linkId = "nervous-system"
 * item[=].text = "Närvisüsteem"
 
-* item[=].item[0].linkId = "nervous_system.diagnoses"
+* item[=].item[0].linkId = "nervous-system.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.4
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kausalgia"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group"
+* item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "nervous_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.0
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Karpaaltunneli sündroom"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Arvutis trükkimine ja kirjutamine muutub valulikuks mingil ajahetkel"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "nervous_system.no_complaints"
+* item[=].item[+].linkId = "nervous-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "nervous_system.syncope"
+* item[=].item[+].linkId = "nervous-system.syncope"
 * item[=].item[=].text = "Teadvuse kaotuse hood"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.syncope.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.syncope.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "aeg-ajalt minestan"
 
-* item[=].item[+].linkId = "nervous_system.seizures"
+* item[=].item[+].linkId = "nervous-system.seizures"
 * item[=].item[=].text = "Krambihood (epilepsia ehk langetõbi)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.seizures.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.seizures.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Vilkuv valgustus tekitab epilepsia hoogu"
 
-* item[=].item[+].linkId = "nervous_system.balance_disorder"
+* item[=].item[+].linkId = "nervous-system.balance-disorder"
 * item[=].item[=].text = "Tasakaaluhäired (sh Meniere'i tõbi)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.balance_disorder.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.balance-disorder.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Meniere'i tõbi diagnoositud"
 
-* item[=].item[+].linkId = "nervous_system.stroke"
+* item[=].item[+].linkId = "nervous-system.stroke"
 * item[=].item[=].text = "Ajuinfarkt või ajuinsult"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.stroke.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.stroke.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Läbipõetud hemoraagiline ajuinfarkt"
 
-* item[=].item[+].linkId = "nervous_system.sea_sickness"
+* item[=].item[+].linkId = "nervous-system.seasickness"
 * item[=].item[=].text = "Merehaigus"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.sea_sickness.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.seasickness.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Iiveldus merel sõites"
 
-* item[=].item[+].linkId = "nervous_system.coordination_disorder"
+* item[=].item[+].linkId = "nervous-system.coordination-disorder"
 * item[=].item[=].text = "Koordinatsioonihäired (sh. kätega seonduvad)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.coordination_disorder.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.coordination-disorder.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Treemor kätes tekitab raskuseid koordinatsiooniga"
 
-* item[=].item[+].linkId = "nervous_system.other_condition"
+* item[=].item[+].linkId = "nervous-system.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "nervous_system.other_condition.specify"
+* item[=].item[=].item[0].linkId = "nervous-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Valu alaseljas füüsilise koormuse ajal"
 
-* item[+].linkId = "eyesight"
+* item[+].linkId = "eyes-vision"
 * item[=].text = "Silmad ja nägemine"
 
-* item[=].item[0].linkId = "eyesight.diagnoses"
+* item[=].item[0].linkId = "eyes-vision.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "eyesight.diagnoses.group"
+* item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "eyesight.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #H27.1
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Läätse väärasetsus"
 
-* item[=].item[=].item[=].item[+].linkId = "eyesight.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "eyesight.no_complaints"
+* item[=].item[+].linkId = "eyes-vision.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "eyesight.myopia"
+* item[=].item[+].linkId = "eyes-vision.myopia"
 * item[=].item[=].text = "Lühinägevus"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "eyesight.myopia.specify"
+* item[=].item[=].item[0].linkId = "eyes-vision.myopia.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Paremat silmast lühinägelik"
 
-* item[=].item[+].linkId = "eyesight.limited_field_of_view"
+* item[=].item[+].linkId = "eyes-vision.hyperopia"
+* item[=].item[=].text = "Lühinägevus"
+* item[=].item[=].answer.valueBoolean = false
+
+* item[=].item[+].linkId = "eyes-vision.limited-view"
 * item[=].item[=].text = "Kas üles-alla või külgedele vaadates esineb vaatevälja piiratust?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "eyesight.limited_field_of_view.specify"
+* item[=].item[=].item[0].linkId = "eyes-vision.limited-view.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "külgedel esineb piiratus"
 
-* item[=].item[+].linkId = "eyesight.double_vision"
+* item[=].item[+].linkId = "eyes-vision.double-vision"
 * item[=].item[=].text = "Kahelinägemine"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "eyesight.problems_seeing_color"
+* item[=].item[+].linkId = "eyes-vision.colour-vision-disorder"
 * item[=].item[=].text = "Värvusmeele häired"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "eyesight.problems_seeing_color.specify"
+* item[=].item[=].item[0].linkId = "eyes-vision.colour-vision-disorder.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Osaline daltonism"
 
-* item[=].item[+].linkId = "eyesight.other_condition"
+* item[=].item[+].linkId = "eyes-vision.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "eyesight.other_condition.specify"
+* item[=].item[=].item[0].linkId = "eyes-vision.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Ise-diagnoositud glaukoom"
 
-* item[+].linkId = "ear_nose_throat"
+* item[+].linkId = "ear-nose-throat"
 * item[=].text = "Kõrv, nina, neel"
 
-* item[=].item[0].linkId = "ear_nose_throat.diagnoses"
+* item[=].item[0].linkId = "ear-nose-throat.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "ear_nose_throat.diagnoses.group"
+* item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "ear_nose_throat.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-korv-nina-neel"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #J38.5
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kõrispasm"
 
-* item[=].item[=].item[=].item[+].linkId = "ear_nose_throat.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "ear_nose_throat.no_complaints"
+* item[=].item[+].linkId = "ear-nose-throat.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "respiratory_system"
+* item[+].linkId = "respiratory-system"
 * item[=].text = "Hingamissüsteem"
 
-* item[=].item[0].linkId = "respiratory_system.diagnoses"
+* item[=].item[0].linkId = "respiratory-system.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "respiratory_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hingamissusteem"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #J65
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Krooniline kopsutolmustus"
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "respiratory_system.no_complaints"
+* item[=].item[+].linkId = "respiratory-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "respiratory_system.asthma"
+* item[=].item[+].linkId = "respiratory-system.asthma"
 * item[=].item[=].text = "Astma"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "respiratory_system.copd"
+* item[=].item[+].linkId = "respiratory-system.copd"
 * item[=].item[=].text = "Krooniline obstruktiivne kopsuhaigus ehk KOK"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "respiratory_system.copd.specify"
+* item[=].item[=].item[0].linkId = "respiratory-system.copd.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "hingamine füüsilisel koormusel raskendatud"
 
-* item[=].item[+].linkId = "respiratory_system.other_condition"
+* item[=].item[+].linkId = "respiratory-system.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "respiratory_system.other_condition.specify"
+* item[=].item[=].item[0].linkId = "respiratory-system.other-disease-condition-symptom.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Sügavalt hingamine krabisev hääl"
 
-* item[=].item[+].linkId = "respiratory_system.sleep_apnoe"
+* item[=].item[+].linkId = "respiratory-system.sleep-apnoea"
 * item[=].item[=].text = "Uneapnoe"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "respiratory_system.sleep_apnoe.specify"
+* item[=].item[=].item[0].linkId = "respiratory-system.sleep-apnoea.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Norskan (kasutan ka CPAP maski)"
 
-* item[+].linkId = "metabolism_disorder"
+* item[+].linkId = "metabolic-disorder"
 * item[=].text = "Ainevahetuse häired (sh kilpnäärme haigused)"
 
-* item[=].item[0].linkId = "metabolism_disorder.diagnoses"
+* item[=].item[0].linkId = "metabolic-disorder.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "metabolism_disorder.diagnoses.group"
+* item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "metabolism_disorder.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #E11.9
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Insuliinisõltumatu suhkurtõbi tüsistusteta"
 
-* item[=].item[=].item[=].item[+].linkId = "metabolism_disorder.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
 
-* item[=].item[=].item[=].item[+].linkId = "metabolism_disorder.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "metabolism_disorder.no_complaints"
+* item[=].item[+].linkId = "metabolic-disorder.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "metabolism_disorder.diabetes"
+* item[=].item[+].linkId = "metabolic-disorder.diabetes"
 * item[=].item[=].text = "Suhkruhaigus"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "metabolism_disorder.diabetes.specify"
+* item[=].item[=].item[0].linkId = "metabolic-disorder.diabetes.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
 
-* item[=].item[+].linkId = "metabolism_disorder.other_condition"
+* item[=].item[+].linkId = "metabolic-disorder.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "cardiovascular_system"
+* item[+].linkId = "cardiovascular-system"
 * item[=].text = "Süda ja veresoonkond"
 
-* item[=].item[0].linkId = "cardiovascular_system.diagnoses"
+* item[=].item[0].linkId = "cardiovascular-system.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "cardiovascular_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "cardiovascular_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #I25.2
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Varasem müokardiinfarkt"
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Pärgarterite 50% ummistus põhjustas MI"
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "cardiovascular_system.no_complaints"
+* item[=].item[+].linkId = "cardiovascular-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular_system.physical_activity_stenocardia"
+* item[=].item[+].linkId = "cardiovascular-system.chest-pain-activity"
 * item[=].item[=].text = "Koormusega seonduv valu rinnus"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "cardiovascular_system.physical_activity_stenocardia.specify"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.chest-pain-activity.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Süda hakkab puperdama füüsilisel koormusel"
 
-* item[=].item[+].linkId = "cardiovascular_system.high_bp"
+* item[=].item[+].linkId = "cardiovascular-system.high-blood-pressure"
 * item[=].item[=].text = "Kõrge vererõhk"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular_system.previous_mi"
+* item[=].item[+].linkId = "cardiovascular-system.heart-attack"
 * item[=].item[=].text = "Läbipõetud südameinfarkt"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "cardiovascular_system.previous_mi.specify"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.heart-attack.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "4 aastat tagasi põdesin läbi südame isheemitõvest tingitud infarkti"
 
-* item[=].item[+].linkId = "cardiovascular_system.heart_arrhythmia"
+* item[=].item[+].linkId = "cardiovascular-system.arrhythmia"
 * item[=].item[=].text = "Südame rütmihäired"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular_system.heart_stenting"
+* item[=].item[+].linkId = "cardiovascular-system.angioplasty-stenting"
 * item[=].item[=].text = "On tehtud südamesondeerimine või stentimine"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "cardiovascular_system.heart_stenting.specify"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.angioplasty-stenting.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Pärast põetud infarkti paigaldatud balloondilatatsiooni stent (reiearteri kaudu)"
 
-* item[=].item[+].linkId = "cardiovascular_system.pacer"
+* item[=].item[+].linkId = "cardiovascular-system.pacer"
 * item[=].item[=].text = "On paigaldatud südamerütmur"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular_system.heart_operation"
+* item[=].item[+].linkId = "cardiovascular-system.heart-operation"
 * item[=].item[=].text = "On tehtud südameoperatsioon"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular_system.other_condition"
+* item[=].item[+].linkId = "cardiovascular-system.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "skeletal_system"
+* item[+].linkId = "bones-joints-muscles"
 * item[=].text = "Luud, liigesed ja lihased"
 
-* item[=].item[0].linkId = "skeletal_system.diagnoses"
+* item[=].item[0].linkId = "bones-joints-muscles.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "skeletal_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #M47
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Spondüloos e lülijäikus"
 
-* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "lülijäikus"
 
-* item[=].item[=].item[=].item[+].linkId = "skeletal_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "skeletal_system.no_complaints"
+* item[=].item[+].linkId = "bones-joints-muscles.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.stiff_joints"
+* item[=].item[+].linkId = "bones-joints-muscles.joint-stiffness"
 * item[=].item[=].text = "Liigesejäikus"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.stiff_joints.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-stiffness.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Hommikuti on kõik liigesed kanged"
 
-* item[=].item[+].linkId = "skeletal_system.paresis_plegia"
+* item[=].item[+].linkId = "bones-joints-muscles.limb-paralysis"
 * item[=].item[=].text = "Jäseme osaline või täielik halvatus (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.amputee"
+* item[=].item[+].linkId = "bones-joints-muscles.missing-limb"
 * item[=].item[=].text = "Jäseme või selle osa puudumine (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.tremor"
+* item[=].item[+].linkId = "bones-joints-muscles.tremor"
 * item[=].item[=].text = "Käte värisemine (treemor)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.joint_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.joint-pain"
 * item[=].item[=].text = "Liigesevalu"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "skeletal_system.joint_pain.specify"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.joint-pain.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Hommikuti on kõik liigesed valusad"
 
-* item[=].item[+].linkId = "skeletal_system.neck_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.neck-pain"
 * item[=].item[=].text = "Kaelavalu"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.shoulder_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.shoulder-pain"
 * item[=].item[=].text = "Õlavöötmevalu"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.lower_back_pain"
+* item[=].item[+].linkId = "bones-joints-muscles.lower-back-pain"
 * item[=].item[=].text = "Alaseljavalu"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "skeletal_system.other_condition"
+* item[=].item[+].linkId = "bones-joints-muscles.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
@@ -634,139 +638,137 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #A51.1
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Primaarne anaalsüüfilis"
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "infections.no_complaints"
-* item[=].item[=].text = "Kaebused hetkel puuduvad"
+* item[=].item[+].linkId = "infections.no-known-illness"
+* item[=].item[=].text = "Teadaolevalt ei ole põdenud"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "other_chronic_illnesses"
+* item[+].linkId = "other-chronic-disorders"
 * item[=].text = "Muud kroonilised haigused, seisundid või sümptomid, mida eespool ei kirjeldatud"
 
-* item[=].item[0].linkId = "other_chronic_illnesses.none"
+* item[=].item[0].linkId = "other-chronic-disorders.none"
 * item[=].item[=].text = "Puuduvad"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "treatment_done"
+* item[+].linkId = "previous-treatment"
 * item[=].text = "Senine ravi"
 
-* item[=].item[0].linkId = "treatment_done.foreign_treatment"
+* item[=].item[0].linkId = "previous-treatment.treatment-abroad"
 * item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "treatment_done.foreign_treatment.specify"
+* item[=].item[=].item[0].linkId = "previous-treatment.treatment-abroad.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Ostsin lätis paratsetamooli"
 
-* item[=].item[+].linkId = "treatment_done.regular_medication"
+* item[=].item[+].linkId = "previous-treatment.regular-medication"
 * item[=].item[=].text = "Regulaarsed ravimid"
 
-* item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men"
+* item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
+* item[=].item[=].item[=].answer.valueBoolean = true
 //Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-//* item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.regular_medication_men.specify"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].item[=].answer.valueString = "Xymelin, beeta-blokaatorid, hjärtemagnyl (südame aspirin)"
 
-* item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions"
+* item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
 * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 
-* item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.current_prescriptions.prescription"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
 * item[=].item[=].item[=].item[=].text = "Retsept"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.date"
+* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.date"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-09-01
 
-//Mis loendist s4ee info peaks tulema
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.atc"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.atc"
 * item[=].item[=].item[=].item[=].item[=].text = "ATC"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/atc-ee"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #G03BA03
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "testosteroon"
 
-// Pakendi info tuleb alles välja kui ravim välja ostetakse (puudub konkreetne meie loend ja välja kirjutatud ravimite juures seda infot ei ole, mis pakendiga tegu)
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.package"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.package"
 * item[=].item[=].item[=].item[=].item[=].text = "Pakend"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/pakend" //Vale
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #mingi_pakend
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.regular_medication.current_prescriptions.prescription.source_reference"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.source-reference"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "treatment_done.hospitalization"
+* item[=].item[+].linkId = "previous-treatment.hospitalization"
 * item[=].item[=].text = "Kas olete viibinud haiglaravil?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "treatment_done.hospitalization.specify"
+* item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Kopsupõletikuga intensiivravil mõni aeg tagasi"
 
-* item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization"
+* item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization"
 * item[=].item[=].item[=].text = "Varasem haiglaravi"
 
-* item[=].item[=].item[=].item[0].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case"
 * item[=].item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.from"
+* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.from"
 * item[=].item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-05-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.to"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.to"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuni"
 * item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-06-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.provider"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.provider"
 * item[=].item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
 * item[=].item[=].item[=].item[=].item[=].answer.valueString = "Lääne-Tallinna Keskhaigla"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.hospitalization.previous_hospitalization.stationary_ce.source_reference"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.source-reference"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "treatment_done.operations"
+* item[=].item[+].linkId = "previous-treatment.operations"
 * item[=].item[=].text = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "treatment_done.operations.specify"
+* item[=].item[=].item[0].linkId = "previous-treatment.operations.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Avatud apendektoomia, vist oli 4 2 kuud tagasi. Põhjuseks akuutne pimesoole põletik"
 
-* item[=].item[=].item[+].linkId = "treatment_done.operations.procedures"
+* item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures"
 * item[=].item[=].item[=].text = "Teostatud protseduurid"
 
-* item[=].item[=].item[=].item[0].linkId = "treatment_done.operations.procedures.operation"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.operations.procedures.operation"
 * item[=].item[=].item[=].item[=].text = "Operatsioon"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "treatment_done.operations.procedures.operation.date"
+* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.operations.procedures.operation.date"
 * item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-11-20
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.specific_operation"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.specific-operation"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEA01
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Laparoskoopiline apendektoomia"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.add_codes"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.add-codes"
 * item[=].item[=].item[=].item[=].item[=].text = "Operatsiooni lisakoodid"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEW96
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Muu operatsioon apendiksil"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "treatment_done.operations.procedures.operation.source_reference"
+* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.operations.procedures.operation.source-reference"
 * item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
@@ -787,11 +789,11 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.3
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Radioaktiivselt ämblikult sai hammustada"
 
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
@@ -805,221 +807,221 @@ Usage: #example
 * item[=].item[=].text = "Luumurrud (palun täpsustage, millised ja millal)"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "traumas.fractures.specify"
+* item[=].item[=].item[0].linkId = "traumas.fractures.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Varbaluumurd (juhtus 3 nädalat tagasi)"
 
-* item[=].item[+].linkId = "traumas.concussion"
+* item[=].item[+].linkId = "traumas.head-traumas"
 * item[=].item[=].text = "Rasked peavigastused"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "traumas.other_injuries"
+* item[=].item[+].linkId = "traumas.other-injuries"
 * item[=].item[=].text = "Muud olulised vigastused (palun täpsustage, millised ja millal)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "skin_disease"
+* item[+].linkId = "skin-disorders"
 * item[=].text = "Nahahaigused"
 
-* item[=].item[0].linkId = "skin_disease.diagnoses"
+* item[=].item[0].linkId = "skin-disorders.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "skin_disease.diagnoses.group"
+* item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "skin_disease.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #L02.1
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kaelanahaabstsess, -furunkul ja -karbunkul"
 
-* item[=].item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group"
+* item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "skin_disease.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #A46
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Erüsiipel e roos"
 
-* item[=].item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Roospõletik tuhara piirkonnas"
 
-* item[=].item[=].item[=].item[+].linkId = "skin_disease.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "skin_disease.skin_conditions"
+* item[=].item[+].linkId = "skin-disorders.skin-conditions"
 * item[=].item[=].text = "Nahahaigused: millal põdenud, milliseid?"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[=].item[0].linkId = "skin_disease.skin_conditions.specify"
+* item[=].item[=].item[0].linkId = "skin-disorders.skin-conditions.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Roospõletik sügeleb sageli ja nahk on kuiv."
 
-* item[+].linkId = "digestive_organs"
+* item[+].linkId = "digestive-organs"
 * item[=].text = "Seedeelundid"
 
-* item[=].item[0].linkId = "digestive_organs.diagnoses"
+* item[=].item[0].linkId = "digestive-organs.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "digestive_organs.diagnoses.group"
+* item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "digestive_organs.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-seedeelundid"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #K70.1
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Alkoholhepatiit"
 
-* item[=].item[=].item[=].item[+].linkId = "digestive_organs.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Ikteeriline maksapuudulikkuse tõttu juba"
 
-* item[=].item[=].item[=].item[+].linkId = "digestive_organs.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "digestive_organs.no_complaints"
+* item[=].item[+].linkId = "digestive-organs.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "digestive_organs.liver_disease"
+* item[=].item[+].linkId = "digestive-organs.liver-disease"
 * item[=].item[=].text = "Maksahaigused"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "digestive_organs.liver_disease.specify"
+* item[=].item[=].item[0].linkId = "digestive-organs.liver-disease.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Alkoholi liigtarvitamisest tingitud maksakahjustus"
 
-* item[=].item[=].linkId = "digestive_organs.gall_stones"
+* item[=].item[=].linkId = "digestive-organs.gallstones"
 * item[=].item[=].text = "Sapikivid"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "digestive_organs.gall_stones.specify"
+* item[=].item[=].item[0].linkId = "digestive-organs.gallstones.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Soola liigtarvitamisest ja vähese vee joomisest sapikivid"
 
-* item[=].item[+].linkId = "digestive_organs.gastric_duodenal_ulcers"
+* item[=].item[+].linkId = "digestive-organs.gastric-duodenal-ulcers"
 * item[=].item[=].text = "Mao- ja kaksteistsõrmiksoole haavandid"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "digestive_organs.crohn_colitis"
+* item[=].item[+].linkId = "digestive-organs.colitis-crohns-disease"
 * item[=].item[=].text = "Haavandiline koliit või Crohni tõbi"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "digestive_organs.other_condition"
+* item[=].item[+].linkId = "digestive-organs.other-disease-condition-symptom"
 * item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "urogenital_system"
+* item[+].linkId = "urogenital-system"
 * item[=].text = "Kuse- ja suguelundid"
 
-* item[=].item[0].linkId = "urogenital_system.diagnoses"
+* item[=].item[0].linkId = "urogenital-system.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "urogenital_system.diagnoses.group"
+* item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "urogenital_system.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #N15.0
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Balkani nefropaatia"
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital_system.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Neerupuudulikkus (Albaanias diagnoositud)"
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital_system.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "urogenital_system.no_complaints"
+* item[=].item[+].linkId = "urogenital-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "blood_problems"
+* item[+].linkId = "blood-problems"
 * item[=].text = "Verehaigused"
 
-* item[=].item[0].linkId = "blood_problems.diagnoses"
+* item[=].item[0].linkId = "blood-problems.diagnoses"
 * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "blood_problems.diagnoses.group"
+* item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group"
 * item[=].item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "blood_problems.diagnoses.group.diagnosis"
+* item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses.group.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-verehaigused"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #D81.9
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Täpsustamata kombineeritud immuunpuudulikkus"
 
-* item[=].item[=].item[=].item[+].linkId = "blood_problems.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "blood_problems.no_complaints"
+* item[=].item[+].linkId = "blood-problems.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[+].linkId = "medical_device"
+* item[+].linkId = "medical-devices"
 * item[=].text = "Kasutan järgmisi meditsiiniseadmeid/abivahendeid"
 
-* item[=].item[0].linkId = "medical_device.nothing_used"
+* item[=].item[0].linkId = "medical-devices.no-devices"
 * item[=].item[=].text = "Ei kasuta"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.eye_glasses"
+* item[=].item[+].linkId = "medical-devices.glasses"
 * item[=].item[=].text = "Prillid"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "medical_device.eye_glasses.specify"
+* item[=].item[=].item[0].linkId = "medical-devices.glasses.specification"
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Kasutan lugemiseks prille"
 
-* item[=].item[+].linkId = "medical_device.eye_lenses"
+* item[=].item[+].linkId = "medical-devices.contact-lenses"
 * item[=].item[=].text = "Kontaktläätsed"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.hearing_aid"
+* item[=].item[+].linkId = "medical-devices.hearing-aid"
 * item[=].item[=].text = "Kuuldeaparaat/kohleaarimplantaat"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.arm_prosthestis"
+* item[=].item[+].linkId = "medical-devices.arm-prosthesis"
 * item[=].item[=].text = "Käeprotees"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.leg_prosthestis"
+* item[=].item[+].linkId = "medical-devices.leg-prosthesis"
 * item[=].item[=].text = "Jalaprotees"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.mobility_support"
+* item[=].item[+].linkId = "medical-devices.mobility-device"
 * item[=].item[=].text = "Liikumise abivahend"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.other_support"
+* item[=].item[+].linkId = "medical-devices.other-device"
 * item[=].item[=].text = "Muu abivahend"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "medical_device.cpap"
+* item[=].item[+].linkId = "medical-devices.cpap"
 * item[=].item[=].text = "Positiivrõhuaparaat (CPAP) või mitteinvasiivse ventilatsiooni seade"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[+].linkId = "medical_device.intraoral_sleep_apnoea"
+* item[=].item[+].linkId = "medical-devices.mandibular-splint"
 * item[=].item[=].text = "Intraoraalne uneapnoe seade"
 * item[=].item[=].answer.valueBoolean = false
 
@@ -1038,21 +1040,21 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #G47.4
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Narkolepsia ja katapleksia"
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.description"
+* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.written-diagnosis"
 * item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
 * item[=].item[=].item[=].item[=].answer.valueString = "Vajun igapäevategevusi tehes lihtsasti unne"
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses.group.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[+].linkId = "sleep.snoring"
+* item[=].item[+].linkId = "sleep.loud-snoring"
 * item[=].item[=].text = "Kas Te norskate valjult (valjemini kui tavaline kõne, või Teie norskamist on kosta kõrvalruumi ka siis, kui magamistoa uks on suletud)?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "sleep.snoring.specify"
+* item[=].item[=].item[0].linkId = "sleep.snoring.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Äratan pidevalt elukaaslase üles norskamisega"
 
@@ -1060,370 +1062,369 @@ Usage: #example
 * item[=].item[=].text = "Kas Te tunnete end sageli mitteväljapuhanuna, väsinuna või unisena päevasel ajal?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "sleep.fatigue.specify"
+* item[=].item[=].item[0].linkId = "sleep.fatigue.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Ebakvaliteetsest unest ja norskamisest tingituna olen ka hommikul väsinud"
 
-* item[=].item[+].linkId = "sleep.breath_stop_during_sleep"
+* item[=].item[+].linkId = "sleep.breath-stop-sleep"
 * item[=].item[=].text = "Kas Teil on täheldatud uneaegseid hingamisseisakuid?"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "health_assessment"
+* item[+].linkId = "health-assessment"
 * item[=].text = "Hinnang enda terviseseisundile"
 
 //Vajab õiget loendit
-* item[=].item[0].linkId = "health_assessment.patient_evaluation"
+* item[=].item[0].linkId = "health-assessment.patient-health-assessment"
 * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
 * item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hinnang-tervisele"
 * item[=].item[=].answer.valueCoding.code = #1
 * item[=].item[=].answer.valueCoding.display = "Hea"
 
-* item[=].item[=].item[0].linkId = "health_assessment.patient_evaluation.specify"
+* item[=].item[=].item[0].linkId = "health-assessment.patient-health-assessment.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Kuigi muresid on palju, siis olen üldiselt positiivselt meelestatud"
 
-* item[=].item[+].linkId = "health_assessment.last_year_illness"
+* item[=].item[+].linkId = "health-assessment.illness-past-year"
 * item[=].item[=].text = "Kas olete viimase aasta jooksul olnud haige?"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "health_assessment.last_year_illness.specify"
+* item[=].item[=].item[0].linkId = "health-assessment.illness-past-year.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Palavik eelmisel kuul (vist oli COVID-19)"
 
-* item[=].item[+].linkId = "health_assessment.complaints"
+* item[=].item[+].linkId = "health-assessment.complaints"
 * item[=].item[=].text = "Kas Teil on enda tervise osas kaebusi?"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "health_assessment.sick_days"
+* item[=].item[+].linkId = "health-assessment.sick-leave-certs"
 * item[=].item[=].text = "Haiguslehed"
 
-* item[=].item[=].item[0].linkId = "health_assessment.sick_days.foreign_country_sick_days_duration"
+* item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.foreign-sick-leave-cert-length"
 * item[=].item[=].item[=].text = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
 * item[=].item[=].item[=].answer.valueString = "Ei ole käinud reisil"
 
-* item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days"
+* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years"
 * item[=].item[=].item[=].text = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
 
-* item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day"
+* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert"
 * item[=].item[=].item[=].item[=].text = "Haigusleht"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.from"
+* item[=].item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.from"
 * item[=].item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-07-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.duration"
+* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.duration"
 * item[=].item[=].item[=].item[=].item[=].text = "Kestus päevades"
 * item[=].item[=].item[=].item[=].item[=].answer.valueInteger = 8
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "health_assessment.sick_days.five_year_sick_days.sick_day.diagnosis"
+* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.diagnosis"
 * item[=].item[=].item[=].item[=].item[=].text = "Diagnoos"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.2
 * item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Skorpionimürk"
 
-* item[=].item[+].linkId = "health_assessment.work_disability"
+* item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss"
 * item[=].item[=].text = "Töövõimetus"
 
-* item[=].item[=].item[0].linkId = "health_assessment.work_disability.foreign_work_disability_given"
+* item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
 * item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability"
+* item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability"
 * item[=].item[=].item[=].text = "Osaline töövõimetus (andmed Sotsiaalkindlustusametist)"
 
-* item[=].item[=].item[=].item[0].linkId = "health_assessment.work_disability.partial_work_disability.from"
+* item[=].item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.from"
 * item[=].item[=].item[=].item[=].text = "Alates"
 * item[=].item[=].item[=].item[=].answer.valueDate = 2024-10-01
 
-* item[=].item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability.to"
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.to"
 * item[=].item[=].item[=].item[=].text = "Kuni"
 * item[=].item[=].item[=].item[=].answer.valueDate = 2025-10-01
 
-* item[=].item[=].item[=].item[+].linkId = "health_assessment.work_disability.partial_work_disability.work_disability_type"
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability.work-capacity-type"
 * item[=].item[=].item[=].item[=].text = "Töövõimeliik"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/toovoime-liik"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #Osaline
 * item[=].item[=].item[=].item[=].answer.valueCoding.display =	"Osaline töövõime"
 
-* item[=].item[+].linkId = "health_assessment.disability"
+* item[=].item[+].linkId = "health-assessment.disability"
 * item[=].item[=].text = "Puue"
 
-* item[=].item[=].item[0].linkId = "health_assessment.disability.foreign_disability_given"
+* item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad"
 * item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "immunization"
 * item[=].text = "Immuniseerimine"
 
-* item[=].item[0].linkId = "immunization.b_hepatitis"
+* item[=].item[0].linkId = "immunization.b-hepatitis"
 * item[=].item[=].text = "B-viirushepatiit"
 
-* item[=].item[=].item[0].linkId = "immunization.b_hepatitis.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.heptatitis-B-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[+].linkId = "immunization.b_hepatitis.immunization_his_data"
+* item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.b_hepatitis.immunization_his_data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.b-hepatitis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 2022-10-10
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.b_hepatitis.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "immunization.b_hepatitis.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.b-hepatitis.date"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 2022-10-01
+
 
 * item[=].item[+].linkId = "immunization.tuberculosis"
 * item[=].item[=].text = "Tuberkuloos"
 
-* item[=].item[=].item[0].linkId = "immunization.tuberculosis.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.tuberculosis.tuberculosis-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization_his_data"
+* item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization_his_data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.tuberculosis.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "immunization.tuberculosis.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.tuberculosis.date"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
 * item[=].item[+].linkId = "immunization.rotavirus"
 * item[=].item[=].text = "Rotaviirus"
 
-* item[=].item[=].item[0].linkId = "immunization.rotavirus.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.rotavirus.rotavirus-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization_his_data"
+* item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization_his_data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.rotavirus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "immunization.rotavirus.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.rotavirus.date"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 1996-03-16
 
 * item[=].item[+].linkId = "immunization.diphteria"
 * item[=].item[=].text = "Difteeria"
 
-* item[=].item[=].item[0].linkId = "immunization.diphteria.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.diphteria.diphtheria-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[+].linkId = "immunization.diphteria.immunization_his_data"
+* item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization_his_data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.diphteria.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 1996-05-16
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "immunization.diphteria.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.diphteria.date"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 1996-04-16
 
 * item[=].item[+].linkId = "immunization.tetanus"
 * item[=].item[=].text = "Teetanus"
 
-* item[=].item[=].item[0].linkId = "immunization.tetanus.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.tetanus.tetanus-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[+].linkId = "immunization.tetanus.immunization_his_data"
+* item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data"
 * item[=].item[=].item[=].text = "Immuniseerimine"
 
-* item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization_his_data.date"
+* item[=].item[=].item[=].item[0].linkId = "immunization.tetanus.immunization-his-data.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 2000-01-01
 
-* item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization_his_data.source_reference"
+* item[=].item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "immunization.tetanus.self_report_date"
+* item[=].item[=].item[+].linkId = "immunization.tetanus.date"
 * item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].answer.valueDate = 2000-01-01
-
-
 
 
 * item[=].item[+].linkId = "immunization.pertussis"
 * item[=].item[=].text = "Läkaköha"
 
-* item[=].item[=].item[0].linkId = "immunization.pertussis.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.pertussis.pertussis-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.polio"
 * item[=].item[=].text = "Poliomüeliit"
 
-* item[=].item[=].item[0].linkId = "immunization.polio.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.polio.poliovirus-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.hemo_influenza"
+* item[=].item[+].linkId = "immunization.hemo-influenza"
 * item[=].item[=].text = "Influensa"
 
-* item[=].item[=].item[0].linkId = "immunization.hemo_influenza.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.haemophilus-influenza-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.measles"
 * item[=].item[=].text = "Leetrid"
 
-* item[=].item[=].item[0].linkId = "immunization.measles.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.measles.measles-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.mumps"
 * item[=].item[=].text = "Mumps"
 
-* item[=].item[=].item[0].linkId = "immunization.mumps.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.mumps.mumps-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.rubella"
 * item[=].item[=].text = "Punetised"
 
-* item[=].item[=].item[0].linkId = "immunization.rubella.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.rubella.rubella-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.hpv"
 * item[=].item[=].text = "HPV"
 
-* item[=].item[=].item[0].linkId = "immunization.hpv.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.hpv.hpv-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.covid"
 * item[=].item[=].text = "COVID"
 
-* item[=].item[=].item[0].linkId = "immunization.covid.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.covid.covid-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.flu"
 * item[=].item[=].text = "Gripiviirus"
 
-* item[=].item[=].item[0].linkId = "immunization.flu.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.flu.influenza-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.pneumococcus"
 * item[=].item[=].text = "Pneumokokk"
 
-* item[=].item[=].item[0].linkId = "immunization.pneumococcus.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.pneumococcus.pneumococcus-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.a_hepatitis"
+* item[=].item[+].linkId = "immunization.a-hepatitis"
 * item[=].item[=].text = "A-hepatiit"
 
-* item[=].item[=].item[0].linkId = "immunization.a_hepatitis.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.hepatitis-A-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.chicken_box"
+* item[=].item[+].linkId = "immunization.varicella"
 * item[=].item[=].text = "Tuulerõuged"
 
-* item[=].item[=].item[0].linkId = "immunization.chicken_box.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.varicella.varicella-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.shingles"
 * item[=].item[=].text = "Vöötohatis"
 
-* item[=].item[=].item[0].linkId = "immunization.shingles.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.shingles.herpes-zoster-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.meningococcus"
 * item[=].item[=].text = "Meningokokk"
 
-* item[=].item[=].item[0].linkId = "immunization.meningococcus.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.meningococcus.meningococcus-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.yellow_fever"
+* item[=].item[+].linkId = "immunization.yellow-fever"
 * item[=].item[=].text = "Kollapalavik"
 
-* item[=].item[=].item[0].linkId = "immunization.yellow_fever.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.yellow-fever.yellow-fever-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.typhoid_fever"
+* item[=].item[+].linkId = "immunization.typhoid-fever"
 * item[=].item[=].text = "Kõhutüüfus"
 
-* item[=].item[=].item[0].linkId = "immunization.typhoid_fever.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.typhoid-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.tick_encephalitis"
+* item[=].item[+].linkId = "immunization.tick-encephalitis"
 * item[=].item[=].text = "Puukentsefaliit"
 
-* item[=].item[=].item[0].linkId = "immunization.tick_encephalitis.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "immunization.other_vaccines"
+* item[=].item[+].linkId = "immunization.other-vac"
 * item[=].item[=].text = "Muud vaktsiinid"
 
-* item[=].item[=].item[0].linkId = "immunization.other_vaccines.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.other-vac.vaccinated"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "occupational_risk_factors"
+* item[+].linkId = "work-risk-factors"
 * item[=].text = "Töökohal esinevad ohutegurid"
 
-* item[=].item[0].linkId = "occupational_risk_factors.risk_factor"
+* item[=].item[0].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
 * item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
 * item[=].item[=].answer.valueCoding.code = #1
 * item[=].item[=].answer.valueCoding.display = "Asbestirohke keskkond"
 
-* item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
+* item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Hästi tolmune on töö"
 
-* item[=].item[+].linkId = "occupational_risk_factors.risk_factor"
+* item[=].item[+].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
 * item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
 * item[=].item[=].answer.valueCoding.code = #3
 * item[=].item[=].answer.valueCoding.display = "Päevavalguse vähesus"
 
-* item[=].item[=].item[0].linkId = "occupational_risk_factors.risk_factor.specify"
+* item[=].item[=].item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Hästi pime on ka"
 
