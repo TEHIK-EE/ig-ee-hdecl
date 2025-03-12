@@ -18,8 +18,7 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * implicitRules 0..0
 //* text 0..0
 * author 1..1
-* extension contains EEHealthDeclarationExpiration named ResponseExpiration 0..1
-//* extension[ResponseExpiration] 0..1
+* extension contains EEHealthDeclarationCategory named categories 1..*
 * item 0..*
   * linkId 1..1
   * definition 0..0

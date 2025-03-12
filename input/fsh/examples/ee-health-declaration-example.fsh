@@ -3,14 +3,17 @@ InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 
-* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclarationExpiration"
-
+* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
 * extension[0].extension[0].url = "category"
-* extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendi-otsuse-kasutusala"
-* extension[0].extension[0].valueCodeableConcept.coding[0].code = #military
-
+* extension[0].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#military-service
 * extension[0].extension[1].url = "expiration"
 * extension[0].extension[1].valueDate = "2025-06-16"
+
+* extension[1].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+* extension[1].extension[0].url = "category"
+* extension[1].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#driver-group-I
+* extension[1].extension[1].url = "expiration"
+* extension[1].extension[1].valueDate = "2025-03-16"
 
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
@@ -28,7 +31,7 @@ Usage: #example
 
 * item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
-* item[=].answer.valueCoding.system = "http://hl7.org/fhir/ValueSet/administrative-gender"
+* item[=].answer.valueCoding.system = "http://hl7.org/fhir/administrative-gender"
 * item[=].answer.valueCoding.code = #male
 * item[=].answer.valueCoding.display = "Male"
 
@@ -671,8 +674,8 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
-* item[=].item[=].item[=].answer.valueBoolean = true
-//Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
+// sellega on validatsiooni probleem: Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
+//* item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].text = "Täpsustus"
