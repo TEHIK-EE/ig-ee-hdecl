@@ -1,4 +1,4 @@
-Instance: ExampleEEHealthDeclaration
+Instance: ee-health-declaration-example
 InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
@@ -16,9 +16,9 @@ Usage: #example
 * identifier.value = "1234567"
 * questionnaire = "https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0"
 * status = #completed
-* subject = Reference(QuestionnairePatient)
+* subject = Reference(Questionnaire-patient)
 * authored =  2024-01-01
-* author = Reference(QuestionnairePatient)
+* author = Reference(Questionnaire-patient)
 
 * item[0].linkId = "category"
 * item[=].text = "Kasutusala"

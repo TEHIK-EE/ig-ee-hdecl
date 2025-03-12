@@ -1,6 +1,6 @@
 Profile: EEHealthDeclaration
 Parent: QuestionnaireResponse
-Id: EEHealthDeclaration
+Id: ee-health-declaration
 Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * ^version = "1.0.0"
 * ^status = #draft

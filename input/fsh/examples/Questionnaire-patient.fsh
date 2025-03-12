@@ -1,4 +1,4 @@
-Instance: QuestionnairePatient
+Instance: Questionnaire-patient
 InstanceOf: Patient
 Description: "Patsient erinevate identifikaatoritega"
 Usage: #example
