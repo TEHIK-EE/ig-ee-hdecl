@@ -9,5 +9,5 @@ Usage: #definition
 * code = #category
 * base = #QuestionnaireResponse
 * type = #token
-* expression = "QuestionnaireResponse.extension.where(url='https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category').extension.where(url='category').value"
+* expression = "QuestionnaireResponse.extension('https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category').extension.where(url='category').value.as(Coding)"
 * processingMode = #normal
