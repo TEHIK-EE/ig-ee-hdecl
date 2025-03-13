@@ -3,17 +3,13 @@ InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 
-* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
-* extension[0].extension[0].url = "category"
-* extension[0].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#military-service
-* extension[0].extension[1].url = "expiration"
-* extension[0].extension[1].valueDate = "2025-06-16"
+* extension[categories].extension[category].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#military-service
+* extension[categories].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories].extension[effectivePeriod].valuePeriod.end = "2025-06-16"
 
-* extension[1].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
-* extension[1].extension[0].url = "category"
-* extension[1].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#driver-group-I
-* extension[1].extension[1].url = "expiration"
-* extension[1].extension[1].valueDate = "2025-03-16"
+* extension[categories][1].extension[category].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#driver-group-I
+* extension[categories][1].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories][1].extension[effectivePeriod].valuePeriod.end = "2025-03-16"
 
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
