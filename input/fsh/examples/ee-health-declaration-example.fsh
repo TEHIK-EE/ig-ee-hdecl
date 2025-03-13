@@ -3,17 +3,13 @@ InstanceOf: EEHealthDeclaration
 Description: "Näidis andmestik küsimustikust vastusest (töötervishoid)"
 Usage: #example
 
-* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
-* extension[0].extension[0].url = "category"
-* extension[0].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#military-service
-* extension[0].extension[1].url = "expiration"
-* extension[0].extension[1].valueDate = "2025-06-16"
+* extension[categories].extension[category].valueCoding = $HDC#military-service
+* extension[categories].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories].extension[effectivePeriod].valuePeriod.end = "2025-06-16"
 
-* extension[1].url = "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
-* extension[1].extension[0].url = "category"
-* extension[1].extension[0].valueCoding = https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala#driver-group-I
-* extension[1].extension[1].url = "expiration"
-* extension[1].extension[1].valueDate = "2025-03-16"
+* extension[categories][1].extension[category].valueCoding = $HDC#driver-group-I
+* extension[categories][1].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories][1].extension[effectivePeriod].valuePeriod.end = "2025-03-16"
 
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
@@ -25,9 +21,8 @@ Usage: #example
 
 * item[0].linkId = "category"
 * item[=].text = "Kasutusala"
-* item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala"
-* item[=].answer.valueCoding.code = #6
-* item[=].answer.valueCoding.display = "Töötervishoid"
+* item[=].answer[+].valueCoding = $HDC#military-service "Kaitseväeteenistuse tervisekontroll"
+* item[=].answer[+].valueCoding = $HDC#driver-group-I "I grupi mootorsõidukijuhi tervisekontroll"
 
 * item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
