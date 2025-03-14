@@ -13,12 +13,15 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * partOf 0..0
 * subject 1..1
 * subject only Reference(Patient)
+* subject ^type.targetProfile = "https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified"
 * encounter 0..0
 * modifierExtension 0..0
 * contained 0..0
 * implicitRules 0..0
 //* text 0..0
 * author 1..1
+* author only Reference(Patient or PractitionerRole)
+* author ^type.targetProfile = "https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified"
 * extension contains EEHealthDeclarationCategory named categories 1..*
 * item 0..*
   * id 0..0

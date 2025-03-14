@@ -1,5 +1,5 @@
 Instance: Questionnaire-patient
-InstanceOf: Patient
+InstanceOf: EEMPIPatientVerified
 Description: "Patsient erinevate identifikaatoritega"
 Usage: #example
 * id = "katipiiriylene"

@@ -9,7 +9,7 @@ Description: "Tervise deklaratsiooni kasutusala ja selle kehtivuse periood"
 * extension[category] ^short = "Kasutusala"
 * extension[category].value[x] only Coding
 * extension[category].value[x] 1..1
-* extension[category].value[x] from $HDC
+* extension[category].value[x] from $HDC_VS
 * extension[effectivePeriod] ^short = "Kehtivusperiood"
 * extension[effectivePeriod].value[x] only Period
 * extension[effectivePeriod].value[x] 1..1
