@@ -6,7 +6,6 @@ Description: "Tervisedeklaratsiooni metaandmestiku profiil ilma küsimustiku vas
 * ^status = #draft
 * ^date = "2024-01-01"
 * meta.profile 1..1
-* version 1..1
 * questionnaire 1..1
 * language 0..1
 * status 1..1
@@ -19,7 +18,6 @@ Description: "Tervisedeklaratsiooni metaandmestiku profiil ilma küsimustiku vas
 * implicitRules 0..0
 //* text 0..0
 * author 1..1
-* extension contains EEHealthDeclarationExpiration named ResponseExpiration 0..1
-//* extension[ResponseExpiration] 0..1
+* extension contains EEHealthDeclarationCategory named categories 1..*
 * item 0..0
 

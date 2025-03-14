@@ -3,15 +3,14 @@ InstanceOf: EEHealthDeclarationMinimal
 Description: "Näidisdeklaratsioon minimaalsete andmetega (metaandmed). Eesmärk kuvada TTO registraatoritele deklaratsiooni metaandmed, ilma küsimustiku vastusteta"
 Usage: #example
 
-* extension[0].url = "https://fhir.ee/hdecl/StructureDefinition/EEHealthDeclarationExpiration"
+* extension[categories].extension[category].valueCoding = $HDC#military-service
+* extension[categories].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories].extension[effectivePeriod].valuePeriod.end = "2025-06-16"
 
-* extension[0].extension[0].url = "category"
-* extension[0].extension[0].valueCodeableConcept.coding[0].system = "https://fhir.ee/CodeSystem/terviestendi-otsuse-kasutusala"
-* extension[0].extension[0].valueCodeableConcept.coding[0].code = #military
+* extension[categories][1].extension[category].valueCoding = $HDC#driver-group-I
+* extension[categories][1].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
+* extension[categories][1].extension[effectivePeriod].valuePeriod.end = "2025-03-16"
 
-* extension[0].extension[1].url = "expiration"
-* extension[0].extension[1].valueDate = "2025-06-16"
-* version = "1.0"
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
 * questionnaire = "https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0"
