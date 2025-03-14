@@ -1,0 +1,51 @@
+[
+  {
+    "id" : "ee.fhir.hdecl",
+    "type" : "ImplementationGuide",
+    "url" : "https://fhir.ee/hdecl/ImplementationGuide/ee.fhir.hdecl",
+    "version" : "1.0.0",
+    "name" : "HDECL"
+  },
+  {
+    "id" : "ee-health-declaration-cancel",
+    "type" : "OperationDefinition",
+    "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-cancel",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationCancel"
+  },
+  {
+    "id" : "ee-health-declaration-complete",
+    "type" : "OperationDefinition",
+    "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-complete",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationComplete"
+  },
+  {
+    "id" : "ee-health-declaration-get-consent",
+    "type" : "OperationDefinition",
+    "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-get-consent",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationGetConsent"
+  },
+  {
+    "id" : "ee-health-declaration-set-consent",
+    "type" : "OperationDefinition",
+    "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-set-consent",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationSetConsent"
+  },
+  {
+    "id" : "ee-health-declaration",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclaration"
+  },
+  {
+    "id" : "ee-health-declaration-category",
+    "type" : "StructureDefinition",
+    "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category",
+    "version" : "1.0.0",
+    "name" : "EEHealthDeclarationCategory"
+  }
+]
