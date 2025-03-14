@@ -13,6 +13,7 @@ Usage: #example
 
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
+* language = #et-EE
 * questionnaire = "https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0"
 * status = #completed
 * subject = Reference(Questionnaire-patient)

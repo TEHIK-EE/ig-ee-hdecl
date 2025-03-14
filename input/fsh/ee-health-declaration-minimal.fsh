@@ -7,11 +7,12 @@ Description: "Tervisedeklaratsiooni metaandmestiku profiil ilma küsimustiku vas
 * ^date = "2024-01-01"
 * meta.profile 1..1
 * questionnaire 1..1
-* language 0..1
+* language 1..1
 * status 1..1
 * basedOn 0..0
 * partOf 0..0
 * subject 1..1
+* subject only Reference(Patient)
 * encounter 0..0
 * modifierExtension 0..0
 * contained 0..0

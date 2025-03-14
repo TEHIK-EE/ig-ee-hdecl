@@ -10,7 +10,7 @@ Usage: #example
 * extension[categories][1].extension[category].valueCoding = $HDC#driver-group-I
 * extension[categories][1].extension[effectivePeriod].valuePeriod.start = "2025-01-16"
 * extension[categories][1].extension[effectivePeriod].valuePeriod.end = "2025-03-16"
-
+* language = #et-EE
 * identifier.system = "http://example.org/fhir/identifiers"
 * identifier.value = "1234567"
 * questionnaire = "https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0"
