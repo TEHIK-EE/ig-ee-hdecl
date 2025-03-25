@@ -49,6 +49,8 @@ pages:
     title: Sissejuhatus
   download.md:
     title: Download
+  hdecl-api.md:
+    title: Healthdeclaration API
 #   implementation.xml:
 #   examples.xml:
 #     title: Examples Overview
@@ -79,6 +81,8 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Guides:
+    Healthdeclaration API: hdecl-api.html
   Artifacts: artifacts.html
   Download: download.html
 
