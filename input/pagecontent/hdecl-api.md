@@ -175,6 +175,48 @@ POST [base]/QuestionnaireResponse/31/$cancel
 HTTP/1.1 200 OK
 ```
 
+## Tervisedeklaratsiooni ligipääsu pärimine
+
+UPTIS võtab vastu patsiendi või patsiendi esindaja poolt tehtud tervisedeklaratsiooni (TD) ligipääsu päringu 
+ja tagastab ligiääsu andmed vastuseks. Päring tehakse ühe konkreetse TD kohta.
+
+### Päring
+- **URL**: `POST [base]/QuestionnaireResponse/[id]/$get-consent`
+
+```
+POST [base]/QuestionnaireResponse/31/$get-consent
+{
+    "resourceType": "Parameters"
+}
+```
+
+## Tervisedeklaratsiooni ligipääsu muutmine
+
+UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud tervisedeklaratsiooni (TD) ligipääsu muutmise - 
+TD suletakse või avatakse arstidele või esindajatele. 
+Patsiendi esindaja saab muuta TD ligipääsu ainult juhul, kui TD on esindajale avatud.
+
+### Päring
+- **URL**: `POST [base]/QuestionnaireResponse/[id]/$set-consent`
+
+```
+POST [base]/QuestionnaireResponse/31/$set-consent
+{
+    "resourceType": "Parameters",
+    "parameter": [{
+            "name": "doctor",
+            "valueString": "open"
+        }, {
+            "name": "representative",
+            "valueString": "closed"
+        }
+    ]
+}
+```
+
+### Vastus
+- **HTTP kood**: 200 OK
+
 ## Tervisedeklaratsiooni pärimine
 UPTIS võtab vastu tervisedeklaratsiooni TD (QuestionnaireResponse) päringu ja tagastab päringu tingimustele vastavad TD-d. 
 Lubatud TD päringud ja päringu tingimused sõltuvad päringu autorist:
@@ -459,9 +501,13 @@ Patsient - MPI id / isikukood
 ```
 patient=123
 
-patient=https://fhir.ee/sid/pid/est/ni|52007010062
+patient=Patient/123
 
-patient=urn:oid:1.3.6.1.4.1.28284.6.2.2.1|52007010062
+patient.identifier=https://fhir.ee/sid/pid/est/ni|52007010062
+
+patient.identifier=urn:oid:1.3.6.1.4.1.28284.6.2.2.1|52007010062
+
+patient:Patient.identifier=https://fhir.ee/sid/pid/est/ni|52007010062
 
 ```
 
@@ -527,7 +573,7 @@ GET /QuestionnaireResponse?patient={id}&{parameter1=value1}&...
 
 #### Näidispäring
 ```
-GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035
+GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035
 ```
 
 #### Vastus
@@ -541,15 +587,15 @@ GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C397022
     "link": [
         {
             "relation": "self",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
         },
         {
             "relation": "first",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
         },
         {
             "relation": "last",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&_page=1"
         }
     ],
     "entry": [
@@ -632,7 +678,7 @@ kohustuslik on määrata päringus status=completed
 
 #### Näidispäring
 ```
-GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed
+GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed
 ```
 
 #### Vastus
@@ -646,15 +692,15 @@ GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C397022
     "link": [
         {
             "relation": "self",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
         },
         {
             "relation": "first",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
         },
         {
             "relation": "last",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&status=completed&_page=1"
         }
     ],
     "entry": [
@@ -998,7 +1044,7 @@ kohustuslik on määrata päringus status=completed ja category=military-service
 
 #### Näidispäring
 ```
-GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_sort=-authored&_count=1&_page=1
+GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_sort=-authored&_count=1&_page=1
 ```
 
 #### Vastus
@@ -1012,19 +1058,19 @@ GET [base]/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C397022
     "link": [
         {
             "relation": "self",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
         },
         {
             "relation": "first",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
         },
         {
             "relation": "last",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
         },
         {
             "relation": "next",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
         }
     ],
     "entry": [
