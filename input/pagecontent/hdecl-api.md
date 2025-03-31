@@ -183,12 +183,32 @@ ja tagastab ligiääsu andmed vastuseks. Päring tehakse ühe konkreetse TD koht
 ### Päring
 - **URL**: `POST [base]/QuestionnaireResponse/[id]/$get-consent`
 
+#### Näidispäring
+
 ```
-POST [base]/QuestionnaireResponse/31/$get-consent
+GET [base]/QuestionnaireResponse/441/$get-consent
+```
+
+
+#### Vastus
+- **HTTP kood**: 200 OK
+
+```
 {
-    "resourceType": "Parameters"
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "doctor",
+            "valueString": "open"
+        },
+        {
+            "name": "representative",
+            "valueString": "closed"
+        }
+    ]
 }
 ```
+
 
 ## Tervisedeklaratsiooni ligipääsu muutmine
 
@@ -198,6 +218,8 @@ Patsiendi esindaja saab muuta TD ligipääsu ainult juhul, kui TD on esindajale 
 
 ### Päring
 - **URL**: `POST [base]/QuestionnaireResponse/[id]/$set-consent`
+
+#### Näidispäring
 
 ```
 POST [base]/QuestionnaireResponse/31/$set-consent
