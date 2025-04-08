@@ -1184,7 +1184,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.tuberculosis"
 * item[=].item[=].text = "Tuberkuloos"
 
-* item[=].item[=].item[0].linkId = "immunization.tuberculosis.tuberculosis-vac"
+* item[=].item[=].item[0].linkId = "immunization.tuberculosis.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
