@@ -189,46 +189,45 @@ Usage: #example
 * item[=].item[=].item[=].answer.valueString = "Generaliseerunud äravushoog (1x kuus)"
 
 
-//jätkata siit
 * item[+].linkId = "nervous-system"
 * item[=].text = "Närvisüsteem"
 
-* item[=].item[0].linkId = "nervous-system.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "nervous-system.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "nervous-system.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.4
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kausalgia"
+* item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].answer.valueCoding.code = #G56.4
+* item[=].item[=].item[=].answer.valueCoding.display = "Kausalgia"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "nervous-system.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[+].linkId = "nervous-system.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "nervous-system.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G56.0
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Karpaaltunneli sündroom"
+* item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].answer.valueCoding.code = #G56.0
+* item[=].item[=].item[=].answer.valueCoding.display = "Karpaaltunneli sündroom"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Arvutis trükkimine ja kirjutamine muutub valulikuks mingil ajahetkel"
+* item[=].item[=].item[+].linkId = "nervous-system.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Arvutis trükkimine ja kirjutamine muutub valulikuks mingil ajahetkel"
 
-* item[=].item[=].item[=].item[+].linkId = "nervous-system.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "nervous-system.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "nervous-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -290,6 +289,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsutus"
 * item[=].item[=].item[=].answer.valueString = "Valu alaseljas füüsilise koormuse ajal"
 
+//jätkata siit
 * item[+].linkId = "eyes-vision"
 * item[=].text = "Silmad ja nägemine"
 
