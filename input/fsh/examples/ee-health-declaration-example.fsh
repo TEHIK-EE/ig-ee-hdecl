@@ -39,7 +39,7 @@ Usage: #example
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "lifestyle.alcohol.alcohol-units"
-* item[=].item[=].answer.item[=].text =  "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kangusega alkoholi)"
+* item[=].item[=].answer.item[=].text =  "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
 * item[=].item[=].answer.item[=].answer.valueDecimal =  3.4
 
 * item[=].item[+].linkId = "lifestyle.smoking"
@@ -60,7 +60,7 @@ Usage: #example
 
 * item[=].item[=].answer.item[0].linkId = "lifestyle.narcotics.narcotics-frequency"
 * item[=].item[=].answer.item[=].text =  "Kirjeldage, kui sageli"
-* item[=].item[=].answer.item[=].answer.valueString = "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
+* item[=].item[=].answer.item[=].answer.valueString = "3x nädalas. Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
 
 * item[=].item[+].linkId = "lifestyle.medication"
 * item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
@@ -115,42 +115,42 @@ Usage: #example
 * item[+].linkId = "mental-health"
 * item[=].text = "Psüühika"
 
-* item[=].item[0].linkId = "mental-health.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "mental-health.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "mental-health.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #F61.0
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
+* item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].answer.valueCoding.code = #F61.0
+* item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "mental-health.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[+].linkId = "mental-health.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "mental-health.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #R45.4
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Ärrituvus ja viha"
+* item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].answer.valueCoding.code = #R45.4
+* item[=].item[=].item[=].answer.valueCoding.display = "Ärrituvus ja viha"
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Liikluses muutun kergesti ärritatavaks"
+* item[=].item[=].item[+].linkId = "mental-health.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Liikluses muutun kergesti ärritatavaks"
 
-* item[=].item[=].item[=].item[+].linkId = "mental-health.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "mental-health.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "mental-health.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -188,6 +188,8 @@ Usage: #example
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Generaliseerunud äravushoog (1x kuus)"
 
+
+//jätkata siit
 * item[+].linkId = "nervous-system"
 * item[=].text = "Närvisüsteem"
 
@@ -1208,7 +1210,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.rotavirus"
 * item[=].item[=].text = "Rotaviirus"
 
-* item[=].item[=].item[0].linkId = "immunization.rotavirus.rotavirus-vac"
+* item[=].item[=].item[0].linkId = "immunization.rotavirus.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
@@ -1232,7 +1234,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.diphteria"
 * item[=].item[=].text = "Difteeria"
 
-* item[=].item[=].item[0].linkId = "immunization.diphteria.diphtheria-vac"
+* item[=].item[=].item[0].linkId = "immunization.diphteria.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
@@ -1256,7 +1258,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.tetanus"
 * item[=].item[=].text = "Teetanus"
 
-* item[=].item[=].item[0].linkId = "immunization.tetanus.tetanus-vac"
+* item[=].item[=].item[0].linkId = "immunization.tetanus.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
@@ -1281,42 +1283,42 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.pertussis"
 * item[=].item[=].text = "Läkaköha"
 
-* item[=].item[=].item[0].linkId = "immunization.pertussis.pertussis-vac"
+* item[=].item[=].item[0].linkId = "immunization.pertussis.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.polio"
 * item[=].item[=].text = "Poliomüeliit"
 
-* item[=].item[=].item[0].linkId = "immunization.polio.poliovirus-vac"
+* item[=].item[=].item[0].linkId = "immunization.polio.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.hemo-influenza"
 * item[=].item[=].text = "Influensa"
 
-* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.haemophilus-influenza-vac"
+* item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.measles"
 * item[=].item[=].text = "Leetrid"
 
-* item[=].item[=].item[0].linkId = "immunization.measles.measles-vac"
+* item[=].item[=].item[0].linkId = "immunization.measles.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.mumps"
 * item[=].item[=].text = "Mumps"
 
-* item[=].item[=].item[0].linkId = "immunization.mumps.mumps-vac"
+* item[=].item[=].item[0].linkId = "immunization.mumps.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.rubella"
 * item[=].item[=].text = "Punetised"
 
-* item[=].item[=].item[0].linkId = "immunization.rubella.rubella-vac"
+* item[=].item[=].item[0].linkId = "immunization.rubella.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
@@ -1330,70 +1332,70 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.covid"
 * item[=].item[=].text = "COVID"
 
-* item[=].item[=].item[0].linkId = "immunization.covid.covid-vac"
+* item[=].item[=].item[0].linkId = "immunization.covid.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.flu"
 * item[=].item[=].text = "Gripiviirus"
 
-* item[=].item[=].item[0].linkId = "immunization.flu.influenza-vac"
+* item[=].item[=].item[0].linkId = "immunization.flu.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.pneumococcus"
 * item[=].item[=].text = "Pneumokokk"
 
-* item[=].item[=].item[0].linkId = "immunization.pneumococcus.pneumococcus-vac"
+* item[=].item[=].item[0].linkId = "immunization.pneumococcus.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.a-hepatitis"
 * item[=].item[=].text = "A-hepatiit"
 
-* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.hepatitis-A-vac"
+* item[=].item[=].item[0].linkId = "immunization.a-hepatitis.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.varicella"
 * item[=].item[=].text = "Tuulerõuged"
 
-* item[=].item[=].item[0].linkId = "immunization.varicella.varicella-vac"
+* item[=].item[=].item[0].linkId = "immunization.varicella.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.shingles"
 * item[=].item[=].text = "Vöötohatis"
 
-* item[=].item[=].item[0].linkId = "immunization.shingles.herpes-zoster-vac"
+* item[=].item[=].item[0].linkId = "immunization.shingles.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.meningococcus"
 * item[=].item[=].text = "Meningokokk"
 
-* item[=].item[=].item[0].linkId = "immunization.meningococcus.meningococcus-vac"
+* item[=].item[=].item[0].linkId = "immunization.meningococcus.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.yellow-fever"
 * item[=].item[=].text = "Kollapalavik"
 
-* item[=].item[=].item[0].linkId = "immunization.yellow-fever.yellow-fever-vac"
+* item[=].item[=].item[0].linkId = "immunization.yellow-fever.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.typhoid-fever"
 * item[=].item[=].text = "Kõhutüüfus"
 
-* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.typhoid-vac"
+* item[=].item[=].item[0].linkId = "immunization.typhoid-fever.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.tick-encephalitis"
 * item[=].item[=].text = "Puukentsefaliit"
 
-* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.tick-borne-encephalitis-vac"
+* item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
