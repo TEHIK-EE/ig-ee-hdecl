@@ -293,23 +293,23 @@ Usage: #example
 * item[+].linkId = "eyes-vision"
 * item[=].text = "Silmad ja nägemine"
 
-* item[=].item[0].linkId = "eyes-vision.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "eyes-vision.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "eyes-vision.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #H27.1
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Läätse väärasetsus"
+* item[=].item[=].item[0].linkId = "eyes-vision.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
+* item[=].item[=].item[=].answer.valueCoding.code = #H27.1
+* item[=].item[=].item[=].answer.valueCoding.display = "Läätse väärasetsus"
 
-* item[=].item[=].item[=].item[+].linkId = "eyes-vision.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "eyes-vision.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "eyes-vision.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -358,23 +358,23 @@ Usage: #example
 * item[+].linkId = "ear-nose-throat"
 * item[=].text = "Kõrv, nina, neel"
 
-* item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "ear-nose-throat.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-korv-nina-neel"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #J38.5
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kõrispasm"
+* item[=].item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-korv-nina-neel"
+* item[=].item[=].item[=].answer.valueCoding.code = #J38.5
+* item[=].item[=].item[=].answer.valueCoding.display = "Kõrispasm"
 
-* item[=].item[=].item[=].item[+].linkId = "ear-nose-throat.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "ear-nose-throat.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "ear-nose-throat.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -383,27 +383,27 @@ Usage: #example
 * item[+].linkId = "respiratory-system"
 * item[=].text = "Hingamissüsteem"
 
-* item[=].item[0].linkId = "respiratory-system.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "respiratory-system.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "respiratory-system.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hingamissusteem"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #J65
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
+* item[=].item[=].item[0].linkId = "respiratory-system.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hingamissusteem"
+* item[=].item[=].item[=].answer.valueCoding.code = #J65
+* item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Krooniline kopsutolmustus"
+* item[=].item[=].item[+].linkId = "respiratory-system.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Krooniline kopsutolmustus"
 
-* item[=].item[=].item[=].item[+].linkId = "respiratory-system.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "respiratory-system.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "respiratory-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -440,27 +440,27 @@ Usage: #example
 * item[+].linkId = "metabolic-disorder"
 * item[=].text = "Ainevahetuse häired (sh kilpnäärme haigused)"
 
-* item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "metabolic-disorder.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #E11.9
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Insuliinisõltumatu suhkurtõbi tüsistusteta"
+* item[=].item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
+* item[=].item[=].item[=].answer.valueCoding.code = #E11.9
+* item[=].item[=].item[=].answer.valueCoding.display = "Insuliinisõltumatu suhkurtõbi tüsistusteta"
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
+* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "II tüüpi diabeet"
 
-* item[=].item[=].item[=].item[+].linkId = "metabolic-disorder.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "metabolic-disorder.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "metabolic-disorder.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -481,27 +481,27 @@ Usage: #example
 * item[+].linkId = "cardiovascular-system"
 * item[=].text = "Süda ja veresoonkond"
 
-* item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "cardiovascular-system.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #I25.2
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Varasem müokardiinfarkt"
+* item[=].item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
+* item[=].item[=].item[=].answer.valueCoding.code = #I25.2
+* item[=].item[=].item[=].answer.valueCoding.display = "Varasem müokardiinfarkt"
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Pärgarterite 50% ummistus põhjustas MI"
+* item[=].item[=].item[+].linkId = "cardiovascular-system.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Pärgarterite 50% ummistus põhjustas MI"
 
-* item[=].item[=].item[=].item[+].linkId = "cardiovascular-system.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "cardiovascular-system.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "cardiovascular-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -543,7 +543,7 @@ Usage: #example
 * item[=].item[=].text = "On paigaldatud südamerütmur"
 * item[=].item[=].answer.valueBoolean = false
 
-* item[=].item[+].linkId = "cardiovascular-system.heart-operation"
+* item[=].item[+].linkId = "cardiovascular-system.heart-surgery"
 * item[=].item[=].text = "On tehtud südameoperatsioon"
 * item[=].item[=].answer.valueBoolean = false
 
@@ -554,27 +554,27 @@ Usage: #example
 * item[+].linkId = "bones-joints-muscles"
 * item[=].text = "Luud, liigesed ja lihased"
 
-* item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #M47
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Spondüloos e lülijäikus"
+* item[=].item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
+* item[=].item[=].item[=].answer.valueCoding.code = #M47
+* item[=].item[=].item[=].answer.valueCoding.display = "Spondüloos e lülijäikus"
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "lülijäikus"
+* item[=].item[=].item[+].linkId = "bones-joints-muscles.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "lülijäikus"
 
-* item[=].item[=].item[=].item[+].linkId = "bones-joints-muscles.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "bones-joints-muscles.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "bones-joints-muscles.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -627,23 +627,23 @@ Usage: #example
 * item[+].linkId = "infections"
 * item[=].text = "Nakkushaigused"
 
-* item[=].item[0].linkId = "infections.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "infections.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "infections.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "infections.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nakkushaigused"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #A51.1
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Primaarne anaalsüüfilis"
+* item[=].item[=].item[0].linkId = "infections.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nakkushaigused"
+* item[=].item[=].item[=].answer.valueCoding.code = #A51.1
+* item[=].item[=].item[=].answer.valueCoding.display = "Primaarne anaalsüüfilis"
 
-* item[=].item[=].item[=].item[+].linkId = "infections.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "infections.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "infections.no-known-illness"
 * item[=].item[=].text = "Teadaolevalt ei ole põdenud"
@@ -660,7 +660,7 @@ Usage: #example
 * item[=].text = "Senine ravi"
 
 * item[=].item[0].linkId = "previous-treatment.treatment-abroad"
-* item[=].item[=].text = "Kas olete välismaal saanud  haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
+* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[0].linkId = "previous-treatment.treatment-abroad.specification"
@@ -673,7 +673,7 @@ Usage: #example
 * item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men"
 * item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
 // sellega on validatsiooni probleem: Constraint failed: qrs-1: 'Item cannot contain both item and answer' (defined in http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse)
-//* item[=].item[=].item[=].answer.valueBoolean = true
+* item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
 * item[=].item[=].item[=].item[=].text = "Täpsustus"
@@ -682,126 +682,126 @@ Usage: #example
 * item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
 * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
-* item[=].item[=].item[=].item[=].text = "Retsept"
+// * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
+// * item[=].item[=].item[=].item[=].text = "Retsept"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.date"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-09-01
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2024-09-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.atc"
-* item[=].item[=].item[=].item[=].item[=].text = "ATC"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/atc-ee"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #G03BA03
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "testosteroon"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.atc"
+* item[=].item[=].item[=].item[=].text = "ATC"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/atc-ee"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G03BA03
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "testosteroon"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.package"
-* item[=].item[=].item[=].item[=].item[=].text = "Pakend"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/pakend" //Vale
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #mingi_pakend
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.package"
+* item[=].item[=].item[=].item[=].text = "Pakend"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/pakend" //Vale
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #mingi_pakend
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription.source-reference"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "previous-treatment.hospitalization"
-* item[=].item[=].text = "Kas olete viibinud haiglaravil?"
+* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.valueString = "Kopsupõletikuga intensiivravil mõni aeg tagasi"
 
-* item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization"
-* item[=].item[=].item[=].text = "Varasem haiglaravi"
+// * item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization"
+// * item[=].item[=].item[=].text = "Varasem haiglaravi"
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case"
-* item[=].item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
+* item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.inpatient-case"
+* item[=].item[=].item[=].text = "Statsionaarne haigusjuhtum"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.from"
-* item[=].item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-05-01
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.hospitalization.inpatient-case.from"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2024-05-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.to"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuni"
-* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-06-01
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.to"
+* item[=].item[=].item[=].item[=].text = "Kuni"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2024-06-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.provider"
-* item[=].item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
-* item[=].item[=].item[=].item[=].item[=].answer.valueString = "Lääne-Tallinna Keskhaigla"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.provider"
+* item[=].item[=].item[=].item[=].text = "Tervishoiuasutus"
+* item[=].item[=].item[=].item[=].answer.valueString = "Lääne-Tallinna Keskhaigla"
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.previous-hospitalization.inpatient-case.source-reference"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
-
-* item[=].item[+].linkId = "previous-treatment.surgery"
-* item[=].item[=].text = "Kas teid on opereeritud? Palun täpsustage, millal, mille tõttu"
-* item[=].item[=].answer.valueBoolean = true
-
-* item[=].item[=].item[0].linkId = "previous-treatment.surgery.specification"
-* item[=].item[=].item[=].text = "Täpsustus"
-* item[=].item[=].item[=].answer.valueString = "Avatud apendektoomia, vist oli 4 2 kuud tagasi. Põhjuseks akuutne pimesoole põletik"
-
-* item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures"
-* item[=].item[=].item[=].text = "Teostatud protseduurid"
-
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgery.procedures.operation"
-* item[=].item[=].item[=].item[=].text = "Operatsioon"
-
-* item[=].item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgery.procedures.operation.date"
-* item[=].item[=].item[=].item[=].item[=].text = "Kuupäev"
-* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-11-20
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.specific-operation"
-* item[=].item[=].item[=].item[=].item[=].text = "Operatsioon"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEA01
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Laparoskoopiline apendektoomia"
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.add-codes"
-* item[=].item[=].item[=].item[=].item[=].text = "Operatsiooni lisakoodid"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEW96
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Muu operatsioon apendiksil"
-
-* item[=].item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgery.procedures.operation.source-reference"
-* item[=].item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
-
-* item[+].linkId = "traumas"
-* item[=].text = "Traumad"
-
-* item[=].item[0].linkId = "traumas.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
-
-* item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
-
-* item[=].item[=].item[=].item[0].linkId = "traumas.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.3
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
-
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Radioaktiivselt ämblikult sai hammustada"
-
-* item[=].item[=].item[=].item[+].linkId = "traumas.diagnoses-group.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.hospitalization.inpatient-case.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
+* item[=].item[+].linkId = "previous-treatment.surgeries"
+* item[=].item[=].text = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
+* item[=].item[=].answer.valueBoolean = true
+
+* item[=].item[=].item[0].linkId = "previous-treatment.surgeries.specification"
+* item[=].item[=].item[=].text = "Täpsustus"
+* item[=].item[=].item[=].answer.valueString = "Avatud apendektoomia, vist oli 4 2 kuud tagasi. Põhjuseks akuutne pimesoole põletik"
+
+// * item[=].item[=].item[+].linkId = "previous-treatment.surgeries.procedures"
+// * item[=].item[=].item[=].text = "Teostatud protseduurid"
+
+* item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery"
+* item[=].item[=].item[=].text = "Operatsioon"
+
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.surgeries.surgery.surgery-date"
+* item[=].item[=].item[=].item[=].text = "Kuupäev"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2024-11-20
+
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.code"
+* item[=].item[=].item[=].item[=].text = "Operatsioon"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEA01
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Laparoskoopiline apendektoomia"
+
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.surgery-add-code"
+* item[=].item[=].item[=].item[=].text = "Operatsiooni lisakoodid"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ncsp"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #JEW96
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Muu operatsioon apendiksil"
+
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.surgeries.surgery.source-reference"
+* item[=].item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
+* item[+].linkId = "traumas"
+* item[=].text = "Traumad"
+
+// * item[=].item[0].linkId = "traumas.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
+
+* item[=].item[0].linkId = "traumas.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
+
+* item[=].item[=].item[0].linkId = "traumas.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
+* item[=].item[=].item[=].answer.valueCoding.code = #T63.3
+* item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
+
+* item[=].item[=].item[+].linkId = "traumas.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Radioaktiivselt ämblikult sai hammustada"
+
+* item[=].item[=].item[+].linkId = "traumas.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
 * item[=].item[+].linkId = "traumas.none"
-* item[=].item[=].text = "Puuduvad"
+* item[=].item[=].text = "Hetkel puuduvad"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "traumas.fractures"
@@ -821,48 +821,48 @@ Usage: #example
 * item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "skin-disorders"
-* item[=].text = "Nahahaigused"
+* item[=].text = "Nahahaigused viimase 5 aasta jooksul: millal põdenud, milliseid?"
 
-* item[=].item[0].linkId = "skin-disorders.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "skin-disorders.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "skin-disorders.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #L02.1
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Kaelanahaabstsess, -furunkul ja -karbunkul"
+* item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
+* item[=].item[=].item[=].answer.valueCoding.code = #L02.1
+* item[=].item[=].item[=].answer.valueCoding.display = "Kaelanahaabstsess, -furunkul ja -karbunkul"
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "skin-disorders.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
-* item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[+].linkId = "skin-disorders.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #A46
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Erüsiipel e roos"
+* item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
+* item[=].item[=].item[=].answer.valueCoding.code = #A46
+* item[=].item[=].item[=].answer.valueCoding.display = "Erüsiipel e roos"
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Roospõletik tuhara piirkonnas"
+* item[=].item[=].item[+].linkId = "skin-disorders.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Roospõletik tuhara piirkonnas"
 
-* item[=].item[=].item[=].item[+].linkId = "skin-disorders.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "skin-disorders.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "skin-disorders.skin-conditions"
 * item[=].item[=].text = "Nahahaigused: millal põdenud, milliseid?"
-* item[=].item[=].answer.valueBoolean = false
+* item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[0].linkId = "skin-disorders.skin-conditions.specification"
 * item[=].item[=].item[=].text = "Täpsustus"
@@ -871,27 +871,27 @@ Usage: #example
 * item[+].linkId = "digestive-organs"
 * item[=].text = "Seedeelundid"
 
-* item[=].item[0].linkId = "digestive-organs.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "digestive-organs.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "digestive-organs.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-seedeelundid"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #K70.1
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Alkoholhepatiit"
+* item[=].item[=].item[0].linkId = "digestive-organs.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-seedeelundid"
+* item[=].item[=].item[=].answer.valueCoding.code = #K70.1
+* item[=].item[=].item[=].answer.valueCoding.display = "Alkoholhepatiit"
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Ikteeriline maksapuudulikkuse tõttu juba"
+* item[=].item[=].item[+].linkId = "digestive-organs.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Ikteeriline maksapuudulikkuse tõttu juba"
 
-* item[=].item[=].item[=].item[+].linkId = "digestive-organs.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "digestive-organs.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "digestive-organs.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -928,27 +928,27 @@ Usage: #example
 * item[+].linkId = "urogenital-system"
 * item[=].text = "Kuse- ja suguelundid"
 
-* item[=].item[0].linkId = "urogenital-system.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "urogenital-system.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "urogenital-system.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #N15.0
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Balkani nefropaatia"
+* item[=].item[=].item[0].linkId = "urogenital-system.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
+* item[=].item[=].item[=].answer.valueCoding.code = #N15.0
+* item[=].item[=].item[=].answer.valueCoding.display = "Balkani nefropaatia"
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Neerupuudulikkus (Albaanias diagnoositud)"
+* item[=].item[=].item[+].linkId = "urogenital-system.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Neerupuudulikkus (Albaanias diagnoositud)"
 
-* item[=].item[=].item[=].item[+].linkId = "urogenital-system.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "urogenital-system.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "urogenital-system.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -957,23 +957,23 @@ Usage: #example
 * item[+].linkId = "blood-problems"
 * item[=].text = "Verehaigused"
 
-* item[=].item[0].linkId = "blood-problems.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "blood-problems.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "blood-problems.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "blood-problems.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-verehaigused"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #D81.9
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Täpsustamata kombineeritud immuunpuudulikkus"
+* item[=].item[=].item[0].linkId = "blood-problems.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-verehaigused"
+* item[=].item[=].item[=].answer.valueCoding.code = #D81.9
+* item[=].item[=].item[=].answer.valueCoding.display = "Täpsustamata kombineeritud immuunpuudulikkus"
 
-* item[=].item[=].item[=].item[+].linkId = "blood-problems.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "blood-problems.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "blood-problems.no-complaints"
 * item[=].item[=].text = "Kaebused hetkel puuduvad"
@@ -1029,27 +1029,27 @@ Usage: #example
 * item[+].linkId = "sleep"
 * item[=].text = "Uni"
 
-* item[=].item[0].linkId = "sleep.diagnoses-group"
-* item[=].item[=].text = "Varasemad diagnoosid"
+// * item[=].item[0].linkId = "sleep.diagnoses-group"
+// * item[=].item[=].text = "Varasemad diagnoosid"
 
-* item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis"
-* item[=].item[=].item[=].text = "Varasem diagnoos"
+* item[=].item[0].linkId = "sleep.previous-diagnosis"
+* item[=].item[=].text = "Varasem diagnoos"
 
-* item[=].item[=].item[=].item[0].linkId = "sleep.diagnoses-group.previous-diagnosis.diagnosis"
-* item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-uni"
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #G47.4
-* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Narkolepsia ja katapleksia"
+* item[=].item[=].item[0].linkId = "sleep.previous-diagnosis.diagnosis"
+* item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-uni"
+* item[=].item[=].item[=].answer.valueCoding.code = #G47.4
+* item[=].item[=].item[=].answer.valueCoding.display = "Narkolepsia ja katapleksia"
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.written-diagnosis"
-* item[=].item[=].item[=].item[=].text = "Sõnaline diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueString = "Vajun igapäevategevusi tehes lihtsasti unne"
+* item[=].item[=].item[+].linkId = "sleep.previous-diagnosis.written-diagnosis"
+* item[=].item[=].item[=].text = "Sõnaline diagnoos"
+* item[=].item[=].item[=].answer.valueString = "Vajun igapäevategevusi tehes lihtsasti unne"
 
-* item[=].item[=].item[=].item[+].linkId = "sleep.diagnoses-group.previous-diagnosis.source-reference"
-* item[=].item[=].item[=].item[=].text = "Allika viide"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
-* item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
-* item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+* item[=].item[=].item[+].linkId = "sleep.previous-diagnosis.source-reference"
+* item[=].item[=].item[=].text = "Allika viide"
+* item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "sleep.loud-snoring"
 * item[=].item[=].text = "Kas Te norskate valjult (valjemini kui tavaline kõne, või Teie norskamist on kosta kõrvalruumi ka siis, kui magamistoa uks on suletud)?"
@@ -1104,28 +1104,28 @@ Usage: #example
 * item[=].item[=].item[=].text = "Viimase 5 aasta jooksul välisriigis väljastatud haiguslehtede alguse kuupäev ja kestvus päevades"
 * item[=].item[=].item[=].answer.valueString = "Ei ole käinud reisil"
 
-* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years"
-* item[=].item[=].item[=].text = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
+// * item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years"
+// * item[=].item[=].item[=].text = "Haiguslehed (viimase 5 aasta andmed Tervisekassast)"
 
-* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert"
-* item[=].item[=].item[=].item[=].text = "Haigusleht"
+* item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert"
+* item[=].item[=].item[=].text = "Haigusleht"
 
-* item[=].item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.from"
-* item[=].item[=].item[=].item[=].item[=].text = "Alates"
-* item[=].item[=].item[=].item[=].item[=].answer.valueDate = 2024-07-01
+* item[=].item[=].item[=].item[0].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.from"
+* item[=].item[=].item[=].item[=].text = "Alates"
+* item[=].item[=].item[=].item[=].answer.valueDate = 2024-07-01
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.duration"
-* item[=].item[=].item[=].item[=].item[=].text = "Kestus päevades"
-* item[=].item[=].item[=].item[=].item[=].answer.valueInteger = 8
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.duration"
+* item[=].item[=].item[=].item[=].text = "Kestus päevades"
+* item[=].item[=].item[=].item[=].answer.valueInteger = 8
 
-* item[=].item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert-five-years.sick-leave-cert.diagnosis"
-* item[=].item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.2
-* item[=].item[=].item[=].item[=].item[=].answer.valueCoding.display = "Skorpionimürk"
+* item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.diagnosis"
+* item[=].item[=].item[=].item[=].text = "Diagnoos"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.2
+* item[=].item[=].item[=].item[=].answer.valueCoding.display = "Skorpionimürk"
 
 * item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss"
-* item[=].item[=].text = "Töövõimetus"
+* item[=].item[=].text = "Osaline töövõime"
 
 * item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
 * item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
@@ -1161,7 +1161,7 @@ Usage: #example
 * item[=].item[0].linkId = "immunization.b-hepatitis"
 * item[=].item[=].text = "B-viirushepatiit"
 
-* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.heptatitis-B-vac"
+* item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
@@ -1325,7 +1325,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.hpv"
 * item[=].item[=].text = "HPV"
 
-* item[=].item[=].item[0].linkId = "immunization.hpv.hpv-vac"
+* item[=].item[=].item[0].linkId = "immunization.hpv.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
@@ -1402,7 +1402,7 @@ Usage: #example
 * item[=].item[+].linkId = "immunization.other-vac"
 * item[=].item[=].text = "Muud vaktsiinid"
 
-* item[=].item[=].item[0].linkId = "immunization.other-vac.vaccinated"
+* item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done"
 * item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
