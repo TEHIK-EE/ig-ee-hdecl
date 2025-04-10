@@ -160,9 +160,9 @@ Usage: #example
 * item[=].item[=].text = "Depressioon"
 * item[=].item[=].answer.valueBoolean = true
 
-* item[=].item[=].item[0].linkId = "mental-health.depression.specification"
-* item[=].item[=].item[=].text = "Täpsustus"
-* item[=].item[=].item[=].answer.valueString = "Pidev apaatsus ja süvenev meeleolulangus"
+* item[=].item[=].answer.item[0].linkId = "mental-health.depression.specification"
+* item[=].item[=].answer.item[=].text = "Täpsustus"
+* item[=].item[=].answer.item[=].answer.valueString = "Pidev apaatsus ja süvenev meeleolulangus"
 
 * item[=].item[+].linkId = "mental-health.schizophrenia"
 * item[=].item[=].text = "Skisofreenia"
