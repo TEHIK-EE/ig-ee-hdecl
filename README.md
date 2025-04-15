@@ -1,10 +1,8 @@
 ## Tervisedeklaratsiooni juurutusjuhend
 
-Juurutusjuhend on kättesaadav siit: https://build.fhir.org/ig/TEHIK-EE/ig-ee-hdecl/index.html
+Juurutusjuhend on kättesaadav siit: https://github.tehik.ee/ig-ee-hdecl/ (build master harust)
 
-https://github.tehik.ee/ig-ee-hdecl/ - build from main branch
-
-https://github.tehik.ee/ig-ee-hdecl/branches/branch_name/ - build from branch_name branch
+https://github.tehik.ee/ig-ee-hdecl/branches/branch_name/ - build branch_name harust
 
 Juurutusjuhendile saab lisada MarkDown (*.md) vormingus lehti. Lehed lisatakse kausta input/pagecontent. 
 Lehtede nimed peavad olema viidatud sushi-config.yaml failis pages sektsioonis, näiteks:
