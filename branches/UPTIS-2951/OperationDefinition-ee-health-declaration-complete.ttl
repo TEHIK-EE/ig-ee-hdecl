@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-complete> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ee-health-declaration-complete"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition ee-health-declaration-complete</b></p><a name=\"ee-health-declaration-complete\"> </a><a name=\"hcee-health-declaration-complete\"> </a><a name=\"ee-health-declaration-complete-en-US\"> </a><p>URL: [base]/QuestionnaireResponse/[id]/$complete</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-complete"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "EEHealthDeclarationComplete"] ; # 
+  fhir:title [ fhir:v "Tervisedeklaratsiooni kinnitamine"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-03-26T15:27:08+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "TEHIK"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "TEHIK" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://tehik.ee" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "abi@tehik.ee" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "'In progress' tervisedeklaratsiooni kinnitamine ('completed' seisundisse)."] ; # 
+  fhir:affectsState [ fhir:v true] ; # 
+  fhir:code [ fhir:v "complete"] ; # 
+  fhir:resource ( [ fhir:v "QuestionnaireResponse"] ) ; # 
+  fhir:system [ fhir:v false] ; # 
+  fhir:type [ fhir:v false] ; # 
+  fhir:instance [ fhir:v true] . # 
+
+# -------------------------------------------------------------------------------------
+
