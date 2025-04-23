@@ -123,7 +123,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #F61.0
 * item[=].item[=].item[=].answer.valueCoding.display = "Segatüüpi isiksushäired"
 
@@ -138,7 +138,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "mental-health.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-psyyhika"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #R45.4
 * item[=].item[=].item[=].answer.valueCoding.display = "Ärrituvus ja viha"
 
@@ -200,7 +200,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #G56.4
 * item[=].item[=].item[=].answer.valueCoding.display = "Kausalgia"
 
@@ -215,7 +215,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "nervous-system.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-narvisusteem"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #G56.0
 * item[=].item[=].item[=].answer.valueCoding.display = "Karpaaltunneli sündroom"
 
@@ -301,7 +301,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "eyes-vision.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-silmad-ja-nagemine"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #H27.1
 * item[=].item[=].item[=].answer.valueCoding.display = "Läätse väärasetsus"
 
@@ -366,7 +366,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "ear-nose-throat.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-korv-nina-neel"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #J38.5
 * item[=].item[=].item[=].answer.valueCoding.display = "Kõrispasm"
 
@@ -391,7 +391,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "respiratory-system.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hingamissusteem"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #J65
 * item[=].item[=].item[=].answer.valueCoding.display = "Pneumokonioos koos tuberkuloosiga"
 
@@ -448,7 +448,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "metabolic-disorder.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ainevahetuse-haired"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #E11.9
 * item[=].item[=].item[=].answer.valueCoding.display = "Insuliinisõltumatu suhkurtõbi tüsistusteta"
 
@@ -489,7 +489,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "cardiovascular-system.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-suda-ja-veresoonkond"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #I25.2
 * item[=].item[=].item[=].answer.valueCoding.display = "Varasem müokardiinfarkt"
 
@@ -562,7 +562,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "bones-joints-muscles.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #M47
 * item[=].item[=].item[=].answer.valueCoding.display = "Spondüloos e lülijäikus"
 
@@ -635,7 +635,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "infections.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nakkushaigused"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #A51.1
 * item[=].item[=].item[=].answer.valueCoding.display = "Primaarne anaalsüüfilis"
 
@@ -696,8 +696,8 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.package"
 * item[=].item[=].item[=].item[=].text = "Pakend"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/pakend" //Vale
-* item[=].item[=].item[=].item[=].answer.valueCoding.code = #mingi_pakend
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "http://ravimiregister.ee/pakendid" 
+* item[=].item[=].item[=].item[=].answer.valueCoding.code = #1022623
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
 
 * item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.source-reference"
@@ -785,7 +785,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "traumas.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #T63.3
 * item[=].item[=].item[=].answer.valueCoding.display = "Amblikumürk"
 
@@ -830,7 +830,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #L02.1
 * item[=].item[=].item[=].answer.valueCoding.display = "Kaelanahaabstsess, -furunkul ja -karbunkul"
 
@@ -845,7 +845,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "skin-disorders.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-nahahaigused"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #A46
 * item[=].item[=].item[=].answer.valueCoding.display = "Erüsiipel e roos"
 
@@ -878,7 +878,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "digestive-organs.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-seedeelundid"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #K70.1
 * item[=].item[=].item[=].answer.valueCoding.display = "Alkoholhepatiit"
 
@@ -935,7 +935,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "urogenital-system.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-kuse-ja-suguelundid"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #N15.0
 * item[=].item[=].item[=].answer.valueCoding.display = "Balkani nefropaatia"
 
@@ -964,7 +964,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "blood-problems.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-verehaigused"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #D81.9
 * item[=].item[=].item[=].answer.valueCoding.display = "Täpsustamata kombineeritud immuunpuudulikkus"
 
@@ -1036,7 +1036,7 @@ Usage: #example
 
 * item[=].item[=].item[0].linkId = "sleep.previous-diagnosis.diagnosis"
 * item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-uni"
+* item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].answer.valueCoding.code = #G47.4
 * item[=].item[=].item[=].answer.valueCoding.display = "Narkolepsia ja katapleksia"
 
@@ -1076,7 +1076,7 @@ Usage: #example
 //Vajab õiget loendit
 * item[=].item[0].linkId = "health-assessment.patient-health-assessment"
 * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-hinnang-tervisele"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/hinnang-terviseseisundile"
 * item[=].item[=].answer.valueCoding.code = #1
 * item[=].item[=].answer.valueCoding.display = "Hea"
 
@@ -1119,7 +1119,7 @@ Usage: #example
 
 * item[=].item[=].item[=].item[+].linkId = "health-assessment.sick-leave-certs.sick-leave-cert.diagnosis"
 * item[=].item[=].item[=].item[=].text = "Diagnoos"
-* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-traumad"
+* item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #T63.2
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "Skorpionimürk"
 
@@ -1410,21 +1410,21 @@ Usage: #example
 
 * item[=].item[0].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
-* item[=].item[=].answer.valueCoding.code = #1
-* item[=].item[=].answer.valueCoding.display = "Asbestirohke keskkond"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ohutegurid"
+* item[=].item[=].answer.valueCoding.code = #194
+* item[=].item[=].answer.valueCoding.display = "Pikaajaline töötamine üksinda"
 
 * item[=].item[=].answer.item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].answer.item[=].text = "Täpsustus"
-* item[=].item[=].answer.item[=].answer.valueString = "Hästi tolmune on töö"
+* item[=].item[=].answer.item[=].answer.valueString = "Üksik tunne. Tahaks suhelda kellegagi"
 
 * item[=].item[+].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/td-ohutegurid"
-* item[=].item[=].answer.valueCoding.code = #3
-* item[=].item[=].answer.valueCoding.display = "Päevavalguse vähesus"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ohutegurid"
+* item[=].item[=].answer.valueCoding.code = #114
+* item[=].item[=].answer.valueCoding.display = "Kantserogeensed ained"
 
 * item[=].item[=].answer.item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].answer.item[=].text = "Täpsustus"
-* item[=].item[=].answer.item[=].answer.valueString = "Hästi pime on ka"
+* item[=].item[=].answer.item[=].answer.valueString = "Igapäevaselt puutun kokku trikloroetüleeniga"
 
