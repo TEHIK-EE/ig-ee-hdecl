@@ -904,7 +904,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].text = "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString = "Alkoholi liigtarvitamisest tingitud maksakahjustus"
 
-* item[=].item[=].linkId = "digestive-organs.gallstones"
+* item[=].item[+].linkId = "digestive-organs.gallstones"
 * item[=].item[=].text = "Sapikivid"
 * item[=].item[=].answer.valueBoolean = true
 
@@ -1058,7 +1058,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].text = "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString = "Äratan pidevalt elukaaslase üles norskamisega"
 
-* item[=].item[=].linkId = "sleep.fatigue"
+* item[=].item[+].linkId = "sleep.fatigue"
 * item[=].item[=].text = "Kas Te tunnete end sageli mitteväljapuhanuna, väsinuna või unisena päevasel ajal?"
 * item[=].item[=].answer.valueBoolean = true
 
