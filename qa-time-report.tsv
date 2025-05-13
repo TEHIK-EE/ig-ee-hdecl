@@ -1,0 +1,14 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.hdecl.json	5998	-	0	0	0	0	0	0	2	63	0	0	0	0	0	0	0	1	0	0	48	59	0	0	0	2	0	1
+fsh-generated/resources/OperationDefinition-ee-health-declaration-cancel.json	600	52	0	0	1	0	0	0	0	27	0	0	0	0	0	0	0	0	0	0	16	13	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-complete.json	598	40	0	0	0	0	0	0	0	26	0	0	0	0	0	0	0	0	0	0	15	12	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-get-consent.json	973	7	0	0	0	0	0	0	0	40	0	0	0	0	0	0	0	0	0	0	16	12	0	0	0	1	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-set-consent.json	1119	4	0	0	0	0	0	0	0	27	0	0	0	0	0	0	0	0	0	0	16	13	0	0	0	0	0	0
+fsh-generated/resources/Patient-katipiiriylene.json	449	8	0	0	1	0	0	0	0	396	0	0	0	0	0	0	0	0	0	0	12	10	0	1	0	0	0	0
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-example.json	93967	55	0	0	0	0	0	0	6	64	0	0	0	0	0	0	0	1	0	0	657	162	0	0	0	0	0	1
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-minimal-example.json	1631	8	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	15	16	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-ee-health-declaration-category-effective-date.json	734	9	0	0	0	0	1	0	0	17	0	0	0	0	0	0	0	0	0	0	15	11	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-ee-health-declaration-category.json	650	6	0	0	0	0	0	0	0	16	0	0	0	0	0	0	0	0	0	0	11	12	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration-category.json	3414	8	0	23	0	0	0	0	0	373	0	0	0	0	0	0	0	0	0	0	76	551	0	0	0	5	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration-minimal.json	900	6	0	104	0	0	0	0	0	28	0	0	0	0	0	0	0	0	0	0	96	358	0	0	0	11	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration.json	4299	9	0	0	0	0	0	0	0	58	0	0	0	0	0	0	0	1	0	0	189	300	0	0	0	7	0	1
