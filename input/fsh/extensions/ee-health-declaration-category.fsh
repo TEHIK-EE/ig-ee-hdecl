@@ -4,7 +4,7 @@ Title: "Tervise deklaratsiooni kasutusala"
 Description: "Tervise deklaratsiooni kasutusala ja selle kehtivuse periood"
 * ^context.type = #element
 * ^context.expression = "QuestionnaireResponse"
-* extension contains category 1..1 and effectivePeriod 0..1 MS SU
+* extension contains category 1..1 and effectivePeriod 0..1 MS
 
 * extension[category] ^short = "Kasutusala" 
 * extension[category].value[x] only Coding
