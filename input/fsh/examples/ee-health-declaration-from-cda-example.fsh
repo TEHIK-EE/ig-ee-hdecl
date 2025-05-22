@@ -25,13 +25,13 @@ Usage: #example
 * author = Reference(Questionnaire-patient)
 
 * item[0].linkId = "category"
-* item[=].text = "Kasutusala"
+// * item[=].text = "Kasutusala"
 * item[=].answer[+].valueCoding = $HDC#military-service 
 * item[=].answer[+].valueCoding = $HDC#driver-group-I 
 * item[=].answer[+].valueCoding = $HDC#driver-group-II 
 
 * item[+].linkId = "lifestyle"
-* item[=].text = "Elustiil"
+// * item[=].text = "Elustiil"
 
 * item[=].item[0].linkId = "lifestyle.alcohol"
 // * item[=].item[=].text = "Kas te tarbite alkoholi?"
@@ -293,7 +293,7 @@ Usage: #example
 
 //jätkata siit
 * item[+].linkId = "eyes-vision"
-* item[=].text = "Silmad ja nägemine"
+// * item[=].text = "Silmad ja nägemine"
 
 // * item[=].item[0].linkId = "eyes-vision.diagnoses-group"
 // * item[=].item[=].text = "Varasemad diagnoosid"
