@@ -1,0 +1,63 @@
+HDECL : Validation Results
+=========================================
+
+err = 0, warn = 6, info = 30
+IG Publisher Version: 1.8.20 Out of date - current version is ?pub-ver-1?
+Generated Wed Mar 12 20:42:08 UTC 2025. FHIR version 5.0.0 for ee.fhir.hdecl#1.0.0 (canonical = https://fhir.ee/hdecl)
+ Build Errors : 0 / 3 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-ee.fhir.hdecl : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-ee-health-declaration-cancel : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-ee-health-declaration-complete : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-ee-health-declaration-get-consent : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/OperationDefinition-ee-health-declaration-set-consent : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/Patient-katipiiriylene : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-example : 0 / 3 / 31
+ /github/workspace/fsh-generated/resources/StructureDefinition-ee-health-declaration : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ee-health-declaration-category : 0 / 0 / 1
+</table>
+== n/a ==
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/ImplementationGuide-ee.fhir.hdecl.json ==
+== fsh-generated/resources/OperationDefinition-ee-health-declaration-cancel.json ==
+== fsh-generated/resources/OperationDefinition-ee-health-declaration-complete.json ==
+== fsh-generated/resources/OperationDefinition-ee-health-declaration-get-consent.json ==
+== fsh-generated/resources/OperationDefinition-ee-health-declaration-set-consent.json ==
+== fsh-generated/resources/Patient-katipiiriylene.json ==
+== fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-example.json ==
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.extension[0].extension[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala' could not be found, so the code cannot be validated
+WARNING: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.extension[0].extension[0].value.ofType(Coding): ValueSet 'https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala' not found
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.extension[1].extension[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala' could not be found, so the code cannot be validated
+WARNING: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.extension[1].extension[0].value.ofType(Coding): ValueSet 'https://fhir.ee/CodeSystem/tervisetoendi-otsuse-kasutusala' not found
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/tervisetoendi-otsuse-kasutusala' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[5].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-psyyhika' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[5].item[0].item[1].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-psyyhika' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[6].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-narvisusteem' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[6].item[0].item[1].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-narvisusteem' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[7].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-silmad-ja-nagemine' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[8].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-korv-nina-neel' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[9].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-hingamissusteem' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[10].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-ainevahetuse-haired' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[11].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-suda-ja-veresoonkond' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[12].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-luud-liigesed-ja-lihased' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[13].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-nakkushaigused' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[15].item[1].item[1].item[0].item[1].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/atc-ee' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[15].item[1].item[1].item[0].item[2].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/pakend' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[15].item[3].item[1].item[0].item[1].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/ncsp' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[15].item[3].item[1].item[0].item[2].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/ncsp' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[16].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-traumad' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[17].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-nahahaigused' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[17].item[0].item[1].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-nahahaigused' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[18].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-seedeelundid' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[19].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-kuse-ja-suguelundid' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[20].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-verehaigused' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[22].item[0].item[0].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-uni' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[23].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-hinnang-tervisele' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[23].item[3].item[1].item[0].item[2].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-traumad' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[23].item[4].item[1].item[2].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/CodeSystem/toovoime-liik' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[25].item[0].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-ohutegurid' could not be found, so the code cannot be validated
+INFORMATION: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse.item[25].item[1].answer[0].value.ofType(Coding): A definition for CodeSystem 'https://fhir.ee/ValueSet/td-ohutegurid' could not be found, so the code cannot be validated
+WARNING: QuestionnaireResponse/ee-health-declaration-example: QuestionnaireResponse: The questionnaire 'https://fhir.ee/qre/Questionnaire-health-declaration|1.0.0' could not be resolved, so no validation can be performed against the base questionnaire
+== fsh-generated/resources/StructureDefinition-ee-health-declaration.json ==
+== fsh-generated/resources/StructureDefinition-ee-health-declaration-category.json ==
