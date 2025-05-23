@@ -22,7 +22,7 @@ Description: "Tervisedeklaratsiooni küsimustiku vastuse profiil"
 * author 1..1
 * author only Reference(Patient or PractitionerRole)
 * author ^type.targetProfile = "https://fhir.ee/mpi/StructureDefinition/ee-mpi-patient-verified"
-* extension contains EEHealthDeclarationCategory named categories 1..*
+* extension contains EEHealthDeclarationCategory named categories 1..* 
 * item 0..*
   * id 0..0
   * linkId 1..1
