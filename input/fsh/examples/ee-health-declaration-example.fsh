@@ -93,6 +93,29 @@ Usage: #example
 * item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
 * item[=].item[=].answer.valueBoolean = true
 
+* item[=].item[=].answer.item[0].linkId = "work-environment.occupational-disease.specification"
+* item[=].item[=].answer.item[=].text =  "Täpsustus"
+* item[=].item[=].answer.item[=].answer.valueString =  "Hingamisraskused tingitud töökeskkonnast"
+
+* item[=].item[=].answer.item[+].linkId = "work-environment.occupational-disease.previous-diagnosis"
+* item[=].item[=].answer.item[=].text =  "Varasemad diagnoosid"
+
+* item[=].item[=].answer.item[=].item[0].linkId = "work-environment.occupational-disease.previous-diagnosis.diagnosis"
+* item[=].item[=].answer.item[=].item[=].text =  "Diagnoos"
+* item[=].item[=].answer.item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/rhk10"
+* item[=].item[=].answer.item[=].item[=].answer.valueCoding.code = #Y96
+* item[=].item[=].answer.item[=].item[=].answer.valueCoding.display = "Kutsetööga seotud olud"
+
+* item[=].item[=].answer.item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis.written-diagnosis"
+* item[=].item[=].answer.item[=].item[=].text =  "Sõnaline diagnoos"
+* item[=].item[=].answer.item[=].item[=].answer.valueString = "Migreenid kiivri kandmisest"
+
+* item[=].item[=].answer.item[=].item[+].linkId = "work-environment.occupational-disease.previous-diagnosis.source-reference"
+* item[=].item[=].answer.item[=].item[=].text =  "Allika viide"
+* item[=].item[=].answer.item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
+* item[=].item[=].answer.item[=].item[=].answer.valueReference.identifier.value = "123456789"
+* item[=].item[=].answer.item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
+
 * item[=].item[+].linkId = "work-environment.work-related-disease"
 * item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
 * item[=].item[=].answer.valueBoolean = false
