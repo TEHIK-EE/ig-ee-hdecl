@@ -14,3 +14,9 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
+* parameter[+].name = #medical-data-updates
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "Teavitus eeltäidetud terviseandmete kohta"
+* parameter[=].type = #OperationOutcome
