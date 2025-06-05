@@ -701,29 +701,29 @@ Usage: #example
 * item[=].item[=].item[=].answer.item[=].text = "Täpsustus"
 * item[=].item[=].item[=].answer.item[=].answer.valueString = "Xymelin, beeta-blokaatorid, hjärtemagnyl (südame aspirin)"
 
-* item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions"
+* item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription"
 * item[=].item[=].item[=].text = "Viimase 9 kuu jooksul välja kirjutatud retseptid"
 
 // * item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.prescription"
 // * item[=].item[=].item[=].item[=].text = "Retsept"
 
-* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescriptions.date"
+* item[=].item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.current-prescription.date"
 * item[=].item[=].item[=].item[=].text = "Kuupäev"
 * item[=].item[=].item[=].item[=].answer.valueDate = 2024-09-01
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.atc"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.atc"
 * item[=].item[=].item[=].item[=].text = "ATC"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/atc-ee"
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #G03BA03
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "testosteroon"
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.package"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.package"
 * item[=].item[=].item[=].item[=].text = "Pakend"
 * item[=].item[=].item[=].item[=].answer.valueCoding.system = "http://ravimiregister.ee/pakendid" 
 * item[=].item[=].item[=].item[=].answer.valueCoding.code = #1022623
 * item[=].item[=].item[=].item[=].answer.valueCoding.display = "mingi pakend"
 
-* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescriptions.source-reference"
+* item[=].item[=].item[=].item[+].linkId = "previous-treatment.regular-medication.current-prescription.source-reference"
 * item[=].item[=].item[=].item[=].text = "Allika viide"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.system = "urn:oid:1.3.6.1.4.1.28284.6.1.1.5.11"
 * item[=].item[=].item[=].item[=].answer.valueReference.identifier.value = "123456789"
@@ -1096,16 +1096,16 @@ Usage: #example
 * item[+].linkId = "health-assessment"
 * item[=].text = "Hinnang enda terviseseisundile"
 
-//Vajab õiget loendit
-* item[=].item[0].linkId = "health-assessment.patient-health-assessment"
-* item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/hinnang-terviseseisundile"
-* item[=].item[=].answer.valueCoding.code = #1
-* item[=].item[=].answer.valueCoding.display = "Hea"
+// //Vajab õiget loendit
+// * item[=].item[0].linkId = "health-assessment.patient-health-assessment"
+// * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
+// * item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/hinnang-terviseseisundile"
+// * item[=].item[=].answer.valueCoding.code = #1
+// * item[=].item[=].answer.valueCoding.display = "Hea"
 
-* item[=].item[=].answer.item[0].linkId = "health-assessment.patient-health-assessment.specification"
-* item[=].item[=].answer.item[=].text = "Täpsustus"
-* item[=].item[=].answer.item[=].answer.valueString = "Kuigi muresid on palju, siis olen üldiselt positiivselt meelestatud"
+// * item[=].item[=].answer.item[0].linkId = "health-assessment.patient-health-assessment.specification"
+// * item[=].item[=].answer.item[=].text = "Täpsustus"
+// * item[=].item[=].answer.item[=].answer.valueString = "Kuigi muresid on palju, siis olen üldiselt positiivselt meelestatud"
 
 * item[=].item[+].linkId = "health-assessment.illness-past-year"
 * item[=].item[=].text = "Kas olete viimase aasta jooksul olnud haige?"
