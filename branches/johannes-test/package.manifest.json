@@ -1,0 +1,6 @@
+{
+  "version" : "1.0.0",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20250605065517",
+  "name" : "ee.fhir.hdecl"
+}
