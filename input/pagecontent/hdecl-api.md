@@ -927,18 +927,17 @@ GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/
 }
 ```
 
-
-
-#### Registraator pärib TD
-
-Registraatori päringutes on kohustuslik määrata metaandmeid tagastav profiil kujul
-
-_profile=https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal
-
-HDECL rakendus tagastab veateate HDECL-058 "FHIR otsingus puudub registraatorile lubatud otsinguprofiil" juhul, kui registraatori tehtud otsingus puudub lubatud profiil.
+#### TTO registraator pärib TD
 
 ```
-GET /QuestionnaireResponse?patient={id}&status=completed&_profile=https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal
+GET /QuestionnaireResponse?patient={id}&status=completed&{parameter1=value1}&...
+```
+kohustuslik on määrata päringus status=completed
+Tagastatakse ainult TD metaandmed (profiiliga EEHealthDeclarationMinimal)
+
+#### Näidispäring
+```
+GET [base]/QuestionnaireResponse?patient=Patient/260920&status=completed
 ```
 
 #### Vastus
@@ -952,33 +951,29 @@ GET /QuestionnaireResponse?patient={id}&status=completed&_profile=https://fhir.e
     "link": [
         {
             "relation": "self",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&status=completed&_summary=true&_page=1"
         },
         {
             "relation": "first",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=1"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&status=completed&_summary=true&_page=1"
         },
         {
             "relation": "last",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
-        },
-        {
-            "relation": "next",
-            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&category=military-service&status=completed&_count=1&_sort=authored&_page=2"
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&status=completed&_summary=true&_page=1"
         }
     ],
     "entry": [
         {
-            "fullUrl": "QuestionnaireResponse/194",
+            "fullUrl": "QuestionnaireResponse/70",
             "resource": {
                 "resourceType": "QuestionnaireResponse",
-                "id": "194",
+                "id": "70",
                 "meta": {
                     "versionId": "2",
-                    "lastUpdated": "2025-01-15T22:00:00.887+00:00",
+                    "lastUpdated": "2025-01-15T22:00:00.566+00:00",
                     "profile": [
-                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
-                    ]                        
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal"
+                    ]                    
                 },
                 "extension": [
                     {
@@ -994,7 +989,7 @@ GET /QuestionnaireResponse?patient={id}&status=completed&_profile=https://fhir.e
                                 "url": "effectivePeriod",
                                 "valuePeriod": {
                                     "start": "2025-01-15T22:00:00+00:00",
-                                    "end": "2025-04-15T21:00:00+00:00"
+                                    "end": "2025-04-15T00:00:00+00:00"
                                 }
                             }
                         ],
@@ -1013,14 +1008,14 @@ GET /QuestionnaireResponse?patient={id}&status=completed&_profile=https://fhir.e
                                 "url": "effectivePeriod",
                                 "valuePeriod": {
                                     "start": "2025-01-15T22:00:00+00:00",
-                                    "end": "2025-02-15T22:00:00+00:00"
+                                    "end": "2025-02-15T00:00:00+00:00"
                                 }
                             }
                         ],
                         "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
                     }
                 ],
-                "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+                "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
                 "status": "completed",
                 "subject": {
                     "reference": "Patient/260920"
@@ -1030,10 +1025,55 @@ GET /QuestionnaireResponse?patient={id}&status=completed&_profile=https://fhir.e
                     "reference": "Patient/260920"
                 }
             }
+        },
+        {
+            "fullUrl": "QuestionnaireResponse/194",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "194",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2025-05-15T14:45:24.887+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal"
+                    ]    
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "occupational",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "occupational"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-05-15T22:00:00+00:00",
+                                    "end": "2025-06-15T21:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }                        
+                ],                
+                "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-05-15T22:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                }
+            }
         }
     ]
 }
 ```
+
 
 
 #### KAM asutuse tervishoiutöötaja pärib TD
