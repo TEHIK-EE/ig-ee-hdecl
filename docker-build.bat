@@ -1,0 +1,1 @@
+docker run --rm -it -v .:/workdir -v ~/.fhir:/root/.fhir docker.kodality.com/fsh-builder /bin/bash -c "cd /workdir && ./_genonce.sh"
