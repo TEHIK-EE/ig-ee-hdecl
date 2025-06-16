@@ -1,0 +1,19 @@
+{
+  "url" : "https://fhir.ee/hdecl/ImplementationGuide/ee.fhir.hdecl",
+  "name" : "HDECL",
+  "title" : "Tervisedeklaratsiooni juurutusjuhend",
+  "description" : null,
+  "status" : "active",
+  "package-id" : "ee.fhir.hdecl",
+  "ig-ver" : "1.0.0",
+  "date" : "Mon, 16 Jun, 2025 14:02:43 +0000",
+  "dateISO8601" : "2025-06-16T14:02:43+00:00",
+  "errs" : 1,
+  "warnings" : 83,
+  "hints" : 21,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1443710328
+}

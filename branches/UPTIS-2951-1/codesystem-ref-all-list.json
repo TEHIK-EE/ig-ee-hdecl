@@ -1,0 +1,57 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/questionnaire-answers-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "QuestionnaireResponseStatus",
+      "title" : "Questionnaire Response Status",
+      "description" : "Lifecycle status of the questionnaire response.",
+      "oids" : [
+        "2.16.840.1.113883.4.642.2.258",
+        "2.16.840.1.113883.4.642.1.441",
+        "2.16.840.1.113883.4.642.4.448"
+      ],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-questionnaire-answers-status.html" : "Questionnaire Response Status"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-common-tags.html" : "Common Tags"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+      "version" : "4.0.0",
+      "status" : "active",
+      "name" : "ObservationValue",
+      "title" : "ObservationValue",
+      "description" : "This code system covers all concepts of HL7-defined values for the Observation value element, when it has a coded datatype.",
+      "oids" : ["2.16.840.1.113883.5.1063"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-common-tags.html" : "Common Tags"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-all-languages.html" : "All Languages",
+      "http://hl7.org/fhir/R5/valueset-languages.html" : "Common Languages"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "ee-health-declaration-category-effective-date",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: SearchParameter ee-health-declaration-category-effective-date</b></p><a name=\"ee-health-declaration-category-effective-date\"> </a><a name=\"hcee-health-declaration-category-effective-date\"> </a><a name=\"ee-health-declaration-category-effective-date-en-US\"> </a><h2>EEHealthDeclarationCategoryEffectiveDate</h2><p>Parameter <code>category-effective-date</code>:<code>date</code></p><div><p>Search by category effective date in the Health Declaration</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R5/questionnaireresponse.html\">QuestionnaireResponse</a></td></tr><tr><td>Expression</td><td><code>QuestionnaireResponse.extension('https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category').extension('effectivePeriod').value.as(Period)</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/hdecl/SearchParameter/ee-health-declaration-category-effective-date",
+  "version" : "1.0.0",
+  "name" : "EEHealthDeclarationCategoryEffectiveDate",
+  "title" : "Health declaration category effective date",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-03-13T18:10:24+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Search by category effective date in the Health Declaration",
+  "code" : "category-effective-date",
+  "base" : ["QuestionnaireResponse"],
+  "type" : "date",
+  "expression" : "QuestionnaireResponse.extension('https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category').extension('effectivePeriod').value.as(Period)",
+  "processingMode" : "normal"
+}

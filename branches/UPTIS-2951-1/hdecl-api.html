@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Healthdeclaration API - Tervisedeklaratsiooni juurutusjuhend v1.0.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7.fhir.ee.tehik.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<!-- <script type="application/javascript" src="assets/js/mermaid.js"></script>
+<script type="application/javascript" src="assets/js/drawio.js"></script>
+<script type="application/javascript" src="assets/js/plantuml.js"></script> -->
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Tervisedeklaratsiooni juurutusjuhend</span>
+            <br/>
+            <span style="display:inline-block;">1.0.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guides
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="hdecl-api.html">Healthdeclaration API</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="download.html">Download</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Healthdeclaration API</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Tervisedeklaratsiooni juurutusjuhend - Local Development build (v1.0.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://fhir.ee/hdecl/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Healthdeclaration API</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#uue-tervisedeklaratsiooni-algatamine" id="markdown-toc-uue-tervisedeklaratsiooni-algatamine">Uue tervisedeklaratsiooni algatamine</a>    <ul>
+      <li><a href="#päring" id="markdown-toc-päring">Päring</a></li>
+      <li><a href="#vastus" id="markdown-toc-vastus">Vastus</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-muutmine" id="markdown-toc-tervisedeklaratsiooni-muutmine">Tervisedeklaratsiooni muutmine</a>    <ul>
+      <li><a href="#päring-1" id="markdown-toc-päring-1">Päring</a></li>
+      <li><a href="#vastus-1" id="markdown-toc-vastus-1">Vastus</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-kinnitamine" id="markdown-toc-tervisedeklaratsiooni-kinnitamine">Tervisedeklaratsiooni kinnitamine</a>    <ul>
+      <li><a href="#päring-2" id="markdown-toc-päring-2">Päring</a></li>
+      <li><a href="#vastus-2" id="markdown-toc-vastus-2">Vastus</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-tühistamine" id="markdown-toc-tervisedeklaratsiooni-tühistamine">Tervisedeklaratsiooni tühistamine</a>    <ul>
+      <li><a href="#päring-3" id="markdown-toc-päring-3">Päring</a></li>
+      <li><a href="#vastus-3" id="markdown-toc-vastus-3">Vastus</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-ligipääsu-pärimine" id="markdown-toc-tervisedeklaratsiooni-ligipääsu-pärimine">Tervisedeklaratsiooni ligipääsu pärimine</a>    <ul>
+      <li><a href="#päring-4" id="markdown-toc-päring-4">Päring</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-ligipääsu-muutmine" id="markdown-toc-tervisedeklaratsiooni-ligipääsu-muutmine">Tervisedeklaratsiooni ligipääsu muutmine</a>    <ul>
+      <li><a href="#päring-5" id="markdown-toc-päring-5">Päring</a></li>
+      <li><a href="#vastus-5" id="markdown-toc-vastus-5">Vastus</a></li>
+    </ul>
+  </li>
+  <li><a href="#tervisedeklaratsiooni-pärimine" id="markdown-toc-tervisedeklaratsiooni-pärimine">Tervisedeklaratsiooni pärimine</a>    <ul>
+      <li><a href="#päring-id-järgi" id="markdown-toc-päring-id-järgi">Päring id järgi</a></li>
+      <li><a href="#vastus-6" id="markdown-toc-vastus-6">Vastus</a></li>
+      <li><a href="#ajaloo-päring" id="markdown-toc-ajaloo-päring">Ajaloo päring</a></li>
+      <li><a href="#vastus-7" id="markdown-toc-vastus-7">Vastus</a></li>
+      <li><a href="#tervisedeklratsiooni-td-questionnaireresponse-päring" id="markdown-toc-tervisedeklratsiooni-td-questionnaireresponse-päring">Tervisedeklratsiooni TD (QuestionnaireResponse) päring</a></li>
+      <li><a href="#otsingu-näited" id="markdown-toc-otsingu-näited">Otsingu näited</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p>Käesolevas juhendis kirjeldatakse toetatud otspunktid ja operatsioonid, operatsioonide üldine 
+kirjeldus, parameetrid, ärireeglid ja päringu ja vastuse näited</p>
+
+<h2 id="uue-tervisedeklaratsiooni-algatamine">Uue tervisedeklaratsiooni algatamine</h2>
+<ul>
+  <li>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud uue tervisedeklaratsiooni TD (QuestionnaireResponse).</li>
+  <li>UPTIS kontrollib päringu tegija õiguseid, andmete suletust ja edastab vastuseks 
+eeltäidetud andmetega TD (QuestionnaireResponse).</li>
+  <li>Uut TD lubatakse teha juhul, kui patsiendil puudub ajaliselt kehtiv TD staatusega "completed" 
+ja puudub täitmisel staatusega "in-progress" TD.</li>
+</ul>
+
+<h3 id="päring">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/QuestionnaireResponse</code></li>
+</ul>
+
+<p>Uue TD algatamisel kasutatav QuestionnaireResponse ressursikirje sisaldab üksnes metaandmeid
+ja kasutusaladele vastavaid laiendusi. Uue TD algatamisel ei ole kasutusala kehtivus määratud.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST [base]/QuestionnaireResponse
+{
+  "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": ["https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"]
+  },
+  "language" : "et-EE",
+  "extension" : [
+    {
+      "extension" : [
+        {
+          "url" : "category",
+          "valueCoding" : {
+            "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+            "code" : "military-service"
+          }
+        }
+      ],
+      "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+    },
+    {
+      "extension" : [
+        {
+          "url" : "category",
+          "valueCoding" : {
+            "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+            "code" : "driver-group-I"
+          }
+        }
+      ],
+      "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+    }
+  ],
+  "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
+  "status": "in-progress",
+  "subject": {"reference": "Patient/123"},
+  "authored": "2024-12-10T11:00:00+02:00",
+  "author": {"reference": "Patient/123"}
+}
+</code></pre></div></div>
+
+<h3 id="vastus">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 201 Created</li>
+  <li><strong>Sisu</strong>: Päringu päise parameetri <code class="language-plaintext highlighter-rouge">Prefer: return=representation</code> korral tagastatakse uus tervisedeklaratsioon (QuestionnaireResponse), mis sisaldab eeltäidetud andmeid.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 201 Created
+Location: [base]/QuestionnaireResponse/21
+</code></pre></div></div>
+
+<h2 id="tervisedeklaratsiooni-muutmine">Tervisedeklaratsiooni muutmine</h2>
+<p>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud täitmisel ("in-progress") tervisedeklaratsiooni TD (QuestionnaireResponse)
+muutmise sõnumi. UPTIS kontrollib päringu tegija õiguseid, andmete suletust ja vajaduse korral edastab vastuseks 
+TD uue versiooni eeltäidetud andmetega: kui TD muutub staatusest "completed"–&gt; "in-progress" või kui on muudetud<br />
+TD kasutusala, siis sel juhul uuendatakse TD eeltäidetud andmetega, muudel juhtudel toimub TD-l andmete uuendamine 
+vajaduspõhiselt (terviseandmeid uuendatakse TD'l UPTIS-s süsteemses parameetris määratud aja tagant).</p>
+
+<h3 id="päring-1">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">PUT [base]/QuestionnaireResponse/[id]</code></li>
+</ul>
+
+<p>TODO Alljärgnevas näites puudub vastuste osa, muus osas peaks näide olema valiidne</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT [base]/QuestionnaireResponse/31
+{
+  "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": ["https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"]
+  },
+  "language" : "et-EE",
+  "extension" : [
+    {
+      "extension" : [
+        {
+          "url" : "category",
+          "valueCoding" : {
+            "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+            "code" : "military-service"
+          }
+        }
+      ],
+      "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+    },
+    {
+      "extension" : [
+        {
+          "url" : "category",
+          "valueCoding" : {
+            "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+            "code" : "driver-group-I"
+          }
+        }
+      ],
+      "url" : "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+    }
+  ],
+  "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
+  "status": "in-progress",
+  "subject": {"reference": "Patient/48806140249"},
+  "authored": "2024-12-10T11:00:00+02:00",
+  "author": {"reference": "Patient/48806140249"}
+}
+</code></pre></div></div>
+
+<h3 id="vastus-1">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 201 Created</li>
+  <li><strong>Sisu</strong>: Päringu päise parameetri <code class="language-plaintext highlighter-rouge">Prefer: return=representation</code> korral tagastatakse uus tervisedeklaratsioon (QuestionnaireResponse), mis sisaldab eeltäidetud andmeid.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 201 Created
+Location: [base]/QuestionnaireResponse/31/_history/2
+</code></pre></div></div>
+
+<h2 id="tervisedeklaratsiooni-kinnitamine">Tervisedeklaratsiooni kinnitamine</h2>
+<p>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud täitmisel ("in-progress") tervisedeklaratsiooni (TD)
+kinnitamise operatsiooni $complete. UPTIS kontrollib päringu tegija õiguseid, andmete suletust ja kontrollib, kas TD-l olevad terviseandmed
+on vahepeal muutunud. Kui terviseandmed ei ole muutunud, siis TD kinnitatakse. Kui terviseandmed on muutunud, siis tagastatakse vastus
+koos muutunud terviseandmetega ja antakse veateade. Patsient või patsiendi esindaja peab TD uuesti üle vaatama ja kinnitama.</p>
+
+<h3 id="päring-2">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$complete</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST [base]/QuestionnaireResponse/31/$complete
+{
+    "resourceType": "Parameters"
+}
+</code></pre></div></div>
+
+<h3 id="vastus-2">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+</code></pre></div></div>
+
+<h2 id="tervisedeklaratsiooni-tühistamine">Tervisedeklaratsiooni tühistamine</h2>
+<p>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud tervisedeklaratsiooni TD (QuestionnaireResponse) tühistamise sõnumi. 
+Tühistatakse kogu TD, mitte ainult TD viimane versioon. UPTIS kontrollib päringu tegija õiguseid, kontrollib, kas TD 
+on lubatud tühistada ja salvestab UPTIS-sse uue versiooni TD-st staatusega "stopped" või "entered-in-error". TD ei lubata tühistada, kui TD
+on juba tervisetõendi otsusega seotud või kui TD kasutusalaga "military-service" on päritud Kaitseministeeriumi asutuse poolt.</p>
+
+<h3 id="päring-3">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$cancel</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST [base]/QuestionnaireResponse/31/$cancel
+{
+    "resourceType": "Parameters"
+}
+</code></pre></div></div>
+
+<h3 id="vastus-3">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+</code></pre></div></div>
+
+<h2 id="tervisedeklaratsiooni-ligipääsu-pärimine">Tervisedeklaratsiooni ligipääsu pärimine</h2>
+
+<p>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt tehtud tervisedeklaratsiooni (TD) ligipääsu päringu 
+ja tagastab ligiääsu andmed vastuseks. Päring tehakse ühe konkreetse TD kohta.</p>
+
+<h3 id="päring-4">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$get-consent</code></li>
+</ul>
+
+<h4 id="näidispäring">Näidispäring</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse/441/$get-consent
+</code></pre></div></div>
+
+<h4 id="vastus-4">Vastus</h4>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Parameters",
+    "parameter": [
+        {
+            "name": "doctor",
+            "valueString": "open"
+        },
+        {
+            "name": "representative",
+            "valueString": "closed"
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h2 id="tervisedeklaratsiooni-ligipääsu-muutmine">Tervisedeklaratsiooni ligipääsu muutmine</h2>
+
+<p>UPTIS võtab vastu patsiendi või patsiendi esindaja poolt edastatud tervisedeklaratsiooni (TD) ligipääsu muutmise - 
+TD suletakse või avatakse arstidele või esindajatele. 
+Patsiendi esindaja saab muuta TD ligipääsu ainult juhul, kui TD on esindajale avatud.</p>
+
+<h3 id="päring-5">Päring</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">POST [base]/QuestionnaireResponse/[id]/$set-consent</code></li>
+</ul>
+
+<h4 id="näidispäring-1">Näidispäring</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST [base]/QuestionnaireResponse/31/$set-consent
+{
+    "resourceType": "Parameters",
+    "parameter": [{
+            "name": "doctor",
+            "valueString": "open"
+        }, {
+            "name": "representative",
+            "valueString": "closed"
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h3 id="vastus-5">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<h2 id="tervisedeklaratsiooni-pärimine">Tervisedeklaratsiooni pärimine</h2>
+<p>UPTIS võtab vastu tervisedeklaratsiooni TD (QuestionnaireResponse) päringu ja tagastab päringu tingimustele vastavad TD-d. 
+Lubatud TD päringud ja päringu tingimused sõltuvad päringu autorist:</p>
+
+<ul>
+  <li>patsient või patsiendi esindaja võib pärida patsiendi kõikides staatustes (ka tühistatud) TD-e, samuti võib pärib tõendiga seotud TD-i (ajaloo päring: konkreetse ID ja versiooni numbriga TD päring)</li>
+  <li>TTO tervishoiutöötaja või spetsialist pärib kehtivat TD-i  või pärib tõendiga seotud TD-i (ajaloo päring)</li>
+  <li>Registraator pärib kehtivat TD ja registraatorile tagastatakse päringu vastuses vaid TD metaandmed - registraatorile on oluline teada, kas patsiendil on olemas kehtiv TD ja kui kaua TD ajaliselt kehtib (patsient soovib broneerida arsitle aega ning registraator kontrollib TD olemasolu visiidi ajal).</li>
+  <li>Kaitseministeeriumi asutuse tervishoiutöötaja pärib TD-i järgmistel juhtudel:
+    <ul>
+      <li>Kaitseressursside ameti arstlik komisjon (KRA AK): tegeleb isikutega, kes on potentsiaalsed ajateenistusse kutsutavad või isikud on ise avaldanud soovi AK läbimiseks. Arstliku komisjoni kuuluv arst pärib isiku hetkel kehtiva TD kasutusalaga "military-service".</li>
+      <li>Kaitseministeeriumi vaidekomisjon (KAVK): kui isik ei on nõus arstliku komisjoni otsusega, siis on tal võimalik otsus vaidlustada KAVK-s. Komisjoni koosoleku toimumisel päritakse eelneva arstliku komisjoni toimumise ajal päritud TD (TD ajaloo päring konkreetse ID ja versiooni numbriga).</li>
+      <li>Kaitseväe arstlik komisjon (KAK):  Isikud, kes jõuavad KAK-i on:
+        <ul>
+          <li>tegevväelased, kes tulevad korralisele tervisekontrollile (3 korda aastas).</li>
+          <li>ajateenijad, kelle väeosa arst suunab komisjoni seoses teenistuse jätkamist takistavate terviseprobleemidega.</li>
+          <li>tsiviilisikud, kes soovivad astuda tegevteenistusse (Värbamiskeskuse kaudu);</li>
+          <li>teenistusülesannete täitmisel tervisekahjustuse saanud isikud ja Kaitseväe teenistusest vabastatud isikud.</li>
+        </ul>
+      </li>
+      <li>KAK arst pärib isiku hetkel kehtiva TD kasutusalaga "military-service".</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="päring-id-järgi">Päring id järgi</h3>
+<ul>
+  <li><strong>URL</strong>: <code class="language-plaintext highlighter-rouge">GET [base]/QuestionnaireResponse/{id}</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse/70
+</code></pre></div></div>
+
+<h3 id="vastus-6">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "QuestionnaireResponse",
+  "id": "70",
+  "meta": {
+      "versionId": "1",
+      "lastUpdated": "2025-03-20T14:50:28.566+00:00",
+      "profile": [
+          "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
+      ]
+  },
+  "extension": [
+      {
+          "extension": [
+              {
+                  "url": "category",
+                  "valueCoding": {
+                      "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                      "code": "military-service"
+                  }
+              }
+          ],
+          "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+      },
+      {
+          "extension": [
+              {
+                  "url": "category",
+                  "valueCoding": {
+                      "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                      "code": "driver-group-I"
+                  }
+              }
+          ],
+          "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+      }
+  ],
+  "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
+  "status": "in-progress",
+  "subject": {
+      "reference": "Patient/260920"
+  },
+  "authored": "2024-12-10T09:00:00+00:00",
+  "author": {
+      "reference": "Patient/260920"
+  }
+}
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="ajaloo-päring">Ajaloo päring</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /QuestionnaireResponse/{id}/_history/{versionId}
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse/120/_history/3
+</code></pre></div></div>
+
+<h3 id="vastus-7">Vastus</h3>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "QuestionnaireResponse",
+    "id": "120",
+    "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-01-15T22:00:25.729+00:00",
+        "profile": [
+            "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
+        ]
+    },
+    "extension": [
+        {
+            "extension": [
+                {
+                    "url": "category",
+                    "valueCoding": {
+                        "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                        "code": "military-service"
+                    }
+                },
+                {
+                    "url": "effectivePeriod",
+                    "valuePeriod": {
+                        "start": "2025-01-15T22:00:00+00:00",
+                        "end": "2025-02-15T21:00:00+00:00"
+                    }
+                }
+            ],
+            "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+        },
+        {
+            "extension": [
+                {
+                    "url": "category",
+                    "valueCoding": {
+                        "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                        "code": "driver-group-I"
+                    }
+                },
+                {
+                    "url": "effectivePeriod",
+                    "valuePeriod": {
+                        "start": "2025-01-15T22:00:00+00:00",
+                        "end": "2025-04-15T22:00:00+00:00"
+                    }
+                }
+            ],
+            "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+        }
+    ],
+    "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+    "status": "completed",
+    "subject": {
+        "reference": "Patient/65491"
+    },
+    "authored": "2025-01-15T22:00:00+00:00",
+    "author": {
+        "reference": "Patient/6549"
+    },
+    "item": [
+        {
+            "linkId": "category",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                        "code": "military-service"
+                    }
+                },
+                {
+                     "valueCoding" : {
+                        "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                        "code" : "driver-group-I"
+                    }
+                }                                   
+            ]
+        },
+        {
+            "linkId": "patient-gender",
+            "answer": [
+                {
+                    "valueCoding": {
+                        "system": "http://hl7.org/fhir/administrative-gender",
+                        "code": "male"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "lifestyle",
+            "item": [
+                {
+                    "linkId": "lifestyle.alcohol",
+                    "answer": [
+                        {
+                            "valueBoolean": true,
+                            "item": [
+                                {
+                                    "linkId": "lifestyle.alcohol.alcohol-units",
+                                    "answer": [
+                                        {
+                                            "valueDecimal": 3.4
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "linkId": "lifestyle.smoking",
+                    "answer": [
+                        {
+                            "valueBoolean": true,
+                            "item": [
+                                {
+                                    "linkId": "lifestyle.smoking.smoking-amount",
+                                    "answer": [
+                                        {
+                                            "valueInteger": 20
+                                        }
+                                    ]
+                                },
+                                {
+                                    "linkId": "lifestyle.smoking.smoking-period",
+                                    "answer": [
+                                        {
+                                            "valueDecimal": 45
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "linkId": "lifestyle.narcotics",
+                    "answer": [
+                        {
+                            "valueBoolean": true,
+                            "item": [
+                                {
+                                    "linkId": "lifestyle.narcotics.narcotics-frequency",
+                                    "answer": [
+                                        {
+                                            "valueString": "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "linkId": "lifestyle.medication",
+                    "answer": [
+                        {
+                            "valueBoolean": true,
+                            "item": [
+                                {
+                                    "linkId": "lifestyle.medication.specification",
+                                    "answer": [
+                                        {
+                                            "valueString": "Kodeiin ja muud opioidid"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h3 id="tervisedeklratsiooni-td-questionnaireresponse-päring">Tervisedeklratsiooni TD (QuestionnaireResponse) päring</h3>
+
+<h4 id="status">status</h4>
+<p>Patsiendil ja patsiendi esindajal on lubatud TD pärida staatustega "in-progress","completed","stopped" või "entered-in-error". Staatuse määramine päringus ei ole kohustuslik.</p>
+
+<p>Muudel rollidel on lubatud TD pärida ainult "completed" staatusega ja staatuse määramine päringus on kohustuslik.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>status=completed
+
+status=stopped,entered-in-error
+</code></pre></div></div>
+
+<h4 id="patient">patient</h4>
+<p>Patsient - MPI id / isikukood</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>patient=123
+
+patient=Patient/123
+
+patient.identifier=https://fhir.ee/sid/pid/est/ni|52007010062
+
+patient.identifier=urn:oid:1.3.6.1.4.1.28284.6.2.2.1|52007010062
+
+patient:Patient.identifier=https://fhir.ee/sid/pid/est/ni|52007010062
+
+</code></pre></div></div>
+
+<h4 id="category-effective-date">category-effective-date</h4>
+
+<p>TD kehtivuse aeg</p>
+
+<p>Lubatud prefiksid: eq, lt</p>
+
+<p>Kui prefiks on määramata, siis on vaikimisi "eq".</p>
+
+<p>Tervisedeklaratsioonil on mitu kehtivust kasutusalade lõikes. Kui päringu tingimuses on kasutusala määramata või on määratud mitu kasutusala, siis category-effective-date tingimus peab sobima vähemalt ühele kasutusala kehtivuse lõpule.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>category-effective-date=2025-01-14  (14.01.2025 kehtivad QR)
+
+category-effective-date=eq2025-01-14  (14.01.2025 kehtivad QR)
+
+category-effective-date=lt2025-01-14  (QR'd, mille kehtivus lõpeb 13.01.2025, kaasa arvatud)
+</code></pre></div></div>
+
+<h4 id="category">category</h4>
+<p>TD kasutusala kood.</p>
+
+<p>KAM asutuste korral on kohustuslik määrata category=military-service</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>category=driver-group-1,occupational,military-service
+</code></pre></div></div>
+
+<h4 id="_summary">_summary</h4>
+<p>Tagastatakse päringu vastuses piiratud komplekt andmeid, profiilis määratakse summary elemendid.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_summary=true
+</code></pre></div></div>
+
+<h4 id="_sort">_sort</h4>
+<p>Vastuse sorteerimine</p>
+
+<h4 id="_page">_page</h4>
+<p>Lehekülgede kaupa pärimine</p>
+
+<h4 id="_id">_id</h4>
+<p>Tervisedeklaratsiooni ID</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_id=21321321
+</code></pre></div></div>
+
+<h4 id="_count">_count</h4>
+<p>Kui mitu ressurssi ühe otsinguga tagastatakse.</p>
+
+<h3 id="otsingu-näited">Otsingu näited</h3>
+
+<h4 id="patsient-või-patsiendi-esindaja-pärib-td">Patsient või patsiendi esindaja pärib TD</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /QuestionnaireResponse/{id}
+GET /QuestionnaireResponse/{id}/_history/{versionId}
+GET /QuestionnaireResponse?patient={id}&amp;{parameter1=value1}&amp;...
+</code></pre></div></div>
+
+<h4 id="näidispäring-2">Näidispäring</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035
+</code></pre></div></div>
+
+<h4 id="vastus-8">Vastus</h4>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;_page=1"
+        },
+        {
+            "relation": "first",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;_page=1"
+        },
+        {
+            "relation": "last",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;_page=1"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "QuestionnaireResponse/198",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "198",
+                "meta": {
+                    "versionId": "1",
+                    "lastUpdated": "2025-01-16T15:03:50.770+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
+                    ]                    
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-16T00:00:00+00:00",
+                                    "end": "2025-04-16T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "driver-group-II"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-16T00:00:00+00:00",
+                                    "end": "2025-02-16T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }
+                ],
+                "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
+                "status": "in-progress",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-01-16T09:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                }
+            }
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h4 id="raviteekonnal-osalev-roll-välja-arvatud-registraator-pärib-td">Raviteekonnal osalev roll (välja arvatud registraator) pärib TD</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /QuestionnaireResponse/{id}
+GET /QuestionnaireResponse/{id}/_history/{versionId}
+GET /QuestionnaireResponse?patient={id}&amp;status=completed&amp;{parameter1=value1}&amp;...
+</code></pre></div></div>
+<p>kohustuslik on määrata päringus status=completed</p>
+
+<h4 id="näidispäring-3">Näidispäring</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;status=completed
+</code></pre></div></div>
+
+<h4 id="vastus-9">Vastus</h4>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 1,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;status=completed&amp;_page=1"
+        },
+        {
+            "relation": "first",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;status=completed&amp;_page=1"
+        },
+        {
+            "relation": "last",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;status=completed&amp;_page=1"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "QuestionnaireResponse/194",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "194",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2025-03-26T14:45:24.887+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
+                    ]                    
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-04-15T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "driver-group-I"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-02-15T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }
+                ],
+                "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-01-15T22:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                },
+                "item": [
+                    {
+                        "linkId": "category",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "valueCoding" : {
+                                    "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code" : "driver-group-I"
+                                }
+                            }                               
+                        ]
+                    },
+                    {
+                        "linkId": "patient-gender",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    "system": "http://hl7.org/fhir/administrative-gender",
+                                    "code": "male"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "linkId": "lifestyle",
+                        "item": [
+                            {
+                                "linkId": "lifestyle.alcohol",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.alcohol.alcohol-units",
+                                                "answer": [
+                                                    {
+                                                        "valueDecimal": 3.4
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.smoking",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.smoking.smoking-amount",
+                                                "answer": [
+                                                    {
+                                                        "valueInteger": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "linkId": "lifestyle.smoking.smoking-period",
+                                                "answer": [
+                                                    {
+                                                        "valueDecimal": 45
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.narcotics",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.narcotics.narcotics-frequency",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.medication",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.medication.specification",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "Kodeiin ja muud opioidid"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h4 id="tto-registraator-pärib-td">TTO registraator pärib TD</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /QuestionnaireResponse?patient={id}&amp;status=completed&amp;{parameter1=value1}&amp;...
+</code></pre></div></div>
+<p>kohustuslik on määrata päringus status=completed
+Tagastatakse ainult TD metaandmed (profiiliga EEHealthDeclarationMinimal)</p>
+
+<h4 id="näidispäring-4">Näidispäring</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse?patient=Patient/260920&amp;status=completed
+</code></pre></div></div>
+
+<h4 id="vastus-10">Vastus</h4>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&amp;status=completed&amp;_summary=true&amp;_page=1"
+        },
+        {
+            "relation": "first",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&amp;status=completed&amp;_summary=true&amp;_page=1"
+        },
+        {
+            "relation": "last",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient=Patient/260920&amp;status=completed&amp;_summary=true&amp;_page=1"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "QuestionnaireResponse/70",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "70",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2025-01-15T22:00:00.566+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal"
+                    ]                    
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-04-15T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "driver-group-I"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-02-15T00:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }
+                ],
+                "questionnaire": "https://fhir.ee/example-questionnaire|0.2",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-01-15T22:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                }
+            }
+        },
+        {
+            "fullUrl": "QuestionnaireResponse/194",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "194",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2025-05-15T14:45:24.887+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal"
+                    ]    
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "occupational",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "occupational"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-05-15T22:00:00+00:00",
+                                    "end": "2025-06-15T21:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }                        
+                ],                
+                "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-05-15T22:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                }
+            }
+        }
+    ]
+}
+</code></pre></div></div>
+
+<h4 id="kam-asutuse-tervishoiutöötaja-pärib-td">KAM asutuse tervishoiutöötaja pärib TD</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /QuestionnaireResponse/id
+GET /QuestionnaireResponse/{id}/_history/{versionId}
+GET /QuestionnaireResponse?patient={id}&amp;status=completed&amp;category=military-service&amp;{parameter1=value1}&amp;...
+</code></pre></div></div>
+<p>kohustuslik on määrata päringus status=completed ja category=military-service</p>
+
+<h4 id="näidispäring-5">Näidispäring</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;category=military-service&amp;status=completed&amp;_sort=-authored&amp;_count=1&amp;_page=1
+</code></pre></div></div>
+
+<h4 id="vastus-11">Vastus</h4>
+<ul>
+  <li><strong>HTTP kood</strong>: 200 OK</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 2,
+    "link": [
+        {
+            "relation": "self",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;category=military-service&amp;status=completed&amp;_count=1&amp;_sort=authored&amp;_page=1"
+        },
+        {
+            "relation": "first",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;category=military-service&amp;status=completed&amp;_count=1&amp;_sort=authored&amp;_page=1"
+        },
+        {
+            "relation": "last",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;category=military-service&amp;status=completed&amp;_count=1&amp;_sort=authored&amp;_page=2"
+        },
+        {
+            "relation": "next",
+            "url": "http://127.0.0.1:4507/hdecl/fhir/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/ni%7C39702232035&amp;category=military-service&amp;status=completed&amp;_count=1&amp;_sort=authored&amp;_page=2"
+        }
+    ],
+    "entry": [
+        {
+            "fullUrl": "QuestionnaireResponse/194",
+            "resource": {
+                "resourceType": "QuestionnaireResponse",
+                "id": "194",
+                "meta": {
+                    "versionId": "2",
+                    "lastUpdated": "2025-01-15T22:00:00.887+00:00",
+                    "profile": [
+                        "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration"
+                    ]                        
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-04-15T21:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "category",
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "driver-group-I"
+                                }
+                            },
+                            {
+                                "url": "effectivePeriod",
+                                "valuePeriod": {
+                                    "start": "2025-01-15T22:00:00+00:00",
+                                    "end": "2025-02-15T22:00:00+00:00"
+                                }
+                            }
+                        ],
+                        "url": "https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-category"
+                    }
+                ],
+                "questionnaire": "https://fhir.ee/qre/Questionnaire-health-declaration-hdecl-test1|1.1.5",
+                "status": "completed",
+                "subject": {
+                    "reference": "Patient/260920"
+                },
+                "authored": "2025-01-15T22:00:00+00:00",
+                "author": {
+                    "reference": "Patient/260920"
+                },
+                "item": [
+                    {
+                        "linkId": "category",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    "system": "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code": "military-service"
+                                }
+                            },
+                            {
+                                "valueCoding" : {
+                                    "system" : "https://fhir.ee/CodeSystem/tervisekontrolli-kasutusala",
+                                    "code" : "driver-group-I"
+                                }
+                            }                                               
+                        ]
+                    },
+                    {
+                        "linkId": "patient-gender",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    "system": "http://hl7.org/fhir/administrative-gender",
+                                    "code": "male"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "linkId": "lifestyle",
+                        "item": [
+                            {
+                                "linkId": "lifestyle.alcohol",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.alcohol.alcohol-units",
+                                                "answer": [
+                                                    {
+                                                        "valueDecimal": 3.4
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.smoking",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.smoking.smoking-amount",
+                                                "answer": [
+                                                    {
+                                                        "valueInteger": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "linkId": "lifestyle.smoking.smoking-period",
+                                                "answer": [
+                                                    {
+                                                        "valueDecimal": 45
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.narcotics",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.narcotics.narcotics-frequency",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "linkId": "lifestyle.medication",
+                                "answer": [
+                                    {
+                                        "valueBoolean": true,
+                                        "item": [
+                                            {
+                                                "linkId": "lifestyle.medication.specification",
+                                                "answer": [
+                                                    {
+                                                        "valueString": "Kodeiin ja muud opioidid"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+</code></pre></div></div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://tehik.ee">TEHIK</a>.  Package ee.fhir.hdecl#1.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Mon, Mar 31, 2025 13:56+0000">2025-03-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "ee-health-declaration-cancel",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition ee-health-declaration-cancel</b></p><a name=\"ee-health-declaration-cancel\"> </a><a name=\"hcee-health-declaration-cancel\"> </a><p>URL: [base]/QuestionnaireResponse/[id]/$cancel</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-cancel",
+  "version" : "1.0.0",
+  "name" : "EEHealthDeclarationCancel",
+  "title" : "Tervisedeklaratsiooni tühistamine",
+  "status" : "active",
+  "kind" : "operation",
+  "experimental" : false,
+  "date" : "2025-06-16T14:03:47+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "'In progress' või 'completed' staatuses tervisedeklaratsiooni tühistamise sõnum.",
+  "affectsState" : true,
+  "code" : "cancel",
+  "resource" : ["QuestionnaireResponse"],
+  "system" : false,
+  "type" : false,
+  "instance" : true
+}
