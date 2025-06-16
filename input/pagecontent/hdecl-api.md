@@ -571,9 +571,9 @@ Vastuses tagastatakse tervisedeklaratsioonid  vastavalt etteantud profiilile.
 
 Praegu on toetatud järgmised profiilid:
 
-https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration -  tervisedeklaratsioon tagastatakse täismahus
+[EEHealthDeclaration](StructureDefinition-ee-health-declaration.html) -  tervisedeklaratsioon tagastatakse täismahus
 
-https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal - tagastatakse tervisedeklaratsiooni metaandmed koos kasutusalade ja nende kehtivustega. Kehtivused puuduvad in-progress olekus tervisedeklaratsiooni korral.
+[EEHealthDeclarationMinimal](StructureDefinition-ee-health-declaration-minimal.html) - tagastatakse tervisedeklaratsiooni metaandmed koos kasutusalade ja nende kehtivustega. Kehtivused puuduvad in-progress olekus tervisedeklaratsiooni korral.
 
 
 HDECL rakendus tagastab veateate HDECL-017 "FHIR profiil '${profile}' pole lubatud või toetatud" juhul, kui _profile profiili URL pole rakenduses toetatud.
