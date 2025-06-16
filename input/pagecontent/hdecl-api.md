@@ -566,6 +566,25 @@ Tagastatakse päringu vastuses piiratud komplekt andmeid, profiilis määratakse
 ```
 _summary=true
 ```
+#### _profile
+Vastuses tagastatakse tervisedeklaratsioonid  vastavalt etteantud profiilile. 
+
+Praegu on toetatud järgmised profiilid:
+
+[EEHealthDeclaration](StructureDefinition-ee-health-declaration.html) -  tervisedeklaratsioon tagastatakse täismahus
+
+[EEHealthDeclarationMinimal](StructureDefinition-ee-health-declaration-minimal.html) - tagastatakse tervisedeklaratsiooni metaandmed koos kasutusalade ja nende kehtivustega. Kehtivused puuduvad in-progress olekus tervisedeklaratsiooni korral.
+
+
+HDECL rakendus tagastab veateate HDECL-017 "FHIR profiil '${profile}' pole lubatud või toetatud" juhul, kui _profile profiili URL pole rakenduses toetatud.
+
+Parameetri puudumisel tagastatakse tervisedeklaratsioon vaikimisi täismahus, v.a. registraatori päringutes. 
+
+Päringuparameetrit on soovitatav kasutada juhul, kui kasutajale kuvatakse üksnes metaandmeid (näiteks tervisedeklaratsioonide loendite kuvamisel).
+```
+_profile=https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration  (vaikimisi)
+_profile=https://fhir.ee/hdecl/StructureDefinition/ee-health-declaration-minimal
+```
 
 #### _sort
 Vastuse sorteerimine
@@ -1055,6 +1074,8 @@ GET [base]/QuestionnaireResponse?patient=Patient/260920&status=completed
 }
 ```
 
+
+
 #### KAM asutuse tervishoiutöötaja pärib TD
 
 ```
@@ -1277,3 +1298,4 @@ GET [base]/QuestionnaireResponse?patient.identifier=https://fhir.ee/sid/pid/est/
     ]
 }
 ```
+
