@@ -22,8 +22,8 @@ Usage: #example
 
 * item[0].linkId = "category"
 * item[=].text = "Kasutusala"
-* item[=].answer[+].valueCoding = $HDC#military-service "Kaitseväeteenistuse tervisekontroll"
-* item[=].answer[+].valueCoding = $HDC#driver-group-I "I grupi mootorsõidukijuhi tervisekontroll"
+* item[=].answer[+].valueCoding = $HDC#military-service "Kaitseväeteenistuses olija tervise läbivaatus"
+* item[=].answer[+].valueCoding = $HDC#driver-group-I "Läbivaatus juhiloa saamiseks või pikendamiseks (A-, AM-, B- ja BE-kategooria)"
 
 * item[+].linkId = "patient-gender"
 * item[=].text = "Sugu"
@@ -35,27 +35,35 @@ Usage: #example
 * item[=].text = "Elustiil"
 
 * item[=].item[0].linkId = "lifestyle.alcohol"
-* item[=].item[=].text = "Kas te tarbite alkoholi?"
+* item[=].item[=].text = "Kas sa tarbid alkoholi?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "lifestyle.alcohol.alcohol-units"
 * item[=].item[=].answer.item[=].text =  "Mitu ühikut nädalas? (1 ühik = 40 ml 40% kanget alkoholi või 120 ml 12% veini või 250 ml 5,2% õlut)"
 * item[=].item[=].answer.item[=].answer.valueDecimal =  3.4
 
-* item[=].item[+].linkId = "lifestyle.smoking"
-* item[=].item[=].text = "Kas te suitsetate?"
-* item[=].item[=].answer.valueBoolean = true
+* item[=].item[+].linkId = "lifestyle.smoking-tobacco"
+* item[=].item[=].text = "Kas sa tarvitad tubakatooteid regulaarselt (regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas)?"
+* item[=].answer.valueCoding.system = "http://snomed.info/sct"
+* item[=].answer.valueCoding.code = #449868002
+* item[=].answer.valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking.smoking-amount"
-* item[=].item[=].answer.item[=].text =  "Mitu sigaretti päevas?"
-* item[=].item[=].answer.item[=].answer.valueInteger = 20
+* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-which"
+* item[=].item[=].answer.item[=].text =  "Milliseid tubakatooteid sa põhiliselt tarvitad(sid)?"
+* item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/tubakatoodete-liik"
+* item[=].answer.valueCoding.code = #smoking-tobacco
+* item[=].answer.valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
 
-* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking.smoking-period"
-* item[=].item[=].answer.item[=].text =  "Mitu aastat olete järjest suitsetanud?"
-* item[=].item[=].answer.item[=].answer.valueDecimal = 45.0
+* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-amount"
+* item[=].item[=].answer.item[=].text =  "Mitu sigaretti (sigarit, sigarillot) sa päevas  keskmiselt tarvita(si)d?"
+* item[=].item[=].answer.item[=].answer.valueInteger = 2
+
+* item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-period"
+* item[=].item[=].answer.item[=].text =  "Mitu aastat kokku sa oled tubakatooteid tarvitanud? Arvesta kokku kõik aastad, mil sa oled tubakatooteid tarvitanud, isegi kui vahepeal on olnud pause."
+* item[=].item[=].answer.item[=].answer.valueInteger = 5
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
-* item[=].item[=].text = "Kas tarvitate narkootilisi/psühhotroopseid aineid?"
+* item[=].item[=].text = "Kas tarvitad narkootilisi/psühhotroopseid aineid?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "lifestyle.narcotics.narcotics-frequency"
@@ -63,7 +71,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "3x nädalas. Narkootilised valuvaigistid kroonilise valu vastu (opiaadid)"
 
 * item[=].item[+].linkId = "lifestyle.medication"
-* item[=].item[=].text = "Kas kasutate ravimeid, mis võivad Teie arvates mõjutada Teie keskendumisvõimet ja koordinatsiooni?"
+* item[=].item[=].text = "Kas kasutad ravimeid, mis võivad sinu arvates mõjutada sinu keskendumisvõimet ja koordinatsiooni?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "lifestyle.medication.specification"
@@ -74,7 +82,7 @@ Usage: #example
 * item[=].text = "Töökeskkond"
 
 * item[=].item[0].linkId = "work-environment.work-restrictions"
-* item[=].item[=].text = "Kas Teile on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
+* item[=].item[=].text = "Kas sulle on tervisekontrolli põhjal varem seatud tööpiiranguid? Kui jah, mille tõttu?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "work-environment.work-restrictions.specification"
@@ -82,7 +90,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString =  "Psühholoogilise stressi tõttu takistatud tööd"
 
 * item[=].item[+].linkId = "work-environment.work-health-problems"
-* item[=].item[=].text = "Kas Teil esineb või on esinenud tervisehäireid, mida seostate oma tööülesannete täitmise või töökeskkonnaga?"
+* item[=].item[=].text = "Kas sul esineb või on esinenud tervisehäireid, mida seostad oma tööülesannete täitmise või töökeskkonnaga?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "work-environment.work-health-problems.specification"
@@ -90,7 +98,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString =  "Hingamisraskused tingitud töökeskkonnast"
 
 * item[=].item[+].linkId = "work-environment.occupational-disease"
-* item[=].item[=].text = "Kas Teil on diagnoositud kutsehaigus?"
+* item[=].item[=].text = "Kas sul on diagnoositud kutsehaigus?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "work-environment.occupational-disease.specification"
@@ -117,11 +125,11 @@ Usage: #example
 * item[=].item[=].answer.item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "work-environment.work-related-disease"
-* item[=].item[=].text = "Kas Teil on diagnoositud tööst põhjustatud haigus?"
+* item[=].item[=].text = "Kas sul on diagnoositud tööst põhjustatud haigus?"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "work-environment.ppe-problems"
-* item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad Teile terviseprobleeme?"
+* item[=].item[=].text = "Kas tööl kasutatavad isikukaitsevahendid põhjustavad sulle terviseprobleeme?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "work-environment.ppe-problems.specification"
@@ -204,7 +212,7 @@ Usage: #example
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "mental-health.other-disease-condition-symptom"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "mental-health.other-disease-condition-symptom.specification"
@@ -371,7 +379,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "Osaline daltonism"
 
 * item[=].item[+].linkId = "eyes-vision.other-disease-condition-symptom"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "eyes-vision.other-disease-condition-symptom.specification"
@@ -498,7 +506,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "II tüüpi diabeet"
 
 * item[=].item[+].linkId = "metabolic-disorder.other-disease-condition-symptom"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "cardiovascular-system"
@@ -571,7 +579,7 @@ Usage: #example
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "cardiovascular-system.other-disease-condition-symptom"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "bones-joints-muscles"
@@ -644,7 +652,7 @@ Usage: #example
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "bones-joints-muscles.other-disease-condition-symptom"
-* item[=].item[=].text = "Muu haigus/seisund/sümptom (palun täpsustage)"
+* item[=].item[=].text = "Muu haigus, seisund, sümptom"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "infections"
@@ -683,7 +691,7 @@ Usage: #example
 * item[=].text = "Senine ravi"
 
 * item[=].item[0].linkId = "previous-treatment.treatment-abroad"
-* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul? Palun täpsustage millal, kus, ja millega seoses"
+* item[=].item[=].text = "Kas oled viimase 5 aasta jooksul saanud välismaal haiglaravi või käinud arsti vastuvõtul?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "previous-treatment.treatment-abroad.specification"
@@ -694,7 +702,7 @@ Usage: #example
 * item[=].item[=].text = "Regulaarsed ravimid"
 
 * item[=].item[=].item[0].linkId = "previous-treatment.regular-medication.regular-medication-men"
-* item[=].item[=].item[=].text = "Kas tarvitate regulaarselt mingeid ravimeid? Palun loetlege, milliseid"
+* item[=].item[=].item[=].text = "Kas tarvitad regulaarselt mingeid ravimeid?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[=].answer.item[0].linkId = "previous-treatment.regular-medication.regular-medication-men.specification"
@@ -730,7 +738,7 @@ Usage: #example
 * item[=].item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "previous-treatment.hospitalization"
-* item[=].item[=].text = "Kas olete viimase 5 aasta jooksul viibinud haiglaravil?"
+* item[=].item[=].text = "Kas oled viimase 5 aasta jooksul viibinud haiglaravil?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "previous-treatment.hospitalization.specification"
@@ -762,7 +770,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "previous-treatment.surgeries"
-* item[=].item[=].text = "Kas teid on viimase 5 aasta jooksul opereeritud? Palun täpsustage, millal, mille tõttu"
+* item[=].item[=].text = "Kas sind on viimase 5 aasta jooksul opereeritud?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "previous-treatment.surgeries.specification"
@@ -1074,7 +1082,7 @@ Usage: #example
 * item[=].item[=].item[=].answer.valueReference.display = "Ambulatoorne epikriis"
 
 * item[=].item[+].linkId = "sleep.loud-snoring"
-* item[=].item[=].text = "Kas Te norskate valjult (valjemini kui tavaline kõne, või Teie norskamist on kosta kõrvalruumi ka siis, kui magamistoa uks on suletud)?"
+* item[=].item[=].text = "Kas sa norskad valjult (valjemini kui tavaline kõne, või sinu norskamist on kosta kõrvalruumi ka siis, kui magamistoa uks on suletud)?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "sleep.snoring.specification"
@@ -1082,7 +1090,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "Äratan pidevalt elukaaslase üles norskamisega"
 
 * item[=].item[+].linkId = "sleep.fatigue"
-* item[=].item[=].text = "Kas Te tunnete end sageli mitteväljapuhanuna, väsinuna või unisena päevasel ajal?"
+* item[=].item[=].text = "Kas sa tunned end sageli mitteväljapuhanuna, väsinuna või unisena päevasel ajal?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "sleep.fatigue.specification"
@@ -1090,25 +1098,14 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "Ebakvaliteetsest unest ja norskamisest tingituna olen ka hommikul väsinud"
 
 * item[=].item[+].linkId = "sleep.breath-stop-sleep"
-* item[=].item[=].text = "Kas Teil on täheldatud uneaegseid hingamisseisakuid?"
+* item[=].item[=].text = "Kas sul on täheldatud uneaegseid hingamisseisakuid?"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "health-assessment"
 * item[=].text = "Hinnang enda terviseseisundile"
 
-// //Vajab õiget loendit
-// * item[=].item[0].linkId = "health-assessment.patient-health-assessment"
-// * item[=].item[=].text = "Milline on Teie hinnang oma tervisele?"
-// * item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/hinnang-terviseseisundile"
-// * item[=].item[=].answer.valueCoding.code = #1
-// * item[=].item[=].answer.valueCoding.display = "Hea"
-
-// * item[=].item[=].answer.item[0].linkId = "health-assessment.patient-health-assessment.specification"
-// * item[=].item[=].answer.item[=].text = "Täpsustus"
-// * item[=].item[=].answer.item[=].answer.valueString = "Kuigi muresid on palju, siis olen üldiselt positiivselt meelestatud"
-
 * item[=].item[+].linkId = "health-assessment.illness-past-year"
-* item[=].item[=].text = "Kas olete viimase aasta jooksul olnud haige?"
+* item[=].item[=].text = "Kas oled viimase aasta jooksul olnud haige?"
 * item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].answer.item[0].linkId = "health-assessment.illness-past-year.specification"
@@ -1116,7 +1113,7 @@ Usage: #example
 * item[=].item[=].answer.item[=].answer.valueString = "Palavik eelmisel kuul (vist oli COVID-19)"
 
 * item[=].item[+].linkId = "health-assessment.complaints"
-* item[=].item[=].text = "Kas Teil on enda tervise osas kaebusi?"
+* item[=].item[=].text = "Kas sul on enda tervise osas kaebusi?"
 * item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "health-assessment.sick-leave-certs"
@@ -1150,7 +1147,7 @@ Usage: #example
 * item[=].item[=].text = "Osaline töövõime"
 
 * item[=].item[=].item[0].linkId = "health-assessment.partial-work-capacity-loss.partial-work-capacity-loss-abroad"
-* item[=].item[=].item[=].text = "Kas Teile on välisriigis määratud töövõime osaline kaotus?"
+* item[=].item[=].item[=].text = "Kas sulle on välisriigis määratud töövõime osaline kaotus?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[=].item[+].linkId = "health-assessment.partial-work-capacity-loss.partial-work-disability"
@@ -1174,7 +1171,7 @@ Usage: #example
 * item[=].item[=].text = "Puue"
 
 * item[=].item[=].item[0].linkId = "health-assessment.disability.disability-abroad"
-* item[=].item[=].item[=].text = "Kas Teil on välisriigis tuvastatud puue?"
+* item[=].item[=].item[=].text = "Kas sulle on välisriigis tuvastatud puue?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "immunization"
@@ -1184,7 +1181,7 @@ Usage: #example
 * item[=].item[=].text = "B-viirushepatiit"
 
 * item[=].item[=].item[0].linkId = "immunization.b-hepatitis.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud B-viirushepatiidi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud B-viirushepatiidi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[+].linkId = "immunization.b-hepatitis.immunization-his-data"
@@ -1209,7 +1206,7 @@ Usage: #example
 * item[=].item[=].text = "Tuberkuloos"
 
 * item[=].item[=].item[0].linkId = "immunization.tuberculosis.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud tuberkuloosi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud tuberkuloosi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[+].linkId = "immunization.tuberculosis.immunization-his-data"
@@ -1233,7 +1230,7 @@ Usage: #example
 * item[=].item[=].text = "Rotaviirus"
 
 * item[=].item[=].item[0].linkId = "immunization.rotavirus.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud rotaviirusnakkuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud rotaviirusnakkuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[+].linkId = "immunization.rotavirus.immunization-his-data"
@@ -1257,7 +1254,7 @@ Usage: #example
 * item[=].item[=].text = "Difteeria"
 
 * item[=].item[=].item[0].linkId = "immunization.diphteria.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud difteeria vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud difteeria vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[+].linkId = "immunization.diphteria.immunization-his-data"
@@ -1281,7 +1278,7 @@ Usage: #example
 * item[=].item[=].text = "Teetanus"
 
 * item[=].item[=].item[0].linkId = "immunization.tetanus.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud teetanuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud teetanuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = true
 
 * item[=].item[=].item[+].linkId = "immunization.tetanus.immunization-his-data"
@@ -1306,126 +1303,126 @@ Usage: #example
 * item[=].item[=].text = "Läkaköha"
 
 * item[=].item[=].item[0].linkId = "immunization.pertussis.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud atsellulaarse läkaköha vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud atsellulaarse läkaköha vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.polio"
 * item[=].item[=].text = "Poliomüeliit"
 
 * item[=].item[=].item[0].linkId = "immunization.polio.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud inaktiveeritud poliomüeliidi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud inaktiveeritud poliomüeliidi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.hemo-influenza"
 * item[=].item[=].text = "Influensa"
 
 * item[=].item[=].item[0].linkId = "immunization.hemo-influenza.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud Haemophilus influenzae tüüp b nakkuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud Haemophilus influenzae tüüp b nakkuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.measles"
 * item[=].item[=].text = "Leetrid"
 
 * item[=].item[=].item[0].linkId = "immunization.measles.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud leetrite vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud leetrite vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.mumps"
 * item[=].item[=].text = "Mumps"
 
 * item[=].item[=].item[0].linkId = "immunization.mumps.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud mumpsi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud mumpsi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.rubella"
 * item[=].item[=].text = "Punetised"
 
 * item[=].item[=].item[0].linkId = "immunization.rubella.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud punetiste vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud punetiste vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.hpv"
 * item[=].item[=].text = "HPV"
 
 * item[=].item[=].item[0].linkId = "immunization.hpv.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud papilloomiviirusnakkuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud inimese papilloomiviirusnakkuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.covid"
 * item[=].item[=].text = "COVID"
 
 * item[=].item[=].item[0].linkId = "immunization.covid.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud COVID vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud COVID vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.flu"
 * item[=].item[=].text = "Gripiviirus"
 
 * item[=].item[=].item[0].linkId = "immunization.flu.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud gripivaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud gripi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.pneumococcus"
 * item[=].item[=].text = "Pneumokokk"
 
 * item[=].item[=].item[0].linkId = "immunization.pneumococcus.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud pneumokoki vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud pneumokoki vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.a-hepatitis"
 * item[=].item[=].text = "A-hepatiit"
 
 * item[=].item[=].item[0].linkId = "immunization.a-hepatitis.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud A-hepatiidi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud A-hepatiidi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.varicella"
 * item[=].item[=].text = "Tuulerõuged"
 
 * item[=].item[=].item[0].linkId = "immunization.varicella.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud tuulerõugete vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud tuulerõugete vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.shingles"
 * item[=].item[=].text = "Vöötohatis"
 
 * item[=].item[=].item[0].linkId = "immunization.shingles.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud vöötohatise vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud vöötohatise vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.meningococcus"
 * item[=].item[=].text = "Meningokokk"
 
 * item[=].item[=].item[0].linkId = "immunization.meningococcus.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud meningokokk-nakkuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud Meningokokk-nakkuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.yellow-fever"
 * item[=].item[=].text = "Kollapalavik"
 
 * item[=].item[=].item[0].linkId = "immunization.yellow-fever.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud kollapalaviku vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud kollapalaviku vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.typhoid-fever"
 * item[=].item[=].text = "Kõhutüüfus"
 
 * item[=].item[=].item[0].linkId = "immunization.typhoid-fever.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud kõhutüüfuse vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud kõhutüüfuse vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.tick-encephalitis"
 * item[=].item[=].text = "Puukentsefaliit"
 
 * item[=].item[=].item[0].linkId = "immunization.tick-encephalitis.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud puukentsefaliidi vaktsiin?"
+* item[=].item[=].item[=].text = "Kas sind on vaktsineeritud puukentsefaliidi vastu?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[=].item[+].linkId = "immunization.other-vac"
 * item[=].item[=].text = "Muud vaktsiinid"
 
 * item[=].item[=].item[0].linkId = "immunization.other-vac.vac-done"
-* item[=].item[=].item[=].text = "Kas Teile on tehtud muid vaktsiine?"
+* item[=].item[=].item[=].text = "Kas sulle on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
 * item[+].linkId = "work-risk-factors"
@@ -1433,7 +1430,7 @@ Usage: #example
 
 * item[=].item[0].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ohutegurid"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].answer.valueCoding.code = #194
 * item[=].item[=].answer.valueCoding.display = "Pikaajaline töötamine üksinda"
 
@@ -1443,9 +1440,9 @@ Usage: #example
 
 * item[=].item[+].linkId = "work-risk-factors.risk-factor"
 * item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/ohutegurid"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
 * item[=].item[=].answer.valueCoding.code = #114
-* item[=].item[=].answer.valueCoding.display = "Kantserogeensed ained"
+* item[=].item[=].answer.valueCoding.display = "Kantserogeenid"
 
 * item[=].item[=].answer.item[0].linkId = "work-risk-factors.risk-factor.specification"
 * item[=].item[=].answer.item[=].text = "Täpsustus"
