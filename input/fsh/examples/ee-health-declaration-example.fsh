@@ -44,15 +44,15 @@ Usage: #example
 
 * item[=].item[+].linkId = "lifestyle.smoking-tobacco"
 * item[=].item[=].text = "Kas sa tarvitad tubakatooteid regulaarselt (regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas)?"
-* item[=].answer.valueCoding.system = "http://snomed.info/sct"
-* item[=].answer.valueCoding.code = #449868002
-* item[=].answer.valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
+* item[=].item[=].answer.valueCoding.system = "http://snomed.info/sct"
+* item[=].item[=].answer.valueCoding.code = #449868002
+* item[=].item[=].answer.valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-which"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking-tobacco-which"
 * item[=].item[=].answer.item[=].text =  "Milliseid tubakatooteid sa põhiliselt tarvitad(sid)?"
-* item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/tubakatoodete-liik"
-* item[=].answer.valueCoding.code = #smoking-tobacco
-* item[=].answer.valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/tubakatoodete-liik"
+* item[=].item[=].answer.valueCoding.code = #smoking-tobacco
+* item[=].item[=].answer.valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
 
 * item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-amount"
 * item[=].item[=].answer.item[=].text =  "Mitu sigaretti (sigarit, sigarillot) sa päevas  keskmiselt tarvita(si)d?"
