@@ -60,7 +60,12 @@ Usage: #example
 
 * item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-period"
 * item[=].item[=].answer.item[=].text =  "Mitu aastat kokku sa oled tubakatooteid tarvitanud? Arvesta kokku kõik aastad, mil sa oled tubakatooteid tarvitanud, isegi kui vahepeal on olnud pause."
-* item[=].item[=].answer.item[=].answer.valueInteger = 5
+
+* item[=].item[=].answer.item[=].item[0].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-period.years"
+* item[=].item[=].answer.item[=].item[=].answer.valueInteger = 10
+
+* item[=].item[=].answer.item[=].item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-period.months"
+* item[=].item[=].answer.item[=].item[=].answer.valueInteger = 6
 
 * item[=].item[+].linkId = "lifestyle.narcotics"
 * item[=].item[=].text = "Kas tarvitad narkootilisi/psühhotroopseid aineid?"
