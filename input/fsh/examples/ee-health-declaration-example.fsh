@@ -44,19 +44,21 @@ Usage: #example
 
 * item[=].item[+].linkId = "lifestyle.smoking-tobacco"
 * item[=].item[=].text = "Kas sa tarvitad tubakatooteid regulaarselt (regulaarse tarvitamise all mõeldakse kindla sagedusega järjepidevat tarvitamist näiteks iga päev või paar korda nädalas)?"
-* item[=].item[=].answer.valueCoding.system = "http://snomed.info/sct"
+* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/suitsetamisharjumused"
 * item[=].item[=].answer.valueCoding.code = #449868002
 * item[=].item[=].answer.valueCoding.display = "Igapäevaselt tubakatoodete tarvitaja"
 
-* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking-tobacco-which"
+* item[=].item[=].answer.item[0].linkId = "lifestyle.smoking-tobacco.which"
 * item[=].item[=].answer.item[=].text =  "Milliseid tubakatooteid sa põhiliselt tarvitad(sid)?"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/tubakatoodete-liik"
-* item[=].item[=].answer.valueCoding.code = #smoking-tobacco
-* item[=].item[=].answer.valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
+* item[=].item[=].answer.item[=].answer.valueCoding.system = "https://fhir.ee/ValueSet/tubakatoodete-liik"
+* item[=].item[=].answer.item[=].answer.valueCoding.code = #smoking-tobacco
+* item[=].item[=].answer.item[=].answer.valueCoding.display = "Suitsetatav tubakatoode (sigaret, sigar, sigarillo, vesipiibutubakas)"
 
 * item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-amount"
-* item[=].item[=].answer.item[=].text =  "Mitu sigaretti (sigarit, sigarillot) sa päevas  keskmiselt tarvita(si)d?"
-* item[=].item[=].answer.item[=].answer.valueInteger = 2
+* item[=].item[=].answer.item[=].text =  "Mitu sigaretti (sigarit, sigarillot) sa keskmiselt tarvita(si)d päevas, nädalas, kuus?"
+* item[=].item[=].answer.item[=].answer.valueQuantity.value = 10
+* item[=].item[=].answer.item[=].answer.valueQuantity.system = "https://fhir.ee/CodeSystem/sagedus-ajas"
+* item[=].item[=].answer.item[=].answer.valueQuantity.code = #/d
 
 * item[=].item[=].answer.item[+].linkId = "lifestyle.smoking-tobacco.smoking-tobacco-period"
 * item[=].item[=].answer.item[=].text =  "Mitu aastat kokku sa oled tubakatooteid tarvitanud? Arvesta kokku kõik aastad, mil sa oled tubakatooteid tarvitanud, isegi kui vahepeal on olnud pause."
