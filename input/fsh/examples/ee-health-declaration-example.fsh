@@ -143,6 +143,10 @@ Usage: #example
 * item[=].item[=].answer.item[=].text =  "Täpsustus"
 * item[=].item[=].answer.item[=].answer.valueString =  "Kiivri kandmine tekitab peavalu"
 
+* item[=].item[+].linkId = "work-environment.previous-employers"
+* item[=].item[=].text = "Varasemad tööandjad"
+* item[=].item[=].answer.valueString = "TEHIK, Unibet Kardikeskus, Valli baar"
+
 * item[+].linkId = "allergies"
 * item[=].text = "Allergiad"
 
@@ -1432,26 +1436,12 @@ Usage: #example
 * item[=].item[=].item[=].text = "Kas sulle on tehtud muid vaktsiine?"
 * item[=].item[=].item[=].answer.valueBoolean = false
 
-* item[+].linkId = "work-risk-factors"
-* item[=].text = "Töökohal esinevad ohutegurid"
+* item[+].linkId = "work-workplace"
+* item[=].text = "Tehtava töö ja töökoha kirjeldus"
 
-* item[=].item[0].linkId = "work-risk-factors.risk-factor"
-* item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
-* item[=].item[=].answer.valueCoding.code = #194
-* item[=].item[=].answer.valueCoding.display = "Pikaajaline töötamine üksinda"
+* item[=].item[0].linkId = "work-workplace.work-description"
+* item[=].item[=].text = "Kirjelda oma tööülesandeid ja töökeskkonda"
+* item[=].item[=].answer.valueString = "Töötan pimedas ja tolmuses keskkonnas ning tööiseloom on väga stressirikas"
 
-* item[=].item[=].answer.item[0].linkId = "work-risk-factors.risk-factor.specification"
-* item[=].item[=].answer.item[=].text = "Täpsustus"
-* item[=].item[=].answer.item[=].answer.valueString = "Üksik tunne. Tahaks suhelda kellegagi"
 
-* item[=].item[+].linkId = "work-risk-factors.risk-factor"
-* item[=].item[=].text = "Ohutegur"
-* item[=].item[=].answer.valueCoding.system = "https://fhir.ee/CodeSystem/toolaadi-ja-tookeskkonnaga-seotud-ohutegurid"
-* item[=].item[=].answer.valueCoding.code = #114
-* item[=].item[=].answer.valueCoding.display = "Kantserogeenid"
-
-* item[=].item[=].answer.item[0].linkId = "work-risk-factors.risk-factor.specification"
-* item[=].item[=].answer.item[=].text = "Täpsustus"
-* item[=].item[=].answer.item[=].answer.valueString = "Igapäevaselt puutun kokku trikloroetüleeniga"
 
