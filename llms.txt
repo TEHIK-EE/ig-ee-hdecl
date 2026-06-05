@@ -1,0 +1,50 @@
+# ee.fhir.hdecl#1.0.0: Tervisedeklaratsiooni juurutusjuhend
+
+## Pages
+
+* [Sissejuhatus](index.md)
+* [Healthdeclaration API](hdecl-api.md)
+* [Download](download.md)
+* [Artifacts Summary](artifacts.md)
+
+## Resources
+
+### CodeSystems
+
+* [Sagedus ajas](CodeSystem-sagedus-ajas.md)
+
+### ValueSets
+
+* [Sagedus ajas loend](ValueSet-sagedus-ajas.md)
+
+### Resource Profiles
+
+* [EEHealthDeclarationMinimal](StructureDefinition-ee-health-declaration-minimal.md)
+* [EEHealthDeclaration](StructureDefinition-ee-health-declaration.md)
+
+### Extensions
+
+* [Tervise deklaratsiooni kasutusala](StructureDefinition-ee-health-declaration-category.md)
+
+### ImplementationGuides
+
+* [Tervisedeklaratsiooni juurutusjuhend](index.md)
+
+### OperationDefinitions
+
+* [Tervisedeklaratsiooni tühistamine](OperationDefinition-ee-health-declaration-cancel.md)
+* [Tervisedeklaratsiooni kinnitamine](OperationDefinition-ee-health-declaration-complete.md)
+* [Tervisedeklaratsiooni ressursi ligipääsude päring](OperationDefinition-ee-health-declaration-get-consent.md)
+* [Tervisedeklaratsiooni ressursi ligipääsude muutmine](OperationDefinition-ee-health-declaration-set-consent.md)
+
+### SearchParameters
+
+* [Health declaration category effective date](SearchParameter-ee-health-declaration-category-effective-date.md)
+* [Health declaration category](SearchParameter-ee-health-declaration-category.md)
+
+### Examples
+
+* [katipiiriylene (Patient)](Patient-katipiiriylene.md)
+* [ee-health-declaration-example (QuestionnaireResponse)](QuestionnaireResponse-ee-health-declaration-example.md)
+* [ee-health-declaration-from-cda-example (QuestionnaireResponse)](QuestionnaireResponse-ee-health-declaration-from-cda-example.md)
+* [ee-health-declaration-minimal-example (QuestionnaireResponse)](QuestionnaireResponse-ee-health-declaration-minimal-example.md)

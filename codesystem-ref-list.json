@@ -1,0 +1,24 @@
+{
+  "codeSystems" : [{
+    "url" : "https://fhir.ee/CodeSystem/labivaatuse-tyyp",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "LabivaatuseTyyp",
+    "title" : "Läbivaatuse tüüp",
+    "description" : "Kasutatakse tervisedeklaratsioonil ja tervisetõenditel, läbivaatuse tüübi määramiseks",
+    "uses" : {
+    },
+    "https://akk.tehik.ee/classifier/fhir/ValueSet/labivaatuse-tyyp" : "Läbivaatuse tüüp"
+  },
+  {
+    "url" : "https://fhir.ee/CodeSystem/sagedus-ajas",
+    "version" : "1.0.0",
+    "status" : "draft",
+    "name" : "Sagedus_CS",
+    "title" : "Sagedus ajas",
+    "description" : "No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+    "uses" : {
+    },
+    "ValueSet-sagedus-ajas.html" : "Sagedus ajas loend"
+  }]
+}

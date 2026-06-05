@@ -1,0 +1,41 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "sagedus-ajas",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem sagedus-ajas</b></p><a name=\"sagedus-ajas\"> </a><a name=\"hcsagedus-ajas\"> </a><p>This  code system <code>https://fhir.ee/CodeSystem/sagedus-ajas</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">/wk<a name=\"sagedus-ajas-.47wk\"> </a></td><td>nädalas</td></tr><tr><td style=\"white-space:nowrap\">/d<a name=\"sagedus-ajas-.47d\"> </a></td><td>päevas</td></tr><tr><td style=\"white-space:nowrap\">/mo<a name=\"sagedus-ajas-.47mo\"> </a></td><td>kuus</td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/CodeSystem/sagedus-ajas",
+  "version" : "1.0.0",
+  "name" : "Sagedus_CS",
+  "title" : "Sagedus ajas",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-06-05T10:57:44+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "No actual CS in terminology server. Sageduse mõõtühikud UCUM notatsioonis",
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "/wk",
+    "display" : "nädalas"
+  },
+  {
+    "code" : "/d",
+    "display" : "päevas"
+  },
+  {
+    "code" : "/mo",
+    "display" : "kuus"
+  }]
+}

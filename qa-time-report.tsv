@@ -1,0 +1,25 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.hdecl.json	6939	-	1	0	0	0	0	0	7	65	0	0	0	0	0	0	0	0	0	0	53	53	0	0	0	2	0	1
+fsh-generated/resources/CodeSystem-sagedus-ajas.json	529	4	0	0	2	0	0	0	1	7	0	0	1	0	1	0	0	0	0	0	6	62	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-cancel.json	600	4	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	6	9	0	0	0	1	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-complete.json	826	3	0	0	0	0	0	0	0	21	0	0	0	0	0	0	0	0	0	0	7	8	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-get-consent.json	973	1	0	0	0	0	0	0	1	3	0	0	0	0	1	0	0	0	0	0	7	8	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-set-consent.json	1119	2	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	7	8	0	0	0	1	0	0
+fsh-generated/resources/Patient-katipiiriylene.json	449	2	0	0	0	0	0	0	0	277	0	0	0	0	0	0	0	0	0	0	5	6	0	0	0	0	0	0
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-example.json	96140	44	0	0	0	0	0	0	16	214	0	0	0	0	0	0	0	1	0	0	818	189	0	0	0	0	0	6
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-from-cda-example.json	56935	18	0	0	0	0	0	0	10	26646	0	0	0	0	0	0	0	1	0	0	474	96	0	0	0	0	0	3
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-minimal-example.json	1609	3	0	0	1	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	12	8	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-ee-health-declaration-category-effective-date.json	734	3	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	5	7	0	0	0	0	0	0
+fsh-generated/resources/SearchParameter-ee-health-declaration-category.json	650	1	0	0	0	0	0	0	0	2	0	0	0	0	1	0	0	0	0	0	4	6	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration-category.json	3403	3	0	59	0	0	0	0	0	1204	0	0	0	0	0	0	0	0	0	0	77	641	0	0	0	2	0	1
+fsh-generated/resources/StructureDefinition-ee-health-declaration-minimal.json	900	1	0	79	0	0	0	0	0	17	0	0	0	0	0	0	0	1	0	0	94	286	0	0	0	4	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration.json	4299	4	0	1	0	0	0	0	0	35	0	0	0	0	1	0	0	0	0	0	139	254	0	0	0	5	0	1
+fsh-generated/resources/ValueSet-sagedus-ajas.json	427	1	0	0	0	0	0	0	1	86	0	0	0	0	0	0	0	0	0	0	5	71	0	0	0	0	0	0
+/fsh-generated/includes/fsh-link-references.md	1245	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/fsh-generated/includes/menu.xml	1361	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/index.md	2391	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0
+/input/pagecontent/download.md	170	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/input/pagecontent/hdecl-api.md	50280	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	2	0	0	0	0	0	0
+/template/config	0	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/template/config/_config.yml	140	-	-	-	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+/temp/pages/_includes/artifacts.xml	10133	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	-	0	0	0	0	0	0	0

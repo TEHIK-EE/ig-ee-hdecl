@@ -1,0 +1,51 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "ee-health-declaration-get-consent",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition ee-health-declaration-get-consent</b></p><a name=\"ee-health-declaration-get-consent\"> </a><a name=\"hcee-health-declaration-get-consent\"> </a><a name=\"ee-health-declaration-get-consent-en-US\"> </a><p>URL: [base]/QuestionnaireResponse/[id]/$get-consent</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>OUT</td><td>representative</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td/><td><div><p>Konfidentsiaalsus eestkostjale</p>\n</div></td></tr><tr><td>OUT</td><td>doctor</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td/><td><div><p>Konfidentsiaalsus arstile</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-get-consent",
+  "version" : "1.0.0",
+  "name" : "EEHealthDeclarationGetConsent",
+  "title" : "Tervisedeklaratsiooni ressursi ligipääsude päring",
+  "status" : "active",
+  "kind" : "operation",
+  "experimental" : false,
+  "date" : "2025-06-05T06:55:17+00:00",
+  "publisher" : "TEHIK",
+  "contact" : [{
+    "name" : "TEHIK",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://tehik.ee"
+    },
+    {
+      "system" : "email",
+      "value" : "abi@tehik.ee"
+    }]
+  }],
+  "description" : "Tervisedeklaratsiooni ressursi ligipääsude päring",
+  "affectsState" : false,
+  "code" : "get-consent",
+  "resource" : ["QuestionnaireResponse"],
+  "system" : false,
+  "type" : false,
+  "instance" : true,
+  "parameter" : [{
+    "name" : "representative",
+    "use" : "out",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "Konfidentsiaalsus eestkostjale",
+    "type" : "string"
+  },
+  {
+    "name" : "doctor",
+    "use" : "out",
+    "min" : 0,
+    "max" : "1",
+    "documentation" : "Konfidentsiaalsus arstile",
+    "type" : "string"
+  }]
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="ee-health-declaration-cancel"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition ee-health-declaration-cancel</b></p><a name="ee-health-declaration-cancel"> </a><a name="hcee-health-declaration-cancel"> </a><a name="ee-health-declaration-cancel-en-US"> </a><p>URL: [base]/QuestionnaireResponse/[id]/$cancel</p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr></table></div>
+  </text>
+  <url value="https://fhir.ee/hdecl/OperationDefinition/ee-health-declaration-cancel"/>
+  <version value="1.0.0"/>
+  <name value="EEHealthDeclarationCancel"/>
+  <title value="Tervisedeklaratsiooni tühistamine"/>
+  <status value="active"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2025-06-05T06:55:17+00:00"/>
+  <publisher value="TEHIK"/>
+  <contact>
+    <name value="TEHIK"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://tehik.ee"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="abi@tehik.ee"/>
+    </telecom>
+  </contact>
+  <description value="'In progress' või 'completed' staatuses tervisedeklaratsiooni tühistamise sõnum."/>
+  <affectsState value="true"/>
+  <code value="cancel"/>
+  <resource value="QuestionnaireResponse"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+</OperationDefinition>

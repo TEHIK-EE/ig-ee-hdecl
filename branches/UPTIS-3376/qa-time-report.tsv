@@ -1,0 +1,10 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ee.fhir.hdecl.json	4091	-	0	0	0	0	0	0	3	67	0	0	0	0	0	0	0	1	0	0	54	64	0	1	1	2	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-cancel.json	600	30	0	0	0	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	15	13	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-complete.json	598	20	0	0	0	0	0	0	0	11	0	0	0	0	0	0	0	0	0	0	14	10	0	0	0	1	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-get-consent.json	973	16	0	0	0	0	0	0	1	32	0	0	0	0	0	0	0	0	0	0	15	10	0	0	0	0	0	0
+fsh-generated/resources/OperationDefinition-ee-health-declaration-set-consent.json	1119	13	0	0	0	0	0	0	0	13	0	0	0	0	0	0	0	0	0	0	14	11	0	0	0	0	0	0
+fsh-generated/resources/Patient-katipiiriylene.json	337	16	0	0	1	0	0	0	0	205	0	0	0	0	0	0	0	0	0	0	10	7	0	0	0	0	0	0
+fsh-generated/resources/QuestionnaireResponse-ee-health-declaration-example.json	96977	73	0	0	0	0	0	0	13	88	0	0	0	0	0	0	0	1	0	0	626	134	0	0	0	0	0	1
+fsh-generated/resources/StructureDefinition-ee-health-declaration-category.json	2978	18	0	19	0	0	1	0	0	377	0	0	1	0	0	0	0	0	0	0	98	518	0	0	0	4	0	0
+fsh-generated/resources/StructureDefinition-ee-health-declaration.json	2749	14	0	35	0	0	0	0	0	46	0	0	0	0	0	0	0	0	0	0	170	519	0	0	0	10	1	1
